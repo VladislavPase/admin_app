@@ -1,0 +1,21 @@
+block config
+
+doctype html
+html(lang=__.lang, class="no-js")
+    head
+        block head
+            include head
+    body.body(class=bodyClass)
+        
+        .app
+            include blocks/aside
+            .page-content
+                include blocks/header
+                block content
+
+
+        block styles
+            link(rel='stylesheet', href='assets/css/libs.css')
+            link(rel='stylesheet', href='assets/css/common.css?v=' + PACKAGE.version)
+        block scripts
+            include scripts

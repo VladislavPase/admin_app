@@ -1,0 +1,22 @@
+extends _includes/layout
+include _includes/mixins/filter
+
+block config
+    - var pagetitle = 'FAQ'
+    - var bodyClass = 'faq'
+    - var pageName = 'FAQ'
+    - var name = 'faq'
+    - var headerIcon = 'icon-brain-icon'
+
+block content
+    .content
+        .content__inner
+            - for (let i = 0; i < 5; i++)
+                .faq__item
+                    .faq__item--header
+                        p Просто текст с подсказкой, как вообще здесь видно не?
+                        button.faq__item--toggler
+                            i.icon-down-dir.icon
+                    .faq__item--body
+                        p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+                    

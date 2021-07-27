@@ -1,0 +1,49 @@
+include ../mixins/header-message
+
+header.header
+    .header__route 
+        i.icon(class=headerIcon)
+        =pageName
+    ul.header__account
+        li.header__item
+            p.header__account--title.item-title ЕРС
+            p.header__account--value 300 000 $
+        li.header__item
+            p.header__account--title.item-title Демонитизировано
+            p.header__account--value 300 000 $
+        li.header__item.balance
+            p.header__account--title.item-title Баланс
+            p.header__account--value 300 000 $
+    .header__notifications.header__item
+        i.icon-bell-alt.icon
+        .new-notifications-indicator
+        ul.header__messages
+            p.header__messages--title Сообщения
+            +headerMessage(
+                icon="icon-attention"
+                title="Что у вас случилось?"
+                date="26.01.2021"
+            )
+            +headerMessage(
+                icon="icon-attention"
+                title="Что у вас случилось?"
+                date="26.01.2021"
+            )
+            +headerMessage(
+                icon="icon-attention"
+                title="Что у вас случилось?"
+                date="26.01.2021"
+            )
+    .header__profile.header__item
+        a.header__profile--link(href="#") Vitaliy Zamedyanskiy
+            i.icon-down-dir.icon
+        ul.account__settings
+            li.account__settings--item
+                i.icon-user-icon.icon
+                a(href="#").account__settings--link Личные данные
+            li.account__settings--item
+                i.icon-security-icon.icon
+                a(href="#").account__settings--link Безопасность
+            li.account__settings--item
+                i.icon-exit-icon.icon
+                a(href="#").account__settings--link Выйти из профиля

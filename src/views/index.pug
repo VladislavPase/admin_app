@@ -1,0 +1,137 @@
+extends _includes/layout
+include _includes/mixins/accountInfoItem
+    
+block config
+    - var pagetitle = 'Дашбоард'
+    - var bodyClass = 'home'
+    - var pageName = 'Дашбоард'
+    - var name = 'home'
+    - var headerIcon = 'icon-dashboard-icon'
+
+block content
+    .content
+        .content__inner
+            .account-info__wrapper
+                .account-info.large
+                    +infoItem(
+                        title="Доступно"
+                        value=1000
+                        type="cash"
+                        subclass="green-text"
+                    )
+                    +infoItem(
+                        title="В ожидании"
+                        value=0
+                        type="cash"
+                    )
+                    +infoItem(
+                        title="Всего"
+                        value=1000
+                        type="cash"
+                        subclass="green-text"
+                    )
+                    +infoItem(
+                        title="Выплачено"
+                        value=0
+                        type="cash"
+                    )
+                .account-info.small
+                    +infoItem(
+                        title="Количество потоков"
+                        value=26
+                        icon="icon-stream-icon"
+                    )
+                .account-info.small
+                    +infoItem(
+                        title="ЕРС"
+                        value=26568.20
+                        type="cash"
+                    )
+            .account-info__wrapper
+                .account-info.chart
+                    p.account-info__item--tag.item-title Аналитика
+                    h3.chart__title Категории новостей за последние 7&nbsp;дней
+                    .chart__diagram.chart__news
+                        p.chart__text ВСЕ
+                            br
+                            | НОВОСТИ
+                        svg(viewBox="0 0 42 42")
+                            circle.chart__center(cx="21" cy="21" r="15.91549430918954" fill="#fff")
+                            circle.chart__ring(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="5")
+                            circle.chart__segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#05C985" stroke-width="5" stroke-dasharray="16 84" stroke-dashoffset="25")
+                            circle.chart__segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#FF9C31" stroke-width="5" stroke-dasharray="22 78" stroke-dashoffset="109")
+                            circle.chart__segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#EE423D" stroke-width="5" stroke-dasharray="11 89" stroke-dashoffset="87")
+                            circle.chart__segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#1F8EFA" stroke-width="5" stroke-dasharray="39 61" stroke-dashoffset="76")
+                            circle.chart__segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#843FA0" stroke-width="5" stroke-dasharray="12 88" stroke-dashoffset="37")
+                    ul.chart__list
+                        li.chart__list--item
+                            .dot.green
+                            p.name Спорт
+                            p.value 16%
+                        li.chart__list--item
+                            .dot.yellow
+                            p.name Политика
+                            p.value 22%
+                        li.chart__list--item
+                            .dot.red
+                            p.name Спецпроекты
+                            p.value 11%
+                        li.chart__list--item
+                            .dot.blue
+                            p.name Здоровье
+                            p.value 39%
+                        li.chart__list--item
+                            .dot.purple
+                            p.name Шоу бизнес
+                            p.value 12%
+                .account-info.chart
+                    p.account-info__item--title.item-title Аналитика
+                    h3.chart__title Тип трафика на витрине за последние 7 дней
+                    .chart__diagram.chart__traffic
+                        p.chart__text ВСЕ
+                            br
+                            | устройства
+                        svg(viewBox="0 0 42 42")
+                            circle.chart__center(cx="21" cy="21" r="15.91549430918954" fill="#fff")
+                            circle.chart__ring(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="5")
+                            circle.chart__segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#05C985" stroke-width="5" stroke-dasharray="16 84" stroke-dashoffset="25")
+                            circle.chart__segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#FF9C31" stroke-width="5" stroke-dasharray="22 78" stroke-dashoffset="109")
+                            circle.chart__segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#EE423D" stroke-width="5" stroke-dasharray="11 89" stroke-dashoffset="87")
+                            circle.chart__segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#1F8EFA" stroke-width="5" stroke-dasharray="51 49" stroke-dashoffset="76")
+                    ul.chart__list
+                        li.chart__list--item
+                            .dot.green
+                            p.name ПК
+                            p.value 16%
+                        li.chart__list--item
+                            .dot.yellow
+                            p.name Мобильные
+                            p.value 22%
+                        li.chart__list--item
+                            .dot.red
+                            p.name Планшет
+                            p.value 11%
+                        li.chart__list--item
+                            .dot.blue
+                            p.name Другое
+                            p.value 51%
+                .account-info.account-info__news
+                    p.account-info__item--title.item-title ТОП 5 новостей за сегодня
+                    .news__item
+                        a(href="#").news__item--title Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe
+                        .news__item--tag Политика
+                    .news__item
+                        a(href="#").news__item--title Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe
+                        .news__item--tag Политика
+                    .news__item
+                        a(href="#").news__item--title Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe
+                        .news__item--tag Политика
+                    .news__item
+                        a(href="#").news__item--title Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe
+                        .news__item--tag Политика
+                    .news__item
+                        a(href="#").news__item--title Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe
+                        .news__item--tag Политика
+                    .news__item
+                        a(href="#").news__item--title Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe
+                        .news__item--tag Политика

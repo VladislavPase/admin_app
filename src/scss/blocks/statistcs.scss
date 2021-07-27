@@ -1,0 +1,127 @@
+.statistics {
+    &__table {
+        margin-top: 30px;
+        &--form {
+
+        }
+        &--filters, &--buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        &--actions {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &--settings {
+            display: flex;
+            align-items: center;
+            &-link {
+                display: flex;
+                align-items: center;
+                color: $color-blue-light;
+                transition: color .2s ease;
+                pointer-events: auto;
+                &:hover {
+                    color: $color-base;
+                }
+                .icon {
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        .settings-item + .settings-item {
+            margin-left: 50px;
+        }
+
+        .setting-trigger {
+            padding: 5px 12px;
+            border-radius: 13px;
+            &._opened {
+                background: $color-white;
+                .table-settings {
+                    display: block !important;
+                }
+            }
+        }
+    }
+
+    .table-settings {
+        position: absolute;
+        top: calc(100% + 13px);
+        left: 40px;
+        box-shadow: 0 1px 13px rgba(128, 141, 162, 0.36);
+        border-radius: 6px;
+        background: $color-white;
+        padding: 20px;
+        z-index: 5;
+        width: 215px;
+        height: 225px;
+        overflow-y: auto;
+        display: none;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #f4f4f4;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $color-gray-dark;
+            border-radius: 12px;
+        }
+
+        input {
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        label {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: bold;
+            color: $color-base;
+            padding: 10px 0;
+            border-bottom: 1px solid #EBEEF3;
+            cursor: pointer;
+            .check {
+                border: 1px solid $color-gray-dark;
+                box-sizing: border-box;
+                border-radius: 6px;
+                width: 20px;
+                flex: 0 0 20px;
+                height: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .icon {
+                    margin: 0;
+                    color: $color-white;
+                    opacity: 0;
+                    &::before {
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+
+        input:checked~label .check {
+            background: $color-green;
+            border-color: transparent;
+            .icon {
+                opacity: 1;
+            }
+        }
+    }
+}

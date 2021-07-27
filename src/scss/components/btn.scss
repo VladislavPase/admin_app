@@ -1,0 +1,30 @@
+.btn {
+    padding: 14px 55px;
+    border-radius: 30px;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &-primary {
+        background: $color-button-primary;
+        color: $color-white;
+        transition: color .2s ease, background-color .2s ease;
+
+        &:active, &:hover {
+            background: $color-button-primary-active;
+        }
+    }
+
+    &-outlined {
+        background: $color-button-outlined;
+        color: $color-base;
+        transition: color .2s ease, background-color .2s ease;
+        border: 1px solid $color-base;
+
+        &:active, &:hover {
+            background: $color-button-outlined-active;
+            color: $color-white;
+        }
+    }
+}

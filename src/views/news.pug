@@ -1,0 +1,87 @@
+extends _includes/layout
+include _includes/mixins/filter
+
+block config
+    - var pagetitle = 'Новости'
+    - var bodyClass = 'news'
+    - var pageName = 'Новости'
+    - var name = 'news'
+    - var headerIcon = 'icon-news-icon'
+
+block content
+    .content
+        .content__inner
+            form.news__form
+                .news__form--top
+                    .fieldset
+                        input.input(name="news_search" type="text" id="news_search")
+                        label.label(for="news_search") Введите фрагмент заголовка новости
+                    .search-info
+                        span.search-info__title Вы недавно искали
+                        p.search-info__text Новый Мерседес блеснул в Париже
+                .news__form--bottom
+                    .calendar-trigger 
+                        i.icon-calendar-1
+                        span.value 21.05.2019 - 26.05.2019
+                    +filter(
+                        title="Маркер категории"
+                        options=[
+                            {
+                                id: 123123123,
+                                option: 'Маркер категории1',
+                                value: 'category_1'
+                            },
+                            {
+                                id: 12312,
+                                option: 'Маркер категории2',
+                                value: 'category_2'
+                            },
+                            {
+                                id: 123125,
+                                option: 'Маркер категории3',
+                                value: 'category_3'
+                            }
+                        ]
+                    )
+                    button(type="submit").btn.btn-primary ПРИМЕНИТЬ
+                    button(type="button").btn.btn-outlined ОЧИСТИТЬ
+            .news__table
+                table
+                    thead
+                        tr
+                            th Дата новости
+                                .sort-icons
+                                    i.icon-up-dir.icon
+                                    i.icon-down-dir.icon
+                            th Картинка
+                            th Заголовок статьи
+                                .sort-icons
+                                    i.icon-up-dir.icon
+                                    i.icon-down-dir.icon
+                            th Маркер категории
+                                .sort-icons
+                                    i.icon-up-dir.icon
+                                    i.icon-down-dir.icon
+                            th Язык
+                            th 
+                    tbody
+                        - for (let i = 0; i < 5; i++)
+                            tr
+                                td 12.02.2021
+                                td.news__table--image 
+                                    picture
+                                        source(srcset="assets/img/news__image.webp" type="image/webp")
+                                        source(srcset="assets/img/news__image.jpg" type="image/jpeg")
+                                        img(src="assets/img/news__image.jpg" alt="news image")
+                                td.news__table--h
+                                    | ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.
+                                td.news__table--mark
+                                    .category-mark ШОУ-БИЗНЕС
+                                td.news__table--lang
+                                    img(src="assets/img/ru-flag.svg" alt="RU")
+                                td.news__table--action
+                                    button(value=i)
+                                        i.icon-eye
+            .pagination-wrapper
+                include _includes/blocks/renderCount
+                include _includes/blocks/pagination

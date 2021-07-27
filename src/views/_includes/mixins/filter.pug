@@ -1,0 +1,12 @@
+mixin filter()
+    .filter
+        .filter__header
+            .filter__item
+                p.filter__header--title=attributes.title
+            i.icon-down-dir.icon
+        .filter__body
+            - let arr = attributes.options
+            each item in arr
+                .filter__item
+                    input(type="checkbox" name="stream" value=item.value id=item.id)
+                    label(for=item.id)=item.option

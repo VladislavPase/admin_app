@@ -1,0 +1,54 @@
+@import "custom-reset";
+
+@import "vars";
+
+body {
+    font-family: $font-roboto;
+    color: $color-base;
+}
+
+.app {
+    flex: 1;
+    display: flex;
+    background: $color-gray;
+}
+
+.page-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.green-text {
+    color: $color-green !important;
+}
+
+.item-title {
+    color: $color-gray-dark;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.pagination-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@import "fonts";
+@import "components/sidebar";
+@import "components/header";
+@import "blocks/content";
+@import "components/calendar";
+@import "components/filter";
+@import "components/input";
+@import "components/table";
+@import "components/btn";
+@import "components/link";
+@import "blocks/render-count";
+@import "blocks/pagination";
+@import "blocks/account-info";
+@import "blocks/statistcs";
+@import "blocks/news";
+@import "blocks/faq";

@@ -1,0 +1,10 @@
+.link {
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-blue-light;
+    transition: color .2s ease;
+
+    &:hover {
+        color: $color-base
+    }
+}

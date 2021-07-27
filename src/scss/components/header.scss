@@ -1,0 +1,227 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background: $color-white;
+
+    &__route {
+        color: $color-base;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 26px;
+
+        .icon {
+            margin-right: 10px;
+        }
+    }
+
+    &__account {
+        display: flex;
+        margin-left: auto;
+
+        &--title {
+            text-align: right;
+        }
+
+        &--value {
+            margin-top: 5px;
+            color: $color-base;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: right;
+            font-weight: bold;
+        }
+    }
+
+    &__item {
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 30px;
+        border-left: 1px solid #ECEEF1;
+
+        &.balance {
+            .header__account--value {
+                color: $color-green;
+            }
+        }
+    }
+
+    &__profile {
+        padding: 15px 0 15px 20px;
+        &--link {
+            font-size: 14px;
+            line-height: 16px;
+            color: $color-blue-light;
+            padding: 5px 5px 5px 10px;
+            background: transparent;
+            border-radius: 10px;
+
+            .icon {
+                margin-left: 10px;
+            }
+        }
+
+        &._opened {
+            .header__profile--link {
+                background: #F4F7FC;
+            }
+            .account__settings {
+                display: block !important;
+            }
+        }
+    }
+
+    &__notifications {
+        cursor: pointer;
+        .icon {
+            font-size: 22px;
+        }
+        .new-notifications-indicator {
+            background: $color-yellow;
+            border: 1px solid $color-white;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            position: absolute;
+            top: 30px;
+            right: 35px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0;
+            height: 0;
+            background: #F4F7FC;
+            border-radius: 50%;
+            display: none;
+            transition: all .2s ease;
+        }
+
+        &._opened {
+            &::before {
+                display: block;
+                width: 32px;
+                height: 32px;
+            }
+            > .icon {
+                color: $color-blue-light;
+            }
+            .header__messages {
+                display: block !important;
+            }
+        }
+    }
+
+    &__messages {
+        display: none;
+        position: absolute;
+        width: 320px;
+        top: calc(100% - 15px);
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 6px;
+        background: $color-white;
+        box-shadow: 0 3px 4px rgba(128, 141, 162, 0.36);
+        padding: 12px 20px;
+        z-index: 3;
+
+        &--title {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 16px;
+            margin-bottom: 8px;
+        }
+
+        &--item {
+            display: flex;
+            padding-top: 10px;
+        }
+
+        &--icon {
+            color: $color-yellow;
+        }
+
+        &--content {
+            margin-left: 15px;
+            flex: 1;
+            padding: 0 0 10px;
+        }
+
+        .message-title {
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        .message-date {
+            font-size: 12px;
+            line-height: 22px;
+            color: $color-gray-dark;
+        }
+
+        &--item {
+            &:not(:last-child) {
+                .header__messages--content {
+                    border-bottom: 1px solid rgba(138,167,224,.3);
+                }
+            }
+        }
+    }
+
+    .account__settings {
+        position: absolute;
+        right: 0;
+        width: 225px;
+        top: calc(100% - 15px);
+        border-radius: 6px;
+        background: $color-white;
+        box-shadow: 0 3px 4px rgba(128, 141, 162, 0.36);
+        padding: 20px;
+        z-index: 4;
+        display: none;
+
+        &--link {
+            display: block;
+            border-bottom: 1px solid rgba(138,167,224,.3);
+            padding: 15px 0 10px;
+            font-size: 14px;
+            line-height: 22px;
+            flex: 1;
+            margin-left: 10px;
+        }
+
+        &--item {
+            display: flex;
+            align-items: center;
+            transition: color .2s ease;
+
+            &:hover {
+                color: $color-blue-light;
+            }
+
+            &:first-child {
+                .account__settings--link {
+                    padding-top: 0;
+                }
+                .icon {
+                    padding-bottom: 13px;
+                }
+            }
+
+            &:last-child {
+                .icon {
+                    padding-top: 13px;
+                }
+                .account__settings--link {
+                    padding-bottom: 0;
+                    border: none;
+                }
+            }
+        }
+    }
+}

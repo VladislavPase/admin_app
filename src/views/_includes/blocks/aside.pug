@@ -1,0 +1,42 @@
+aside.sidebar
+    nav.sidebar__navigation
+        a.sidebar__link(href="/" class=(name === "home" ? "_active" : undefined))
+            i.icon-dashboard-icon.icon
+            | Дашборд
+        h3.sidebar__title МОЙ КАБИНЕТ
+        ul.sidebar__list
+            li.sidebar__list--item
+                a.sidebar__link(href="statistics.html" class=(name === "statistics" ? "_active" : undefined)) 
+                    i.icon-statistics-icon.icon
+                    | Статистика
+            li.sidebar__list--item
+                a.sidebar__link(href="news.html" class=(name === "news" ? "_active" : undefined))
+                    i.icon-news-icon.icon
+                    | Новости
+            li.sidebar__list--item
+                a.sidebar__link(href="#")
+                    i.icon-stream-icon.icon
+                    | Потоки
+            li.sidebar__list--item
+                a.sidebar__link(href="#")
+                    i.icon-hand-icon.icon
+                    | Домонетизация
+            li.sidebar__list--item
+                a.sidebar__link(href="#")
+                    i.icon-parking-icon.icon
+                    | Парковка домена
+            li.sidebar__list--item
+                a.sidebar__link(href="#")
+                    i.icon-wallet-icon.icon
+                    | Финансы
+        h3.sidebar__title ДРУГОЕ
+        ul.sidebar__list
+            li.sidebar__list--item
+                a.sidebar__link(href="#")
+                    i.icon-api-icon.icon
+                    | API
+            li.sidebar__list--item
+                a.sidebar__link(href="faq.html" class=(name === "faq" ? "_active" : undefined))
+                    i.icon-brain-icon.icon
+                    | FAQ
+    .sidebar__copyright © 2021 Tratata company The company is a registered trademark, any copying is prohibited.

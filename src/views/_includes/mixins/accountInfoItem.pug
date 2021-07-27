@@ -1,0 +1,9 @@
+mixin infoItem()
+    .account-info__item
+        p.account-info__item--title.item-title=attributes.title
+        p.account-info__item--value(class=attributes.subclass ? attributes.subclass : '')
+            if attributes.icon
+                i(class=attributes.icon)
+            span=attributes.value
+            if attributes.type=='cash'
+                span $

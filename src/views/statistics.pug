@@ -1,0 +1,196 @@
+extends _includes/layout
+include _includes/mixins/accountInfoItem
+include _includes/mixins/filter
+include _includes/mixins/table
+include _includes/mixins/tableSettings
+    
+block config
+    
+    - var pagetitle = 'Статистика'
+    - var bodyClass = 'statistics'
+    - var pageName = 'Статистика'
+    - var name = 'statistics'
+    - var headerIcon = 'icon-statistics-icon'
+
+block content
+    .content
+        .content__inner
+            .account-info__wrapper
+                .account-info.large
+                    +infoItem(
+                        title="Доступно"
+                        value=1000
+                        type="cash"
+                        subclass="green-text"
+                    )
+                    +infoItem(
+                        title="В ожидании"
+                        value=0
+                        type="cash"
+                    )
+                    +infoItem(
+                        title="Всего"
+                        value=1000
+                        type="cash"
+                        subclass="green-text"
+                    )
+                    +infoItem(
+                        title="Выплачено"
+                        value=0
+                        type="cash"
+                    )
+            .statistics__table
+                form.statistics__table--form()
+                    .statistics__table--filters
+                        .calendar-trigger
+                            i.icon-calendar-1.icon
+                            span.value 21.05.2019 - 26.05.2019
+                        +filter(
+                            title="Поток"
+                            options=[
+                                {
+                                    id: 123123123,
+                                    option: 'Поток1',
+                                    value: 'stream_1'
+                                },
+                                {
+                                    id: 12312,
+                                    option: 'Поток2',
+                                    value: 'stream_2'
+                                },
+                                {
+                                    id: 123125,
+                                    option: 'Поток3',
+                                    value: 'stream_3'
+                                }
+                            ]
+                        )
+                        +filter(
+                            title="Статья"
+                            options=[
+                                {
+                                    id: 123123123,
+                                    option: 'Статья1',
+                                    value: 'article_1'
+                                },
+                                {
+                                    id: 12312,
+                                    option: 'Статья2',
+                                    value: 'article_2'
+                                },
+                                {
+                                    id: 123125,
+                                    option: 'Статья3',
+                                    value: 'article_3'
+                                }
+                            ]
+                        )
+                        +filter(
+                            title="Дизайн"
+                            options=[
+                                {
+                                    id: 123123123,
+                                    option: 'Дизайн1',
+                                    value: 'design_1'
+                                },
+                                {
+                                    id: 12312,
+                                    option: 'Дизайн2',
+                                    value: 'design_2'
+                                }
+                            ]
+                        )
+                        +filter(
+                            title="Тип страницы"
+                            options=[
+                                {
+                                    id: 123123123,
+                                    option: 'Тип страницы 1',
+                                    value: 'page_type_1'
+                                },
+                                {
+                                    id: 12312,
+                                    option: 'Тип страницы 2',
+                                    value: 'page_type_2'
+                                },
+                                {
+                                    id: 123125,
+                                    option: 'Тип страницы 3',
+                                    value: 'page_type_3'
+                                }
+                            ]
+                        )
+                        +filter(
+                            title="Устройство"
+                            options=[
+                                {
+                                    id: 123123123,
+                                    option: 'Устройство 1',
+                                    value: 'device_1'
+                                },
+                                {
+                                    id: 12312,
+                                    option: 'Устройство 2',
+                                    value: 'device_2'
+                                },
+                                {
+                                    id: 123125,
+                                    option: 'Устройство 3',
+                                    value: 'device_3'
+                                }
+                            ]
+                        )
+                    .statistics__table--actions
+                        .statistics__table--buttons
+                            button(type="submit").btn.btn-primary ПРИМЕНИТЬ
+                            button(type="button").btn.btn-outlined ОЧИСТИТЬ
+                        .statistics__table--settings 
+                            .settings-item.setting-trigger
+                                a(href="#").statistics__table--settings-link
+                                    .icon-calendar.icon
+                                    span Настроить поля в таблице
+                                    .icon-down-dir
+                                .table-settings
+                                    +tableSetting(
+                                        title="Дата"
+                                        id="date"
+                                        value="date"
+                                    )
+                                    +tableSetting(
+                                        title="Переходы"
+                                        id="redirect"
+                                        value="redirect"
+                                    )
+                                    +tableSetting(
+                                        title="Уники"
+                                        id="uniques"
+                                        value="uniques"
+                                    )
+                                    +tableSetting(
+                                        title="Показы"
+                                        id="shows"
+                                        value="shows"
+                                    )
+                                    +tableSetting(
+                                        title="Клики"
+                                        id="clicks"
+                                        value="clicks"
+                                    )
+                                    +tableSetting(
+                                        title="CTR"
+                                        id="ctr"
+                                        value="ctr"
+                                    )
+                                    +tableSetting(
+                                        title="Лиды"
+                                        id="leads"
+                                        value="leads"
+                                    )
+                            .settings-item
+                                a(href="#").statistics__table--settings-link
+                                    .icon-export.icon
+                                    span Экспорт CSV
+                +table()
+            .pagination-wrapper
+                include _includes/blocks/renderCount
+                include _includes/blocks/pagination

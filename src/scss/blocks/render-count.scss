@@ -1,0 +1,45 @@
+.record-count {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 16px;
+
+    &__value {
+        font-weight: bold;
+        margin-left: 15px;
+        cursor: pointer;
+        color: $color-blue-light;
+    }
+
+    &__options {
+        background: $color-white;
+        padding: 20px 15px;
+        border-radius: 8px;
+        box-shadow: 0 1px 4px rgba(128, 141, 162, .36);
+        display: none;
+        position: fixed;
+        right: 0;
+        width: 65px;
+    }
+
+    &__option {
+        text-align: right;
+        cursor: pointer;
+        color: $color-blue-light;
+
+        &._selected {
+            color: $color-base;
+            font-weight: bold;
+        }
+    }
+
+    &__option + &__option {
+        margin-top: 8px;
+    }
+
+    &._opened {
+        .record-count__options {
+            display: block;
+        }
+    }
+}
