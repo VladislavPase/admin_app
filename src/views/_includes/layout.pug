@@ -5,6 +5,8 @@ html(lang=__.lang, class="no-js")
     head
         block head
             include head
+            block styles
+                link(rel='stylesheet', href='assets/css/common.css?v=' + PACKAGE.version)
     body.body(class=bodyClass)
         
         .app
@@ -13,9 +15,14 @@ html(lang=__.lang, class="no-js")
                 include blocks/header
                 block content
 
+        if name === 'streams'
+            include blocks/streamsAddPopup
+            include blocks/streamsArchivePopup
+        else if name === 'parking'
+            include blocks/parkingDomainPopup
+            include blocks/addPixelPopup
+        else if name === 'finances'
+            include blocks/financesPopup
 
-        block styles
-            link(rel='stylesheet', href='assets/css/libs.css')
-            link(rel='stylesheet', href='assets/css/common.css?v=' + PACKAGE.version)
         block scripts
             include scripts

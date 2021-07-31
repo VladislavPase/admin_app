@@ -23,6 +23,10 @@ body {
     color: $color-green !important;
 }
 
+.red-text {
+    color: $color-red !important;
+}
+
 .item-title {
     color: $color-gray-dark;
     font-size: 14px;
@@ -36,6 +40,47 @@ body {
     justify-content: space-between;
 }
 
+.action-elem {
+    border: 1px solid $color-blue-light;
+    box-sizing: border-box;
+    border-radius: 6px;
+    cursor: pointer;
+    color: $color-blue-light;
+    transition: color .3s ease, background-color .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+
+    &:hover {
+        color: $color-white;
+        background-color: $color-blue-light;
+    }
+
+    &[data-action="archive"],
+    &[data-action="delete"] {
+        color: $color-red;
+        border-color: $color-red;
+
+        &:hover {
+            background-color: $color-red;
+            color: $color-white;
+        }
+    }
+
+    &[data-action="active"] {
+        color: $color-green;
+        border-color: $color-green;
+
+        &:hover {
+            background-color: $color-green;
+            color: $color-white;
+        }
+    }
+}
+
+@import "vendor/jquery.fancybox.css";
+
 @import "fonts";
 @import "components/sidebar";
 @import "components/header";
@@ -46,9 +91,18 @@ body {
 @import "components/table";
 @import "components/btn";
 @import "components/link";
+@import "components/top-news-item";
+@import "components/switch";
+@import "components/tabs";
+@import "blocks/search-info";
 @import "blocks/render-count";
 @import "blocks/pagination";
+@import "blocks/popup";
 @import "blocks/account-info";
 @import "blocks/statistcs";
 @import "blocks/news";
 @import "blocks/faq";
+@import "blocks/streams";
+@import "blocks/domonetization";
+@import "blocks/parking";
+@import "blocks/finances";

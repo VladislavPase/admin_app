@@ -1,0 +1,55 @@
+.parking {
+    &__content {
+        margin-top: 30px;
+        &--inner {
+            display: none;
+            &._active {
+                display: block;
+            }
+        }
+        &--top {
+            display: flex;
+        }
+        &--info  {
+            flex: 1;
+            padding-right: 85px;
+            font-size: 14px;
+            line-height: 24px;
+        }
+        &--actions {
+            flex: 0 0 250px;
+        }
+        &--title {
+            font-weight: 500;
+        }
+        &--list {
+            margin-top: 10px;
+            list-style: decimal;
+            padding-left: 20px;
+        }
+    }
+    &__table, .pixels__table {
+        th, td {
+            text-align: start;
+            padding: 12px 20px;
+        }
+        &--domain {
+            width: 230px;
+        }
+
+        &--status {
+            width: 290px;
+        }
+
+        &--actions {
+            width: 200px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .action-elem {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}

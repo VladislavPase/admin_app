@@ -7,6 +7,7 @@
 .icon-ok:before { content: '\e805'; } /* '' */
 .icon-eye:before { content: '\e806'; } /* '' */
 .icon-calendar-1:before { content: '\e807'; } /* '' */
+.icon-pencil:before { content: '\e808'; } /* '' */
 .icon-api-icon:before { content: '\e812'; } /* '' */
 .icon-brain-icon:before { content: '\e813'; } /* '' */
 .icon-dashboard-icon:before { content: '\e814'; } /* '' */
@@ -21,6 +22,10 @@
 .icon-user-icon:before { content: '\e81e'; } /* '' */
 .icon-security-icon:before { content: '\e81f'; } /* '' */
 .icon-exit-icon:before { content: '\e820'; } /* '' */
+.icon-icon-archive:before { content: '\e821'; } /* '' */
+.icon-icon-docs:before { content: '\e822'; } /* '' */
+.icon-icon-docs2:before { content: '\e823'; } /* '' */
 .icon-right-open:before { content: '\f006'; } /* '' */
 .icon-left-open:before { content: '\f007'; } /* '' */
 .icon-bell-alt:before { content: '\f0f3'; } /* '' */
+.icon-trash:before { content: '\f1f8'; } /* '' */

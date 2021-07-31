@@ -1,0 +1,72 @@
+extends _includes/layout
+include  _includes/mixins/parkingTable
+include  _includes/mixins/pixelsTable
+
+block config
+    - var pagetitle = 'Парковка домена'
+    - var bodyClass = 'parking'
+    - var pageName = 'Парковка домена'
+    - var name = 'parking'
+    - var headerIcon = 'icon-parking-icon'
+
+block content
+    .content
+        .content__inner
+            ul.list__tabs
+                li.list__tabs--item
+                    a.list__tabs--link.parking__tab--link._active(href="" data-href="parking_domains") Парковка доменов
+                li.list__tabs--item
+                    a.list__tabs--link.parking__tab--link(href="" data-href="my_pixels") Мои пиксели
+            .parking__content
+                .parking__content--inner._active(data-target="parking_domains")
+                    .parking__content--top
+                        .parking__content--info
+                            h4.parking__content--title Вы можете добавить здесь ссылку на свою страницу "спасибо" на которую установлен ваш пиксель, для оптимизации рекламных компаний в Google Ads или Facebook
+                            ol.parking__content--list
+                                li Добавляете свою страницу спасибо, она будет открываться при оставленной заявке
+                                li При выборе потока в новостях будет отображаться ваш припаркованный домен, а так же в разделе "домонетизация"
+                        .parking__content--actions
+                            a(href="#parkingDomain" data-fancybox data-options='{"touch" : false}').btn.btn-primary ПРИпарковать домен
+                    +parkingTable(
+                        lines=[
+                            {
+                                domain: 'Domain Name',
+                                status: true,
+                                comment: 'comment'
+                            },
+                            {
+                                domain: 'Domain Name 2',
+                                status: false,
+                                comment: 'comment'
+                            }
+                        ]
+                    )
+                    .pagination-wrapper
+                        include _includes/blocks/renderCount
+                        include _includes/blocks/pagination
+                .parking__content--inner(data-target="my_pixels")
+                    .parking__content--top
+                        .parking__content--info
+                            h4.parking__content--title Вы можете добавить сюда свой пиксель для оптимизации рекламных компаний таких как: Google Ads или Facebook
+                            ol.parking__content--list
+                                li Сначала нужно в ресурсных записях регистратора прописать «CNAME» на наш домен mixer-money.ru Или, если Вы не можете найти информацию о внесении записи «CNAME» к вашему поставщику DNS
+                                li Далее переходите в раздел "Новости", выбираете подходящую Новость, нажимаете получить ссылку, в графе выбор пикселя выбираете необходимый созданный пиксель
+                        .parking__content--actions
+                            a(href="#addPixel" data-fancybox data-options='{"touch" : false}').btn.btn-primary Добавить пиксель
+                    +pixelsTable(
+                        lines=[
+                            {
+                                id: 123123,
+                                name: 'Тестовый запуск инер магаза',
+                                url: 'https://www.facebook.com/zamedyanskiy/'
+                            },
+                            {
+                                id: 1231,
+                                name: 'Тестовый запуск инер магаза2',
+                                url: 'https://www.facebook.com/zamedyanskiy/'
+                            }
+                        ]
+                    )
+                    .pagination-wrapper
+                        include _includes/blocks/renderCount
+                        include _includes/blocks/pagination

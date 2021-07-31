@@ -1,0 +1,14 @@
+.popup#addPixel
+    .popup__close(data-fancybox-close)
+        span
+        span
+    .popup__inner
+        h2.popup__title Добавление пикселя
+        form.form.popup__form
+            .fieldset
+                input.input(type="text" name="page_url" required id="page_url")
+                label.label(for="page_url") URL Страницы
+            .fieldset
+                input.input(type="text" name="pixel_name" required id="pixel_name")
+                label.label(for="pixel_name") Название
+            button.btn.btn-primary(type="submit") Добавить пиксель

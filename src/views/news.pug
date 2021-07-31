@@ -1,5 +1,6 @@
 extends _includes/layout
 include _includes/mixins/filter
+include _includes/mixins/input-search
 
 block config
     - var pagetitle = 'Новости'
@@ -13,9 +14,11 @@ block content
         .content__inner
             form.news__form
                 .news__form--top
-                    .fieldset
-                        input.input(name="news_search" type="text" id="news_search")
-                        label.label(for="news_search") Введите фрагмент заголовка новости
+                    +inputSearch(
+                        id="news_search"
+                        name="news_search"
+                        label="Введите фрагмент заголовка новости"
+                    ) 
                     .search-info
                         span.search-info__title Вы недавно искали
                         p.search-info__text Новый Мерседес блеснул в Париже
@@ -25,6 +28,7 @@ block content
                         span.value 21.05.2019 - 26.05.2019
                     +filter(
                         title="Маркер категории"
+                        type="checkbox"
                         options=[
                             {
                                 id: 123123123,
@@ -52,16 +56,16 @@ block content
                             th Дата новости
                                 .sort-icons
                                     i.icon-up-dir.icon
-                                    i.icon-down-dir.icon
+                                    i.icon-down-dir.icon._sorted
                             th Картинка
                             th Заголовок статьи
                                 .sort-icons
                                     i.icon-up-dir.icon
-                                    i.icon-down-dir.icon
+                                    i.icon-down-dir.icon._sorted
                             th Маркер категории
                                 .sort-icons
                                     i.icon-up-dir.icon
-                                    i.icon-down-dir.icon
+                                    i.icon-down-dir.icon._sorted
                             th Язык
                             th 
                     tbody
@@ -80,7 +84,7 @@ block content
                                 td.news__table--lang
                                     img(src="assets/img/ru-flag.svg" alt="RU")
                                 td.news__table--action
-                                    button(value=i)
+                                    button(value=i).action-elem
                                         i.icon-eye
             .pagination-wrapper
                 include _includes/blocks/renderCount

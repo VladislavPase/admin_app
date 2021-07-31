@@ -1,0 +1,46 @@
+mixin streamsTable()
+    .streams__table
+        table
+            thead
+                tr
+                    th Дата новости
+                        .sort-icons
+                            i.icon-up-dir.icon
+                            i.icon-down-dir.icon._sorted
+                    th Название потока
+                        .sort-icons
+                            i.icon-up-dir.icon
+                            i.icon-down-dir.icon._sorted
+                    th Картинка
+                    th Название статьи
+                        .sort-icons
+                            i.icon-up-dir.icon
+                            i.icon-down-dir.icon
+                    th
+            tbody
+                - for (let i = 0; i < 4; i++)
+                    tr
+                        td.streams__table--date 12.02.2021
+                        td.streams__table--name
+                            | Новый поток для рекламы бумаги
+                        td.streams__table--image
+                            picture
+                                source(srcset="assets/img/news__image.webp" type="image/webp")
+                                source(srcset="assets/img/news__image.jpg" type="image/jpeg")
+                                img(src="assets/img/news__image.jpg" alt="news image")
+                        td.streams__table--h
+                            | ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.
+                        td.streams__table--action
+                            .actions
+                                button.action-elem
+                                    i.icon-eye
+                                button.action-elem
+                                    i.icon-pencil
+                                button.action-elem
+                                    i.icon-icon-docs
+                                if attributes.type === "active"
+                                    a.action-elem(data-action="archive")
+                                        i.icon-icon-archive
+                                else
+                                    a.action-elem(data-action="active")
+                                        i.icon-icon-docs2

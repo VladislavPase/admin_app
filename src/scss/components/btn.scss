@@ -1,10 +1,12 @@
 .btn {
-    padding: 14px 55px;
+    display: block;
+    padding: 14px 35px;
     border-radius: 30px;
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
     font-weight: bold;
+    text-align: center;
 
     &-primary {
         background: $color-button-primary;

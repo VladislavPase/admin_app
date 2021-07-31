@@ -1,0 +1,112 @@
+include ../mixins/filter
+include ../mixins/switch
+
+.popup#addStream
+    .popup__close(data-fancybox-close)
+        span
+        span
+    .popup__inner
+        h2.popup__title Добавление потока
+        form.form.popup__form.add-popup-form(method="post")
+            .fieldset
+                input.input(name="stream_name" type="text" required id="stream_name")
+                label.label(for="stream_name") Название потока
+            .fieldset
+                input.input(name="stream_link" type="text" required id="stream_link")
+                label.label(for="stream_link") Ссылка потока
+            .fieldset
+                +filter(
+                    title="Выбор типа страницы"
+                    type="radio"
+                    options=[
+                        {
+                            id: 123123123,
+                            option: 'Тип страницы 1',
+                            value: 'page_type_1'
+                        },
+                        {
+                            id: 12312,
+                            option: 'Тип страницы 2',
+                            value: 'page_type_2'
+                        },
+                        {
+                            id: 123125,
+                            option: 'Тип страницы 3',
+                            value: 'page_type_3'
+                        }
+                    ]
+                )
+            .fieldset
+                +filter(
+                    title="Дизайн"
+                    type="radio"
+                    options=[
+                        {
+                            id: 123123123,
+                            option: 'Дизайн 1',
+                            value: 'design_1'
+                        },
+                        {
+                            id: 12312,
+                            option: 'Дизайн 2',
+                            value: 'design_2'
+                        }
+                    ]
+                )
+            .fieldset
+                +filter(
+                    title="Домен"
+                    type="radio"
+                    options=[
+                        {
+                            id: 123123123,
+                            option: 'Домен 1',
+                            value: 'domain_1'
+                        },
+                        {
+                            id: 12312,
+                            option: 'Домен 2',
+                            value: 'domain_2'
+                        }
+                    ]
+                )
+            .switch-wrapper
+                +switch(
+                    name="shock_content"
+                    value="shock_content"
+                    switch_name="Шок-контент"
+                    helper=true
+                )
+                +switch(
+                    name="demonetization"
+                    value="demonetization"
+                    switch_name="Демонетизация"
+                    helper=true
+                )
+                +switch(
+                    name="popup_window"
+                    value="popup_window"
+                    switch_name="Поп-ап окно"
+                    helper=true
+                )
+                +switch(
+                    name="push_base"
+                    value="push_base"
+                    switch_name="Сбор пуш базы"
+                    helper=true
+                )
+            .popup__postback
+                +switch(
+                    name="post_back"
+                    value="post_back"
+                    switch_name="Отправлять PostBack"
+                )
+                .popup__postback--text
+                    p PostBack запрос будет отправлен на указанный адрес методом GET. Для передачи параметров в запрос Вы можете использовать макросы, указанные ниже:
+                    p {click_id} - номер лида в системе,
+                    p {status} - статус лида (pending, approved, rejected, trash),
+                    p {payout} - сумма отчислений вебмастеру,
+                    p {currency} - валюта (RUB)
+                    p Пример
+                        span http://sdjvjskdv.jsdvnjndsv/sdkv
+            button.btn.btn-primary(type="submit") ДОБАВИТЬ НОВЫЙ пОТОК

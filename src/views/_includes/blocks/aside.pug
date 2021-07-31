@@ -2,7 +2,7 @@ aside.sidebar
     nav.sidebar__navigation
         a.sidebar__link(href="/" class=(name === "home" ? "_active" : undefined))
             i.icon-dashboard-icon.icon
-            | Дашборд
+            | Dashboard
         h3.sidebar__title МОЙ КАБИНЕТ
         ul.sidebar__list
             li.sidebar__list--item
@@ -14,19 +14,19 @@ aside.sidebar
                     i.icon-news-icon.icon
                     | Новости
             li.sidebar__list--item
-                a.sidebar__link(href="#")
+                a.sidebar__link(href="streams.html" class=(name === "streams" ? "_active" : undefined))
                     i.icon-stream-icon.icon
                     | Потоки
             li.sidebar__list--item
-                a.sidebar__link(href="#")
+                a.sidebar__link(href="domonetization.html" class=(name === "domonetization" ? "_active" : undefined))
                     i.icon-hand-icon.icon
                     | Домонетизация
             li.sidebar__list--item
-                a.sidebar__link(href="#")
+                a.sidebar__link(href="parking.html" class=(name === "parking" ? "_active" : undefined))
                     i.icon-parking-icon.icon
                     | Парковка домена
             li.sidebar__list--item
-                a.sidebar__link(href="#")
+                a.sidebar__link(href="finances.html" class=(name === "finances" ? "_active" : undefined))
                     i.icon-wallet-icon.icon
                     | Финансы
         h3.sidebar__title ДРУГОЕ

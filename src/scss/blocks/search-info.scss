@@ -1,0 +1,15 @@
+.search-info {
+    margin-left: 20px;
+
+    &__title {
+        font-size: 14px;
+        line-height: 16px;
+        color: $color-gray-dark;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 16px;
+        color: $color-blue-light;
+    }
+}

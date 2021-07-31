@@ -1,0 +1,30 @@
+mixin pixelsTable()
+    .pixels__table
+        table
+            thead
+                tr
+                    th ID
+                        .sort-icons
+                            i.icon-up-dir.icon
+                            i.icon-down-dir.icon._sorted
+                    th Название
+                        .sort-icons
+                            i.icon-up-dir.icon
+                            i.icon-down-dir.icon._sorted
+                    th URL страницы
+                    th
+            tbody
+                if attributes.lines.length
+                    each elem in attributes.lines
+                        tr
+                            td.pixels__table--id=elem.id
+                            td.pixels__table--name=elem.name
+                            td.pixels__table--url=elem.url
+                            td.pixels__table--actions
+                                button.action-elem(value=attributes.id data-action="edit")
+                                    i.icon-pencil
+                                button.action-elem(value=attributes.id data-action="delete")
+                                    i.icon-trash
+                else
+                    tr
+                        td(colspan=4).empty-text У Вас нет пикселей.

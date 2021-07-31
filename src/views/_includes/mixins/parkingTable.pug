@@ -1,0 +1,29 @@
+mixin parkingTable()
+    .parking__table
+        table
+            thead
+                tr
+                    th Домен
+                        .sort-icons
+                            i.icon-up-dir.icon
+                            i.icon-down-dir.icon._sorted
+                    th Статус
+                        .sort-icons
+                            i.icon-up-dir.icon
+                            i.icon-down-dir.icon._sorted
+                    th Комментарий
+            tbody
+                if attributes.lines.length
+                    each elem in attributes.lines
+                        tr
+                            td.parking__table--domain=elem.domain
+                            td.parking__table--status
+                                if elem.status
+                                    span.status._active.green-text Активный
+                                else
+                                    pan.status._no-active.red-text Неактивный
+                            td.parking__table--comment=elem.comment
+                else
+                    tr
+                        td(colspan=3).empty-text Вы не запарковали еще ни одного домена
+                        

@@ -1,0 +1,65 @@
+.streams {
+
+    &__content {
+        margin-top: 30px;
+
+        &--inner {
+            display: none;
+
+            &._active {
+                display: block;
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+
+        > * {
+            margin-left: 20px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        .input-search {
+            flex: 1 1 265px;
+        }
+    }
+
+    &__table {
+
+        overflow-x: auto;
+
+        &--date {
+            width: 135px;
+        }
+        &--name {
+            width: 180px;
+            text-align: start;
+        }
+        &--image {
+            width: 175px;
+        }
+        &--h {
+            width: 300px;
+            text-align: start;
+        }
+        &--action {
+            padding: 0 15px;
+
+            .action-elem {
+                width: 30px;
+                height: 30px;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
+    }
+}

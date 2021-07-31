@@ -1,10 +1,11 @@
 extends _includes/layout
 include _includes/mixins/accountInfoItem
+include _includes/mixins/news-item
     
 block config
-    - var pagetitle = 'Дашбоард'
+    - var pagetitle = 'Dashboard'
     - var bodyClass = 'home'
-    - var pageName = 'Дашбоард'
+    - var pageName = 'Dashboard'
     - var name = 'home'
     - var headerIcon = 'icon-dashboard-icon'
 
@@ -117,21 +118,12 @@ block content
                             p.value 51%
                 .account-info.account-info__news
                     p.account-info__item--title.item-title ТОП 5 новостей за сегодня
-                    .news__item
-                        a(href="#").news__item--title Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe
-                        .news__item--tag Политика
-                    .news__item
-                        a(href="#").news__item--title Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe
-                        .news__item--tag Политика
-                    .news__item
-                        a(href="#").news__item--title Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe
-                        .news__item--tag Политика
-                    .news__item
-                        a(href="#").news__item--title Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe
-                        .news__item--tag Политика
-                    .news__item
-                        a(href="#").news__item--title Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe
-                        .news__item--tag Политика
-                    .news__item
-                        a(href="#").news__item--title Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe
-                        .news__item--tag Политика
+                    - var n = 0
+                    .news-wrapper
+                        while n < 5
+                            +news-item(
+                                href="#"
+                                title="Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe"
+                                tag="Политика"
+                            )
+                            - n++

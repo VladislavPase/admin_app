@@ -1,0 +1,134 @@
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $color-white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    padding: 40px;
+
+    &__close {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 14px;
+        height: 14px;
+        cursor: pointer;
+
+        span {
+            position: absolute;
+            width: 12px;
+            height: 2px;
+            background-color: $color-gray-dark;
+            transform: rotate(45deg);
+            transition: background-color .2s ease;
+
+            &:last-child {
+                transform: rotate(-45deg);
+            };
+        }
+
+        &:hover {
+            span {
+                background-color: $color-base;
+            }
+        }
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+        margin-bottom: 25px;
+    }
+
+    &__form {
+        width: 350px;
+
+        .fieldset + .fieldset {
+            margin-top: 24px;
+        }
+
+        .switch-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(101,125,149,.15);
+        }
+
+        .switch-item {
+            flex: 0 0 50%;
+            margin-top: 20px;
+        }
+
+        .helper {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: $color-base;
+            color: $color-white;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            margin-left: 5px;
+            span {
+                font-size: 14px;
+                line-height: 14px;
+            }
+        }
+
+        .btn {
+            margin-top: 30px;
+            width: 100%;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        font-size: 14px;
+        line-height: 21px;
+        max-width: 285px;
+        margin: 0 auto;
+    }
+
+    .archive_request {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        .btn.btn-primary {
+            flex: 1;
+        }
+        .btn + .btn {
+            margin-left: 20px;
+        }
+    }
+
+    &__postback {
+        margin-top: 24px;
+
+        &--text {
+            margin-top: 24px;
+            display: none;
+
+            p {
+                font-size: 12px;
+                line-height: 17px;
+                color: $color-gray-dark;
+
+                span {
+                    display: block;
+                }
+            }
+
+            p + p {
+                margin-top: 12px;
+            }
+        }
+    }
+}

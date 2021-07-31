@@ -1,0 +1,9 @@
+mixin switch()
+    .switch-item
+        label.switch
+            input(type="checkbox" name=attributes.name value=attributes.value)
+            span.slider
+        p.switch__name=attributes.switch_name
+        if attributes.helper
+            .helper
+                span ?

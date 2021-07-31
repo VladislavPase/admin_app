@@ -9,6 +9,7 @@ table {
     margin: 30px 0;
     thead {
         box-shadow: 0 1px 5px rgba(0, 0, 0, .06);
+        border-bottom: 1px solid #f5f5f5;
         th {
             font-weight: bold;
             padding: 13px 15px 13px 3px;
@@ -46,5 +47,15 @@ table {
         .icon + .icon {
             margin-top: 1px;
         }
+        ._sorted {
+            color: red;
+        }
+    }
+
+    .empty-text {
+        text-align: center;
+        color: $color-gray-dark;
+        padding: 40px 0;
+        background-color: $color-white;
     }
 }

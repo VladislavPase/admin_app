@@ -1,0 +1,32 @@
+mixin financesTable()
+    .finances__table
+        table
+            thead
+                tr
+                    th Дата
+                        .sort-icons
+                            i.icon-up-dir.icon
+                            i.icon-down-dir.icon._sorted
+                    th Номер транзакции
+                        .sort-icons
+                            i.icon-up-dir.icon
+                            i.icon-down-dir.icon._sorted
+                    th Сумма
+                        .sort-icons
+                            i.icon-up-dir.icon
+                            i.icon-down-dir.icon._sorted
+                    th Статус
+                        .sort-icons
+                            i.icon-up-dir.icon
+                            i.icon-down-dir.icon._sorted
+            tbody
+                if attributes.lines.length
+                    each elem in attributes.lines
+                        tr
+                            td.finances__table--id=elem.date
+                            td.finances__table--num=elem.transaction_num
+                            td.finances__table--sum.green-text=elem.sum
+                            td.finances__table--status=elem.status
+                else
+                    tr
+                        td(colspan=4).empty-text У вас нет транзакций

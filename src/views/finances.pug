@@ -1,0 +1,102 @@
+extends _includes/layout
+include _includes/mixins/accountInfoItem
+include _includes/mixins/financesTable
+
+block config
+    - var pagetitle = 'Финансы'
+    - var bodyClass = 'finances'
+    - var pageName = 'Финансы'
+    - var name = 'finances'
+    - var headerIcon = 'icon-wallet-icon'
+
+block content
+    .content
+        .content__inner
+            .finances__top
+                .account-info.large
+                    +infoItem(
+                        title="Доступно"
+                        value=1000
+                        type="cash"
+                        subclass="green-text"
+                    )
+                    +infoItem(
+                        title="В ожидании"
+                        value=0
+                        type="cash"
+                    )
+                    +infoItem(
+                        title="Всего"
+                        value=1000
+                        type="cash"
+                        subclass="green-text"
+                    )
+                    +infoItem(
+                        title="Выплачено"
+                        value=0
+                        type="cash"
+                    )
+                .support-text При наличии вопросов Вы всегда можете к нам обращаться по электронному адресу 
+                    a.link(href="") supportnew@yaya.com. 
+                    | Всегда рады оказать информационную поддержку.
+            .finances__systems
+                .finances__systems--header
+                    h3.finances__systems--title Выбор платежной системы на вывод средств
+                .finances__systems--body
+                    a(href="#financePopup" data-fancybox data-options='{"touch" : false}').finances__systems--item 
+                        picture
+                            source(srcset="assets/img/payoneer.webp" type="image/webp")
+                            source(srcset="assets/img/payoneer.png" type="image/png")
+                            img(src="assets/img/payoneer.png" alt="payoneer")
+                    a(href="#financePopup" data-fancybox data-options='{"touch" : false}').finances__systems--item
+                        picture
+                            source(srcset="assets/img/qiwi.webp" type="image/webp")
+                            source(srcset="assets/img/qiwi.png" type="image/png")
+                            img(src="assets/img/qiwi.png" alt="qiwi")
+                    a(href="#financePopup" data-fancybox data-options='{"touch" : false}').finances__systems--item
+                        picture
+                            source(srcset="assets/img/alfa_bank.webp" type="image/webp")
+                            source(srcset="assets/img/alfa_bank.png" type="image/png")
+                            img(src="assets/img/alfa_bank.png" alt="alfa_bank")
+                    a(href="#financePopup" data-fancybox data-options='{"touch" : false}').finances__systems--item
+                        picture
+                            source(srcset="assets/img/master_card.webp" type="image/webp")
+                            source(srcset="assets/img/master_card.png" type="image/png")
+                            img(src="assets/img/master_card.png" alt="master_card")
+                    a(href="#financePopup" data-fancybox data-options='{"touch" : false}').finances__systems--item
+                        picture
+                            source(srcset="assets/img/payoneer.webp" type="image/webp")
+                            source(srcset="assets/img/payoneer.png" type="image/png")
+                            img(src="assets/img/payoneer.png" alt="payoneer")
+                    
+            +financesTable(
+                lines=[
+                    {
+                        date: "12.07.2021",
+                        transaction_num: "123123123123123123123123123",
+                        sum: "1 259 $",
+                        status: 'Проведена'
+                    },
+                    {
+                        date: "12.07.2021",
+                        transaction_num: "12312312",
+                        sum: "1 123 $",
+                        status: 'Проведена'
+                    },
+                    {
+                        date: "12.07.2021",
+                        transaction_num: "12312312312312",
+                        sum: "999 $",
+                        status: 'Проведена'
+                    },
+                    {
+                        date: "12.07.2021",
+                        transaction_num: "1231231231231231231231",
+                        sum: "1 245 $",
+                        status: 'Проведена'
+                    }
+                ]
+            )
+            .pagination-wrapper
+                include _includes/blocks/renderCount
+                include _includes/blocks/pagination

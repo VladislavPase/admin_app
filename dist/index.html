@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <title>Дашбоард</title>
+    <title>Dashboard</title>
     <meta name="description" content="Description">
     <meta property="og:url" content="https://">
     <meta property="og:type" content="website">
@@ -16,19 +16,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/common.css?v=1.2.3">
   </head>
   <body class="body home">
     <div class="app">
       <aside class="sidebar">
-        <nav class="sidebar__navigation"><a class="sidebar__link _active" href="/"><i class="icon-dashboard-icon icon"></i>Дашборд</a>
+        <nav class="sidebar__navigation"><a class="sidebar__link _active" href="/"><i class="icon-dashboard-icon icon"></i>Dashboard</a>
           <h3 class="sidebar__title">МОЙ КАБИНЕТ</h3>
           <ul class="sidebar__list">
             <li class="sidebar__list--item"><a class="sidebar__link" href="statistics.html"> <i class="icon-statistics-icon icon"></i>Статистика</a></li>
             <li class="sidebar__list--item"><a class="sidebar__link" href="news.html"><i class="icon-news-icon icon"></i>Новости</a></li>
-            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-stream-icon icon"></i>Потоки</a></li>
-            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-hand-icon icon"></i>Домонетизация</a></li>
-            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-parking-icon icon"></i>Парковка домена</a></li>
-            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-wallet-icon icon"></i>Финансы</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="streams.html"><i class="icon-stream-icon icon"></i>Потоки</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="domonetization.html"><i class="icon-hand-icon icon"></i>Домонетизация</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="parking.html"><i class="icon-parking-icon icon"></i>Парковка домена</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="finances.html"><i class="icon-wallet-icon icon"></i>Финансы</a></li>
           </ul>
           <h3 class="sidebar__title">ДРУГОЕ</h3>
           <ul class="sidebar__list">
@@ -40,7 +41,7 @@
       </aside>
       <div class="page-content">
         <header class="header">
-          <div class="header__route"> <i class="icon icon-dashboard-icon"></i>Дашбоард
+          <div class="header__route"> <i class="icon icon-dashboard-icon"></i>Dashboard
           </div>
           <ul class="header__account">
             <li class="header__item">
@@ -48,7 +49,7 @@
               <p class="header__account--value">300 000 $</p>
             </li>
             <li class="header__item">
-              <p class="header__account--title item-title">Демонитизировано</p>
+              <p class="header__account--title item-title">Домонетизировано</p>
               <p class="header__account--value">300 000 $</p>
             </li>
             <li class="header__item balance">
@@ -220,23 +221,17 @@
               </div>
               <div class="account-info account-info__news">
                 <p class="account-info__item--title item-title">ТОП 5 новостей за сегодня</p>
-                <div class="news__item"><a class="news__item--title" href="#">Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe</a>
-                  <div class="news__item--tag">Политика</div>
-                </div>
-                <div class="news__item"><a class="news__item--title" href="#">Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe</a>
-                  <div class="news__item--tag">Политика</div>
-                </div>
-                <div class="news__item"><a class="news__item--title" href="#">Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe</a>
-                  <div class="news__item--tag">Политика</div>
-                </div>
-                <div class="news__item"><a class="news__item--title" href="#">Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe</a>
-                  <div class="news__item--tag">Политика</div>
-                </div>
-                <div class="news__item"><a class="news__item--title" href="#">Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe</a>
-                  <div class="news__item--tag">Политика</div>
-                </div>
-                <div class="news__item"><a class="news__item--title" href="#">Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe</a>
-                  <div class="news__item--tag">Политика</div>
+                <div class="news-wrapper"><a class="news__item" href="#">
+                    <h4 class="news__item--title">Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe</h4>
+                    <div class="news__item--tag">Политика</div></a><a class="news__item" href="#">
+                    <h4 class="news__item--title">Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe</h4>
+                    <div class="news__item--tag">Политика</div></a><a class="news__item" href="#">
+                    <h4 class="news__item--title">Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe</h4>
+                    <div class="news__item--tag">Политика</div></a><a class="news__item" href="#">
+                    <h4 class="news__item--title">Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe</h4>
+                    <div class="news__item--tag">Политика</div></a><a class="news__item" href="#">
+                    <h4 class="news__item--title">Дешеве і найдорожче пиво в світі: яке srqweqweqweqweqwe</h4>
+                    <div class="news__item--tag">Политика</div></a>
                 </div>
               </div>
             </div>
@@ -244,8 +239,6 @@
         </div>
       </div>
     </div>
-    <link rel="stylesheet" href="assets/css/libs.css">
-    <link rel="stylesheet" href="assets/css/common.css?v=1.2.3">
     <script src="assets/js/vendors~main.bundle.js"></script>
     <script src="assets/js/main.bundle.js?v=1.2.3"></script>
   </body>

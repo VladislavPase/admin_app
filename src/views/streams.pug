@@ -1,0 +1,54 @@
+extends _includes/layout
+include _includes/mixins/accountInfoItem
+include _includes/mixins/news-item
+include _includes/mixins/calendar
+include _includes/mixins/input-search
+include _includes/mixins/streamsTable
+
+block config
+    - var pagetitle = 'Потоки'
+    - var bodyClass = 'streams'
+    - var pageName = 'Потоки'
+    - var name = 'streams'
+    - var headerIcon = 'icon-stream-icon'
+
+block content
+    .content
+        .content__inner
+            ul.list__tabs
+                li.list__tabs--item
+                    a.list__tabs--link.streams__tab--link._active(href="" data-href="active_streams") Активно
+                li.list__tabs--item
+                    a.list__tabs--link.streams__tab--link(href="" data-href="archive_streams") Архивировано
+            .streams__content
+                .streams__content--inner._active(data-target="active_streams")
+                    form.form.streams__form(method="post")
+                        +calendar()
+                        +inputSearch(
+                            id="streams_active_search"
+                            name="streams_active_search"
+                            label="Поиск потока"
+                        )
+                        .search-info
+                            span.search-info__title Вы недавно искали
+                            p.search-info__text Новый Мерседес блеснул в Париже
+                        a(href="#addStream" data-fancybox data-options='{"touch" : false}').btn.btn-primary._js-popup-trigger Добавить поток
+                    +streamsTable(type="active")
+                    .pagination-wrapper
+                        include _includes/blocks/renderCount
+                        include _includes/blocks/pagination
+                .streams__content--inner(data-target="archive_streams")
+                    form.form.streams__form(method="post")
+                        +inputSearch(
+                            id="streams_active_search"
+                            name="streams_active_search"
+                            label="Поиск потока"
+                        )
+                        .search-info
+                            span.search-info__title Вы недавно искали
+                            p.search-info__text Новый Мерседес блеснул в Париже
+                        button(type="button").btn.btn-primary Добавить поток
+                    +streamsTable(type="archive")
+                    .pagination-wrapper
+                        include _includes/blocks/renderCount
+                        include _includes/blocks/pagination

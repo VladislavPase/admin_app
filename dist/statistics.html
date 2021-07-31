@@ -16,19 +16,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/common.css?v=1.2.3">
   </head>
   <body class="body statistics">
     <div class="app">
       <aside class="sidebar">
-        <nav class="sidebar__navigation"><a class="sidebar__link" href="/"><i class="icon-dashboard-icon icon"></i>Дашборд</a>
+        <nav class="sidebar__navigation"><a class="sidebar__link" href="/"><i class="icon-dashboard-icon icon"></i>Dashboard</a>
           <h3 class="sidebar__title">МОЙ КАБИНЕТ</h3>
           <ul class="sidebar__list">
             <li class="sidebar__list--item"><a class="sidebar__link _active" href="statistics.html"> <i class="icon-statistics-icon icon"></i>Статистика</a></li>
             <li class="sidebar__list--item"><a class="sidebar__link" href="news.html"><i class="icon-news-icon icon"></i>Новости</a></li>
-            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-stream-icon icon"></i>Потоки</a></li>
-            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-hand-icon icon"></i>Домонетизация</a></li>
-            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-parking-icon icon"></i>Парковка домена</a></li>
-            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-wallet-icon icon"></i>Финансы</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="streams.html"><i class="icon-stream-icon icon"></i>Потоки</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="domonetization.html"><i class="icon-hand-icon icon"></i>Домонетизация</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="parking.html"><i class="icon-parking-icon icon"></i>Парковка домена</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="finances.html"><i class="icon-wallet-icon icon"></i>Финансы</a></li>
           </ul>
           <h3 class="sidebar__title">ДРУГОЕ</h3>
           <ul class="sidebar__list">
@@ -48,7 +49,7 @@
               <p class="header__account--value">300 000 $</p>
             </li>
             <li class="header__item">
-              <p class="header__account--title item-title">Демонитизировано</p>
+              <p class="header__account--title item-title">Домонетизировано</p>
               <p class="header__account--value">300 000 $</p>
             </li>
             <li class="header__item balance">
@@ -135,16 +136,16 @@
                     </div>
                     <div class="filter__body">
                       <div class="filter__item">
-                        <input type="checkbox" name="stream" value="stream_1" id="123123123"/>
-                        <label for="123123123">Поток1</label>
+                        <input type="checkbox" name="stream" value="stream_1" id="stream_1"/>
+                        <label for="stream_1">Поток1</label>
                       </div>
                       <div class="filter__item">
-                        <input type="checkbox" name="stream" value="stream_2" id="12312"/>
-                        <label for="12312">Поток2</label>
+                        <input type="checkbox" name="stream" value="stream_2" id="stream_2"/>
+                        <label for="stream_2">Поток2</label>
                       </div>
                       <div class="filter__item">
-                        <input type="checkbox" name="stream" value="stream_3" id="123125"/>
-                        <label for="123125">Поток3</label>
+                        <input type="checkbox" name="stream" value="stream_3" id="stream_3"/>
+                        <label for="stream_3">Поток3</label>
                       </div>
                     </div>
                   </div>
@@ -156,16 +157,16 @@
                     </div>
                     <div class="filter__body">
                       <div class="filter__item">
-                        <input type="checkbox" name="stream" value="article_1" id="123123123"/>
-                        <label for="123123123">Статья1</label>
+                        <input type="checkbox" name="stream" value="article_1" id="article_1"/>
+                        <label for="article_1">Статья1</label>
                       </div>
                       <div class="filter__item">
-                        <input type="checkbox" name="stream" value="article_2" id="12312"/>
-                        <label for="12312">Статья2</label>
+                        <input type="checkbox" name="stream" value="article_2" id="article_2"/>
+                        <label for="article_2">Статья2</label>
                       </div>
                       <div class="filter__item">
-                        <input type="checkbox" name="stream" value="article_3" id="123125"/>
-                        <label for="123125">Статья3</label>
+                        <input type="checkbox" name="stream" value="article_3" id="article_3"/>
+                        <label for="article_3">Статья3</label>
                       </div>
                     </div>
                   </div>
@@ -177,12 +178,12 @@
                     </div>
                     <div class="filter__body">
                       <div class="filter__item">
-                        <input type="checkbox" name="stream" value="design_1" id="123123123"/>
-                        <label for="123123123">Дизайн1</label>
+                        <input type="checkbox" name="stream" value="design_1" id="design_1"/>
+                        <label for="design_1">Дизайн1</label>
                       </div>
                       <div class="filter__item">
-                        <input type="checkbox" name="stream" value="design_2" id="12312"/>
-                        <label for="12312">Дизайн2</label>
+                        <input type="checkbox" name="stream" value="design_2" id="design_2"/>
+                        <label for="design_2">Дизайн2</label>
                       </div>
                     </div>
                   </div>
@@ -194,16 +195,16 @@
                     </div>
                     <div class="filter__body">
                       <div class="filter__item">
-                        <input type="checkbox" name="stream" value="page_type_1" id="123123123"/>
-                        <label for="123123123">Тип страницы 1</label>
+                        <input type="checkbox" name="stream" value="page_type_1" id="page_type_1"/>
+                        <label for="page_type_1">Тип страницы 1</label>
                       </div>
                       <div class="filter__item">
-                        <input type="checkbox" name="stream" value="page_type_2" id="12312"/>
-                        <label for="12312">Тип страницы 2</label>
+                        <input type="checkbox" name="stream" value="page_type_2" id="page_type_2"/>
+                        <label for="page_type_2">Тип страницы 2</label>
                       </div>
                       <div class="filter__item">
-                        <input type="checkbox" name="stream" value="page_type_3" id="123125"/>
-                        <label for="123125">Тип страницы 3</label>
+                        <input type="checkbox" name="stream" value="page_type_3" id="page_type_3"/>
+                        <label for="page_type_3">Тип страницы 3</label>
                       </div>
                     </div>
                   </div>
@@ -215,16 +216,16 @@
                     </div>
                     <div class="filter__body">
                       <div class="filter__item">
-                        <input type="checkbox" name="stream" value="device_1" id="123123123"/>
-                        <label for="123123123">Устройство 1</label>
+                        <input type="checkbox" name="stream" value="device_1" id="device_1"/>
+                        <label for="device_1">Устройство 1</label>
                       </div>
                       <div class="filter__item">
-                        <input type="checkbox" name="stream" value="device_2" id="12312"/>
-                        <label for="12312">Устройство 2</label>
+                        <input type="checkbox" name="stream" value="device_2" id="device_2"/>
+                        <label for="device_2">Устройство 2</label>
                       </div>
                       <div class="filter__item">
-                        <input type="checkbox" name="stream" value="device_3" id="123125"/>
-                        <label for="123125">Устройство 3</label>
+                        <input type="checkbox" name="stream" value="device_3" id="device_3"/>
+                        <label for="device_3">Устройство 3</label>
                       </div>
                     </div>
                   </div>
@@ -292,7 +293,7 @@
                 <thead>
                   <tr>
                     <th>Дата
-                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon _sorted"></i></div>
                     </th>
                     <th>Переходы
                       <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
@@ -439,8 +440,6 @@
         </div>
       </div>
     </div>
-    <link rel="stylesheet" href="assets/css/libs.css">
-    <link rel="stylesheet" href="assets/css/common.css?v=1.2.3">
     <script src="assets/js/vendors~main.bundle.js"></script>
     <script src="assets/js/main.bundle.js?v=1.2.3"></script>
   </body>

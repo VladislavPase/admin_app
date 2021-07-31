@@ -3,6 +3,7 @@ include _includes/mixins/accountInfoItem
 include _includes/mixins/filter
 include _includes/mixins/table
 include _includes/mixins/tableSettings
+include _includes/mixins/calendar
     
 block config
     
@@ -42,11 +43,10 @@ block content
             .statistics__table
                 form.statistics__table--form()
                     .statistics__table--filters
-                        .calendar-trigger
-                            i.icon-calendar-1.icon
-                            span.value 21.05.2019 - 26.05.2019
+                        +calendar()
                         +filter(
                             title="Поток"
+                            type="checkbox"
                             options=[
                                 {
                                     id: 123123123,
@@ -67,6 +67,7 @@ block content
                         )
                         +filter(
                             title="Статья"
+                            type="checkbox"
                             options=[
                                 {
                                     id: 123123123,
@@ -87,6 +88,7 @@ block content
                         )
                         +filter(
                             title="Дизайн"
+                            type="checkbox"
                             options=[
                                 {
                                     id: 123123123,
@@ -102,6 +104,7 @@ block content
                         )
                         +filter(
                             title="Тип страницы"
+                            type="checkbox"
                             options=[
                                 {
                                     id: 123123123,
@@ -122,6 +125,7 @@ block content
                         )
                         +filter(
                             title="Устройство"
+                            type="checkbox"
                             options=[
                                 {
                                     id: 123123123,
