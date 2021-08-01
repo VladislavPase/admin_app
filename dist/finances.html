@@ -92,8 +92,8 @@
           </div>
           <div class="header__profile header__item"><a class="header__profile--link" href="#">Vitaliy Zamedyanskiy<i class="icon-down-dir icon"></i></a>
             <ul class="account__settings">
-              <li class="account__settings--item"><i class="icon-user-icon icon"></i><a class="account__settings--link" href="#">Личные данные</a></li>
-              <li class="account__settings--item"><i class="icon-security-icon icon"></i><a class="account__settings--link" href="#">Безопасность</a></li>
+              <li class="account__settings--item"><i class="icon-user-icon icon"></i><a class="account__settings--link" href="profile.html">Личные данные</a></li>
+              <li class="account__settings--item"><i class="icon-security-icon icon"></i><a class="account__settings--link" href="profile.html">Безопасность</a></li>
               <li class="account__settings--item"><i class="icon-exit-icon icon"></i><a class="account__settings--link" href="#">Выйти из профиля</a></li>
             </ul>
           </div>
@@ -224,37 +224,37 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="popup" id="financePopup">
-      <div class="popup__close" data-fancybox-close><span></span><span></span></div>
-      <div class="popup__inner">
-        <h2 class="popup__title">Выплата на Альфа Банк</h2>
-        <form class="form popup__form add-popup-form" method="post">
-          <div class="fieldset">
-            <input class="input" name="pay_sum" type="text" required id="pay_sum">
-            <label class="label" for="pay_sum">Сумма выплаты в рублях</label>
-          </div>
-          <div class="fieldset">
-            <input class="input" name="bank_name" type="text" required id="bank_name">
-            <label class="label" for="bank_name">Наименование банка</label>
-          </div>
-          <div class="fieldset">
-            <input class="input" name="card_num" type="text" required id="card_num">
-            <label class="label" for="card_num">Номер карты</label>
-          </div>
-          <div class="fieldset">
-            <input class="input" name="person_name" type="text" required id="person_name">
-            <label class="label" for="person_name">Имя</label>
-          </div>
-          <div class="fieldset">
-            <input class="input" name="person_lastname" type="text" required id="person_lastname">
-            <label class="label" for="person_lastname">Фамилия</label>
-          </div>
-          <button class="btn-primary btn">Заказать выплату</button>
-        </form>
+      <div class="popup" id="financePopup">
+        <div class="popup__close" data-fancybox-close><span></span><span></span></div>
+        <div class="popup__inner">
+          <h2 class="popup__title">Выплата на Альфа Банк</h2>
+          <form class="form popup__form add-popup-form" method="post">
+            <div class="fieldset">
+              <input class="input" name="pay_sum" type="text" required id="pay_sum">
+              <label class="label" for="pay_sum">Сумма выплаты в рублях</label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="bank_name" type="text" required id="bank_name">
+              <label class="label" for="bank_name">Наименование банка</label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="card_num" type="text" required id="card_num">
+              <label class="label" for="card_num">Номер карты</label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="person_name" type="text" required id="person_name">
+              <label class="label" for="person_name">Имя</label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="person_lastname" type="text" required id="person_lastname">
+              <label class="label" for="person_lastname">Фамилия</label>
+            </div>
+            <button class="btn-primary btn">Заказать выплату</button>
+          </form>
+        </div>
       </div>
     </div>
-    <script src="assets/js/vendors~main.bundle.js"></script>
     <script src="assets/js/main.bundle.js?v=1.2.3"></script>
+    <script src="assets/js/vendors~main.bundle.js"></script>
   </body>
 </html>

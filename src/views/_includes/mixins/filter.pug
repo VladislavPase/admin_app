@@ -8,5 +8,5 @@ mixin filter()
             - let arr = attributes.options
             each item in arr
                 .filter__item
-                    input(type=attributes.type name="stream" value=item.value id=item.value)
+                    input(type=attributes.type name="stream" value=item.value id=item.value checked=item.checked)
                     label(for=item.value)=item.option

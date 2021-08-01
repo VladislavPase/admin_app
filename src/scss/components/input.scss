@@ -6,30 +6,50 @@ input.input {
     background: $color-white;
     border: 1px solid $color-gray-dark;
     border-radius: 8px;
-    padding: 15px 10px;
+    padding: 15px 10px 15px 0;
     width: 100%;
+    cursor: pointer;
 }
 
 label.label {
     pointer-events: none;
     position: absolute;
     top: 15px;
-    left: 10px;
+    left: 1px;
     color: $color-gray-dark;
     opacity: .5;
     background: $color-white;
     transition: top .3s ease, font-size .3s ease;
-    padding: 2px 5px;
+    padding: 3px 10px;
     font-size: 14px;
     line-height: 16px;
+    border-radius: 13px;
+    z-index: 2;
+
+    span {
+        color: $color-red;
+    }
 }
 
 input.input._focus + label.label, input.input._valid + label.label {
     top: -8px;
+    left: 10px;
     opacity: 1;
     font-size: 12px;
     line-height: 14px;
     color: $color-blue-light;
+}
+
+input.input._focus + label.label + .icon, input.input._valid + label.label + .icon {
+    opacity: 1;
+}
+
+input.input._focus, input.input._focusout {
+    padding: 15px 10px;
+}
+
+input.input._focusout + label.label {
+    color: $color-base;
 }
 
 input.input._focus:focus {
@@ -47,5 +67,23 @@ textarea.textarea {
     &:focus, &:active {
         opacity: 1;
         border-color: $color-blue-light;
+    }
+}
+
+.input-search {
+    .icon {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: .5;
+        z-index: 2;
+        font-size: 20px;
+    }
+    label {
+        left: 35px;
+    }
+    input {
+        padding-left: 40px !important;
     }
 }

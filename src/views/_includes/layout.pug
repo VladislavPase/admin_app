@@ -14,15 +14,17 @@ html(lang=__.lang, class="no-js")
             .page-content
                 include blocks/header
                 block content
-
-        if name === 'streams'
-            include blocks/streamsAddPopup
-            include blocks/streamsArchivePopup
-        else if name === 'parking'
-            include blocks/parkingDomainPopup
-            include blocks/addPixelPopup
-        else if name === 'finances'
-            include blocks/financesPopup
+                    
+            
+            if name === 'streams'
+                include blocks/streamsAddPopup
+                include blocks/streamsArchivePopup
+            else if name === 'parking'
+                include blocks/parkingDomainPopup
+                include blocks/addPixelPopup
+            else if name === 'finances'
+                include blocks/financesPopup
 
         block scripts
             include scripts
+                

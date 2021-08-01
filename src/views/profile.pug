@@ -1,0 +1,76 @@
+extends _includes/layout
+include _includes/mixins/filter
+
+block config
+
+    - var pagetitle = 'Профиль'
+    - var bodyClass = 'profile'
+    - var pageName = 'Профиль'
+    - var name = 'profile'
+    - var headerIcon = 'icon-user-icon'
+
+block content
+    .content
+        .content__inner
+            ul.list__tabs
+                li.list__tabs--item
+                    a.list__tabs--link.profile__tab--link._active(href="" data-href="profile_data") Личные данные
+                li.list__tabs--item
+                    a.list__tabs--link.profile__tab--link(href="" data-href="security") Безопасность
+            .profile__content
+                .profile__content--inner._active(data-target="profile_data")
+                    form(method="post").profile__form
+                        .fieldset
+                            input.input#profile_name(name="profile_name" required)
+                            label.label(for="profile_name") Имя 
+                                span *
+                        .fieldset
+                            input.input#profile_email(name="profile_email" required)
+                            label.label(for="profile_email") E-mail 
+                                span *
+                        .fieldset
+                            input.input#profile_telegram(name="profile_telegram" required)
+                            label.label(for="profile_telegram") Telegram 
+                                span *
+                        .fieldset
+                            input.input#phone(name="phone" required)
+                            label.label(for="phone") Номер телефона 
+                                span *
+                        .fieldset
+                            +filter(
+                                title="Доллары США"
+                                type="radio"
+                                options=[
+                                    {
+                                        option: 'Доллары США',
+                                        value: 'dollars',
+                                        checked: true
+                                    },
+                                    {
+                                        id: 12312,
+                                        option: 'UAH',
+                                        value: 'uah',
+                                        checked: false
+                                    }
+                                ]
+                            )
+                            label.label Валюта 
+                                span *
+                        button.btn-primary.btn.profile__btn Сохранить
+                .profile__content--inner(data-target="security")
+                    form(method="post").profile__form
+                        .fieldset
+                            input.input#current_pass(name="current_pass" required type="password")
+                            label.label(for="current_pass") Текущий пароль
+                            i.icon-eye.icon.show-pass
+                        .fieldset
+                            input.input#new_pass(name="new_pass" required type="password")
+                            label.label(for="new_pass") Новый пароль 
+                            i.icon-eye.icon.show-pass
+                        .fieldset
+                            input.input#validate_pass(name="validate_pass" required type="password")
+                            label.label(for="validate_pass") Подтверждение пароля
+                            i.icon-eye.icon.show-pass
+                        .fieldset
+                        button.btn-primary.btn.profile__btn поменять пароль
+                

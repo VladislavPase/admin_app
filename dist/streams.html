@@ -92,8 +92,8 @@
           </div>
           <div class="header__profile header__item"><a class="header__profile--link" href="#">Vitaliy Zamedyanskiy<i class="icon-down-dir icon"></i></a>
             <ul class="account__settings">
-              <li class="account__settings--item"><i class="icon-user-icon icon"></i><a class="account__settings--link" href="#">Личные данные</a></li>
-              <li class="account__settings--item"><i class="icon-security-icon icon"></i><a class="account__settings--link" href="#">Безопасность</a></li>
+              <li class="account__settings--item"><i class="icon-user-icon icon"></i><a class="account__settings--link" href="profile.html">Личные данные</a></li>
+              <li class="account__settings--item"><i class="icon-security-icon icon"></i><a class="account__settings--link" href="profile.html">Безопасность</a></li>
               <li class="account__settings--item"><i class="icon-exit-icon icon"></i><a class="account__settings--link" href="#">Выйти из профиля</a></li>
             </ul>
           </div>
@@ -109,6 +109,7 @@
                 <form class="form streams__form" method="post">
                   <div class="calendar-trigger"><i class="icon-calendar-1 icon"></i><span class="value">21.05.2019 - 26.05.2019</span></div>
                   <div class="fieldset input-search">
+                    <div class="icon-search icon"></div>
                     <input class="input" name="streams_active_search" type="text" id="streams_active_search"/>
                     <label class="label" for="streams_active_search">Поиск потока</label>
                   </div>
@@ -237,6 +238,7 @@
               <div class="streams__content--inner" data-target="archive_streams">
                 <form class="form streams__form" method="post">
                   <div class="fieldset input-search">
+                    <div class="icon-search icon"></div>
                     <input class="input" name="streams_active_search" type="text" id="streams_active_search"/>
                     <label class="label" for="streams_active_search">Поиск потока</label>
                   </div>
@@ -367,143 +369,143 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="popup" id="addStream">
-      <div class="popup__close" data-fancybox-close><span></span><span></span></div>
-      <div class="popup__inner">
-        <h2 class="popup__title">Добавление потока</h2>
-        <form class="form popup__form add-popup-form" method="post">
-          <div class="fieldset">
-            <input class="input" name="stream_name" type="text" required id="stream_name">
-            <label class="label" for="stream_name">Название потока</label>
-          </div>
-          <div class="fieldset">
-            <input class="input" name="stream_link" type="text" required id="stream_link">
-            <label class="label" for="stream_link">Ссылка потока</label>
-          </div>
-          <div class="fieldset">
-                <div class="filter">
-                  <div class="filter__header">
-                    <div class="filter__item">
-                      <p class="filter__header--title">Выбор типа страницы</p>
-                    </div><i class="icon-down-dir icon"></i>
-                  </div>
-                  <div class="filter__body">
-                    <div class="filter__item">
-                      <input type="radio" name="stream" value="page_type_1" id="page_type_1">
-                      <label for="page_type_1">Тип страницы 1</label>
-                    </div>
-                    <div class="filter__item">
-                      <input type="radio" name="stream" value="page_type_2" id="page_type_2">
-                      <label for="page_type_2">Тип страницы 2</label>
-                    </div>
-                    <div class="filter__item">
-                      <input type="radio" name="stream" value="page_type_3" id="page_type_3">
-                      <label for="page_type_3">Тип страницы 3</label>
-                    </div>
-                  </div>
-                </div>
-          </div>
-          <div class="fieldset">
-                <div class="filter">
-                  <div class="filter__header">
-                    <div class="filter__item">
-                      <p class="filter__header--title">Дизайн</p>
-                    </div><i class="icon-down-dir icon"></i>
-                  </div>
-                  <div class="filter__body">
-                    <div class="filter__item">
-                      <input type="radio" name="stream" value="design_1" id="design_1">
-                      <label for="design_1">Дизайн 1</label>
-                    </div>
-                    <div class="filter__item">
-                      <input type="radio" name="stream" value="design_2" id="design_2">
-                      <label for="design_2">Дизайн 2</label>
-                    </div>
-                  </div>
-                </div>
-          </div>
-          <div class="fieldset">
-                <div class="filter">
-                  <div class="filter__header">
-                    <div class="filter__item">
-                      <p class="filter__header--title">Домен</p>
-                    </div><i class="icon-down-dir icon"></i>
-                  </div>
-                  <div class="filter__body">
-                    <div class="filter__item">
-                      <input type="radio" name="stream" value="domain_1" id="domain_1">
-                      <label for="domain_1">Домен 1</label>
-                    </div>
-                    <div class="filter__item">
-                      <input type="radio" name="stream" value="domain_2" id="domain_2">
-                      <label for="domain_2">Домен 2</label>
-                    </div>
-                  </div>
-                </div>
-          </div>
-          <div class="switch-wrapper">
-                <div class="switch-item">
-                  <label class="switch">
-                    <input type="checkbox" name="shock_content" value="shock_content"><span class="slider"></span>
-                  </label>
-                  <p class="switch__name">Шок-контент</p>
-                  <div class="helper"><span>?</span></div>
-                </div>
-                <div class="switch-item">
-                  <label class="switch">
-                    <input type="checkbox" name="demonetization" value="demonetization"><span class="slider"></span>
-                  </label>
-                  <p class="switch__name">Демонетизация</p>
-                  <div class="helper"><span>?</span></div>
-                </div>
-                <div class="switch-item">
-                  <label class="switch">
-                    <input type="checkbox" name="popup_window" value="popup_window"><span class="slider"></span>
-                  </label>
-                  <p class="switch__name">Поп-ап окно</p>
-                  <div class="helper"><span>?</span></div>
-                </div>
-                <div class="switch-item">
-                  <label class="switch">
-                    <input type="checkbox" name="push_base" value="push_base"><span class="slider"></span>
-                  </label>
-                  <p class="switch__name">Сбор пуш базы</p>
-                  <div class="helper"><span>?</span></div>
-                </div>
-          </div>
-          <div class="popup__postback">
-                <div class="switch-item">
-                  <label class="switch">
-                    <input type="checkbox" name="post_back" value="post_back"><span class="slider"></span>
-                  </label>
-                  <p class="switch__name">Отправлять PostBack</p>
-                </div>
-            <div class="popup__postback--text">
-              <p>PostBack запрос будет отправлен на указанный адрес методом GET. Для передачи параметров в запрос Вы можете использовать макросы, указанные ниже:</p>
-              <p>{click_id} - номер лида в системе,</p>
-              <p>{status} - статус лида (pending, approved, rejected, trash),</p>
-              <p>{payout} - сумма отчислений вебмастеру,</p>
-              <p>{currency} - валюта (RUB)</p>
-              <p>Пример<span>http://sdjvjskdv.jsdvnjndsv/sdkv</span></p>
+      <div class="popup" id="addStream">
+        <div class="popup__close" data-fancybox-close><span></span><span></span></div>
+        <div class="popup__inner">
+          <h2 class="popup__title">Добавление потока</h2>
+          <form class="form popup__form add-popup-form" method="post">
+            <div class="fieldset">
+              <input class="input" name="stream_name" type="text" required id="stream_name">
+              <label class="label" for="stream_name">Название потока</label>
             </div>
-          </div>
-          <button class="btn btn-primary" type="submit">ДОБАВИТЬ НОВЫЙ пОТОК</button>
-        </form>
+            <div class="fieldset">
+              <input class="input" name="stream_link" type="text" required id="stream_link">
+              <label class="label" for="stream_link">Ссылка потока</label>
+            </div>
+            <div class="fieldset">
+                    <div class="filter">
+                      <div class="filter__header">
+                        <div class="filter__item">
+                          <p class="filter__header--title">Выбор типа страницы</p>
+                        </div><i class="icon-down-dir icon"></i>
+                      </div>
+                      <div class="filter__body">
+                        <div class="filter__item">
+                          <input type="radio" name="stream" value="page_type_1" id="page_type_1">
+                          <label for="page_type_1">Тип страницы 1</label>
+                        </div>
+                        <div class="filter__item">
+                          <input type="radio" name="stream" value="page_type_2" id="page_type_2">
+                          <label for="page_type_2">Тип страницы 2</label>
+                        </div>
+                        <div class="filter__item">
+                          <input type="radio" name="stream" value="page_type_3" id="page_type_3">
+                          <label for="page_type_3">Тип страницы 3</label>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+            <div class="fieldset">
+                    <div class="filter">
+                      <div class="filter__header">
+                        <div class="filter__item">
+                          <p class="filter__header--title">Дизайн</p>
+                        </div><i class="icon-down-dir icon"></i>
+                      </div>
+                      <div class="filter__body">
+                        <div class="filter__item">
+                          <input type="radio" name="stream" value="design_1" id="design_1">
+                          <label for="design_1">Дизайн 1</label>
+                        </div>
+                        <div class="filter__item">
+                          <input type="radio" name="stream" value="design_2" id="design_2">
+                          <label for="design_2">Дизайн 2</label>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+            <div class="fieldset">
+                    <div class="filter">
+                      <div class="filter__header">
+                        <div class="filter__item">
+                          <p class="filter__header--title">Домен</p>
+                        </div><i class="icon-down-dir icon"></i>
+                      </div>
+                      <div class="filter__body">
+                        <div class="filter__item">
+                          <input type="radio" name="stream" value="domain_1" id="domain_1">
+                          <label for="domain_1">Домен 1</label>
+                        </div>
+                        <div class="filter__item">
+                          <input type="radio" name="stream" value="domain_2" id="domain_2">
+                          <label for="domain_2">Домен 2</label>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+            <div class="switch-wrapper">
+                    <div class="switch-item">
+                      <label class="switch">
+                        <input type="checkbox" name="shock_content" value="shock_content"><span class="slider"></span>
+                      </label>
+                      <p class="switch__name">Шок-контент</p>
+                      <div class="helper"><span>?</span></div>
+                    </div>
+                    <div class="switch-item">
+                      <label class="switch">
+                        <input type="checkbox" name="demonetization" value="demonetization"><span class="slider"></span>
+                      </label>
+                      <p class="switch__name">Демонетизация</p>
+                      <div class="helper"><span>?</span></div>
+                    </div>
+                    <div class="switch-item">
+                      <label class="switch">
+                        <input type="checkbox" name="popup_window" value="popup_window"><span class="slider"></span>
+                      </label>
+                      <p class="switch__name">Поп-ап окно</p>
+                      <div class="helper"><span>?</span></div>
+                    </div>
+                    <div class="switch-item">
+                      <label class="switch">
+                        <input type="checkbox" name="push_base" value="push_base"><span class="slider"></span>
+                      </label>
+                      <p class="switch__name">Сбор пуш базы</p>
+                      <div class="helper"><span>?</span></div>
+                    </div>
+            </div>
+            <div class="popup__postback">
+                    <div class="switch-item">
+                      <label class="switch">
+                        <input type="checkbox" name="post_back" value="post_back"><span class="slider"></span>
+                      </label>
+                      <p class="switch__name">Отправлять PostBack</p>
+                    </div>
+              <div class="popup__postback--text">
+                <p>PostBack запрос будет отправлен на указанный адрес методом GET. Для передачи параметров в запрос Вы можете использовать макросы, указанные ниже:</p>
+                <p>{click_id} - номер лида в системе,</p>
+                <p>{status} - статус лида (pending, approved, rejected, trash),</p>
+                <p>{payout} - сумма отчислений вебмастеру,</p>
+                <p>{currency} - валюта (RUB)</p>
+                <p>Пример<span>http://sdjvjskdv.jsdvnjndsv/sdkv</span></p>
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit">ДОБАВИТЬ НОВЫЙ пОТОК</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup" id="archivePopup">
+        <div class="popup__close" data-fancybox-close><span></span><span></span></div>
+        <div class="popup__inner">
+          <h2 class="popup__title">Архивирование потока</h2>
+          <p class="popup__text">Вы уверены что хотите архивировать поток “Шо там ваще”?</p>
+          <form class="form archive_request">
+            <button class="btn btn-primary" type="submit">да, архивировать</button>
+            <button class="btn btn-outlined" type="button" data-fancybox-close>Нет</button>
+          </form>
+        </div>
       </div>
     </div>
-    <div class="popup" id="archivePopup">
-      <div class="popup__close" data-fancybox-close><span></span><span></span></div>
-      <div class="popup__inner">
-        <h2 class="popup__title">Архивирование потока</h2>
-        <p class="popup__text">Вы уверены что хотите архивировать поток “Шо там ваще”?</p>
-        <form class="form archive_request">
-          <button class="btn btn-primary" type="submit">да, архивировать</button>
-          <button class="btn btn-outlined" type="button" data-fancybox-close>Нет</button>
-        </form>
-      </div>
-    </div>
-    <script src="assets/js/vendors~main.bundle.js"></script>
     <script src="assets/js/main.bundle.js?v=1.2.3"></script>
+    <script src="assets/js/vendors~main.bundle.js"></script>
   </body>
 </html>

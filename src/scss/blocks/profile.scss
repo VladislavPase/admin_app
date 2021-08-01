@@ -1,0 +1,48 @@
+.profile {
+    &__content {
+        &--inner {
+            display: none;
+            padding-top: 30px;
+
+            &._active {
+                display: block;
+            }
+        }
+    }
+
+    &__form {
+        max-width: 285px;
+        margin: 0 auto;
+
+        .fieldset + .fieldset {
+            margin-top: 20px;
+        }
+
+        .filter {
+            height: 51px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .fieldset {
+            .icon {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+                font-size: 18px;
+                opacity: .5;
+                &._showed {
+                    color: $color-blue-light;
+                }
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: 30px;
+        width: 100%;
+    }
+}

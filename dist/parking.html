@@ -92,8 +92,8 @@
           </div>
           <div class="header__profile header__item"><a class="header__profile--link" href="#">Vitaliy Zamedyanskiy<i class="icon-down-dir icon"></i></a>
             <ul class="account__settings">
-              <li class="account__settings--item"><i class="icon-user-icon icon"></i><a class="account__settings--link" href="#">Личные данные</a></li>
-              <li class="account__settings--item"><i class="icon-security-icon icon"></i><a class="account__settings--link" href="#">Безопасность</a></li>
+              <li class="account__settings--item"><i class="icon-user-icon icon"></i><a class="account__settings--link" href="profile.html">Личные данные</a></li>
+              <li class="account__settings--item"><i class="icon-security-icon icon"></i><a class="account__settings--link" href="profile.html">Безопасность</a></li>
               <li class="account__settings--item"><i class="icon-exit-icon icon"></i><a class="account__settings--link" href="#">Выйти из профиля</a></li>
             </ul>
           </div>
@@ -247,38 +247,38 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="popup" id="parkingDomain">
-      <div class="popup__close" data-fancybox-close><span></span><span></span></div>
-      <div class="popup__inner">
-        <h2 class="popup__title">Парковка домена</h2>
-        <form class="form popup__form">
-          <div class="fieldset">
-            <input class="input" type="text" name="parking" required id="parking">
-            <label class="label" for="parking">Домен</label>
-          </div>
-          <button class="btn btn-primary" type="submit">ПРИпарковать домен</button>
-        </form>
+      <div class="popup" id="parkingDomain">
+        <div class="popup__close" data-fancybox-close><span></span><span></span></div>
+        <div class="popup__inner">
+          <h2 class="popup__title">Парковка домена</h2>
+          <form class="form popup__form">
+            <div class="fieldset">
+              <input class="input" type="text" name="parking" required id="parking">
+              <label class="label" for="parking">Домен</label>
+            </div>
+            <button class="btn btn-primary" type="submit">ПРИпарковать домен</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup" id="addPixel">
+        <div class="popup__close" data-fancybox-close><span></span><span></span></div>
+        <div class="popup__inner">
+          <h2 class="popup__title">Добавление пикселя</h2>
+          <form class="form popup__form">
+            <div class="fieldset">
+              <input class="input" type="text" name="page_url" required id="page_url">
+              <label class="label" for="page_url">URL Страницы</label>
+            </div>
+            <div class="fieldset">
+              <input class="input" type="text" name="pixel_name" required id="pixel_name">
+              <label class="label" for="pixel_name">Название</label>
+            </div>
+            <button class="btn btn-primary" type="submit">Добавить пиксель</button>
+          </form>
+        </div>
       </div>
     </div>
-    <div class="popup" id="addPixel">
-      <div class="popup__close" data-fancybox-close><span></span><span></span></div>
-      <div class="popup__inner">
-        <h2 class="popup__title">Добавление пикселя</h2>
-        <form class="form popup__form">
-          <div class="fieldset">
-            <input class="input" type="text" name="page_url" required id="page_url">
-            <label class="label" for="page_url">URL Страницы</label>
-          </div>
-          <div class="fieldset">
-            <input class="input" type="text" name="pixel_name" required id="pixel_name">
-            <label class="label" for="pixel_name">Название</label>
-          </div>
-          <button class="btn btn-primary" type="submit">Добавить пиксель</button>
-        </form>
-      </div>
-    </div>
-    <script src="assets/js/vendors~main.bundle.js"></script>
     <script src="assets/js/main.bundle.js?v=1.2.3"></script>
+    <script src="assets/js/vendors~main.bundle.js"></script>
   </body>
 </html>

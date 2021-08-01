@@ -323,6 +323,12 @@
       "src": "fontawesome"
     },
     {
+      "uid": "9dd9e835aebe1060ba7190ad2b2ed951",
+      "css": "search",
+      "code": 59401,
+      "src": "fontawesome"
+    },
+    {
       "uid": "205f0f224c4e015cd06dbacb162c3f43",
       "css": "location-icon",
       "code": 59396,
