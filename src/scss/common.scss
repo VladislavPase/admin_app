@@ -11,6 +11,8 @@ body {
     flex: 1;
     display: flex;
     background: $color-gray;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .page-content {
@@ -79,6 +81,67 @@ body {
     }
 }
 
+.triangle{
+    height: 0;
+    width: 0;
+    border-bottom: 10px solid $color-white;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    top: -10px;
+    right: 15px;
+}
+
+.form {
+    &__title {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 20px;
+    }
+}
+
+.close-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+
+    span {
+        display: block;
+        position: absolute;
+        width: 90%;
+        height: 2px;
+        background-color: $color-gray-dark;
+        transform: rotate(45deg);
+        transition: background-color .2s ease;
+
+        &:last-child {
+            transform: rotate(-45deg);
+        };
+    }
+
+    &:hover {
+        span {
+            background-color: $color-base;
+        }
+    }
+}
+
+
+
 @import "vendor/jquery.fancybox.css";
 @import "vendor/mobiscroll.javascript.min.css";
 
@@ -108,3 +171,4 @@ body {
 @import "blocks/parking";
 @import "blocks/finances";
 @import "blocks/profile";
+@import "blocks/auth";

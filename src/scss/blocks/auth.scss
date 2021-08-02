@@ -1,0 +1,71 @@
+.auth {
+    flex: 1;
+    //height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../img/auth_bg.png') no-repeat center/cover;
+
+    &__form-wrapper {
+        display: none;
+        &._active {
+            display: block;
+        }
+
+        .fieldset + .fieldset {
+            margin-top: 20px;
+        }
+
+        .btn {
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .forget-pass {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        input#pass {
+            padding: 15px 135px 15px 10px;
+        }
+    }
+
+    &__content {
+        background: $color-white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        border-radius: 20px;
+        width: 360px;
+        padding: 40px;
+    }
+
+    .list__tabs{
+        margin-bottom: 20px;
+        &--item {
+            flex: 0 0 50%;
+        }
+        &--link {
+            text-align: center;
+            padding: 0 0 13px;
+        }
+    }
+
+    .forget__content, .success__content {
+        .close-btn {
+            top: -20px;
+            right: -20px;
+        }
+    }
+
+    .success__content {
+        .success__img {
+            margin-bottom: 20px;
+
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
+}

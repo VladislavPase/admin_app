@@ -18,6 +18,7 @@ header.header
         i.icon-bell-alt.icon
         .new-notifications-indicator
         ul.header__messages
+            .triangle
             p.header__messages--title Сообщения
             +headerMessage(
                 icon="icon-attention"
@@ -38,6 +39,7 @@ header.header
         a.header__profile--link(href="#") Vitaliy Zamedyanskiy
             i.icon-down-dir.icon
         ul.account__settings
+            .triangle
             li.account__settings--item
                 i.icon-user-icon.icon
                 a(href="profile.html").account__settings--link Личные данные
@@ -46,4 +48,4 @@ header.header
                 a(href="profile.html").account__settings--link Безопасность
             li.account__settings--item
                 i.icon-exit-icon.icon
-                a(href="#").account__settings--link Выйти из профиля
+                a(href="auth.html").account__settings--link Выйти из профиля

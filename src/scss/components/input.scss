@@ -9,6 +9,8 @@ input.input {
     padding: 15px 10px 15px 0;
     width: 100%;
     cursor: pointer;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 label.label {
@@ -85,5 +87,45 @@ textarea.textarea {
     }
     input {
         padding-left: 40px !important;
+    }
+}
+
+.fieldset{
+
+    .error-text {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: calc(100% + 2px);
+        font-size: 12px;
+        line-height: 14px;
+        color: $color-red;
+    }
+
+    &._error {
+        input.input {
+            border-color: $color-red;
+        }
+        label.label {
+            color: $color-red !important;
+        }
+
+        .error-text {
+            display: block;
+        }
+    }
+}
+
+.fieldset .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    opacity: .5;
+
+    &._showed {
+        color: $color-blue-light;
     }
 }

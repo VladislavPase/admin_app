@@ -1,0 +1,22 @@
+extends _includes/layout
+
+block config
+    - var pagetitle = 'Мы сделали это!'
+    - var bodyClass = 'done'
+    - var pageName = 'Мы сделали это!'
+    - var name = 'done'
+
+block content
+    .auth
+        .auth__content
+            .success__content.auth__content--inner
+                .auth__form-wrapper._active
+                    a(href="auth.html").close-btn
+                        span
+                        span
+                    .success__content--inner
+                        h3.form__title Мы сделали это!
+                        .success__img
+                            img(src="assets/img/tick.png")
+                        p.form__text Мы отправили вам письмо по восстановлению пароля!
+                        a(href="auth.html").btn-primary.btn супер, спасибо!

@@ -14,6 +14,7 @@ require('@fancyapps/fancybox');
             e.stopPropagation();
             let windowHeight = $(window).height();
             let item = $(this).children('.record-count__options');
+            let triangle = item.children('.triangle');
 
             let containerHeight = $(this).outerHeight();
             let containerWidth = $(this).outerWidth();
@@ -26,7 +27,12 @@ require('@fancyapps/fancybox');
             let left = X + $(this).offset().left + containerWidth - $(item).outerWidth() + 20;
 
             if (($(this).offset().top + itemHeight + Y) > windowHeight) {
-                top = windowHeight - itemHeight - containerHeight - 40 + 'px';
+                top = windowHeight - itemHeight - containerHeight - 50 + 'px';
+                triangle.css({
+                    top: 'auto',
+                    bottom: -10 + 'px',
+                    transform: 'rotate(180deg)'
+                });
             }
 
             item.css({
@@ -56,14 +62,6 @@ require('@fancyapps/fancybox');
             .mouseout(function() {
                 $(this).removeClass('_opened');
             });
-
-        // $('.setting-trigger ')
-        //     .mouseover(function() {
-        //         $(this).addClass('_opened');
-        //     })
-        //     .mouseout(function() {
-        //         $(this).removeClass('_opened');
-        //     });
 
         $('.setting-trigger .statistics__table--settings-link').on('click', function (e) {
             e.preventDefault();
@@ -127,6 +125,24 @@ require('@fancyapps/fancybox');
         filter('.streams__tab--link', '.streams__content--inner');
         filter('.parking__tab--link', '.parking__content--inner');
         filter('.profile__tab--link', '.profile__content--inner');
+        filter('.auth__tab--link', '.auth__form-wrapper');
+
+        // $('.forget-pass').on('click', function (e) {
+        //     e.preventDefault();
+        //
+        //     $('.auth__content .main__content').removeClass('_active');
+        //     $('.auth__form-wrapper').addClass('_active');
+        //     $('.auth__content .forget__content').addClass('_active');
+        // });
+        //
+        // $('.forget__content .close-btn').on('click', function (e) {
+        //     e.preventDefault();
+        //
+        //     $('.auth__content .main__content').addClass('_active');
+        //     $('.auth__content .forget__content').addClass('_active');
+        //     $('.auth__form-wrapper').removeClass('_active');
+        //     $('.auth__form-wrapper[data-target="auth"]').addClass('_active');
+        // });
 
         let post_back_input = $('input[name="post_back"]');
         let post_back_text = $('.popup__postback--text');
@@ -165,6 +181,7 @@ require('@fancyapps/fancybox');
         };
 
         $(document).on('click', (e) => handlersFormExist(e, '.filter'));
+        $(document).on('click', (e) => handlersFormExist(e, '.settings-item'));
 
         $('.show-pass').on('click', function () {
             let input = $(this).parent('.fieldset').find('input');

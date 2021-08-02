@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Авторизация</title>
+    <meta name="description" content="Description">
+    <meta property="og:url" content="https://">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="title">
+    <meta property="twitter:title" content="title">
+    <meta property="og:description" content="description">
+    <meta property="twitter:description" content="description">
+    <meta property="og:image" content="assets/share.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/common.css?v=1.2.3">
+  </head>
+  <body class="body auth">
+    <div class="app">
+      <div class="auth">
+        <div class="auth__content">
+          <div class="main__content auth__content--inner _active">
+            <ul class="list__tabs">
+              <li class="list__tabs--item"><a class="list__tabs--link auth__tab--link" href="" data-href="registration">Регистрация</a></li>
+              <li class="list__tabs--item"><a class="list__tabs--link auth__tab--link _active" href="" data-href="auth">Вход</a></li>
+            </ul>
+            <div class="auth__form-wrapper" data-target="registration">
+              <form class="form" method="post">
+                <div class="fieldset">
+                  <input class="input" id="name" type="text" required name="name">
+                  <label class="label" for="name">Имя <span>*</span></label>
+                </div>
+                <div class="fieldset">
+                  <input class="input" id="registration_email" type="text" required name="email">
+                  <label class="label" for="registration_email">E-mail <span>*</span></label>
+                </div>
+                <div class="fieldset">
+                  <input class="input" id="telegram" type="text" required name="telegram">
+                  <label class="label" for="telegram">Telegram<span>*</span></label>
+                </div>
+                <div class="fieldset">
+                  <input class="input" id="phone" type="password" required name="phone">
+                  <label class="label" for="phone">Номер телефона<span>*</span></label>
+                </div>
+                <div class="fieldset">
+                  <input class="input" id="registration_pass" type="password" required name="pass">
+                  <label class="label" for="registration_pass">Пароль<span>*</span></label><i class="icon-eye icon show-pass"></i>
+                </div>
+                <div class="fieldset">
+                  <input class="input" id="pass_repeat" type="password" required name="pass_repeat">
+                  <label class="label" for="pass_repeat">Подтвердить пароль <span>*</span></label><i class="icon-eye icon show-pass"></i>
+                  <p class="error-text">Не верный пароль</p>
+                </div>
+                <button class="btn-primary btn">регистрация</button>
+              </form>
+            </div>
+            <div class="auth__form-wrapper _active" data-target="auth">
+              <form class="form" method="post">
+                <div class="fieldset">
+                  <input class="input" id="email" type="text" required name="email">
+                  <label class="label" for="email">E-маіl</label>
+                </div>
+                <div class="fieldset">
+                  <input class="input" id="pass" type="password" required name="pass">
+                  <label class="label" for="pass">Пароль</label><a class="link forget-pass" href="remember_pass.html">Забыли пароль?</a>
+                </div>
+                <button class="btn-primary btn">Войти</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/main.bundle.js?v=1.2.3"></script>
+    <script src="assets/js/vendors~main.bundle.js"></script>
+  </body>
+</html>

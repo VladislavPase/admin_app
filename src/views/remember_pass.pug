@@ -1,0 +1,24 @@
+extends _includes/layout
+
+block config
+    - var pagetitle = 'Вспомнить пароль'
+    - var bodyClass = 'remember'
+    - var pageName = 'Вспомнить пароль'
+    - var name = 'remember'
+
+block content
+    .auth
+        .auth__content
+            .forget__content.auth__content--inner
+                .auth__form-wrapper._active
+                    .close-btn
+                        span
+                        span
+                    form.form(method="post")
+                        h3.form__title Забыли пароль?
+                        p.form__text Не волнуйтесь! Мы вышлем вам на почту инструкцию по восстановлению пароля.
+                        .fieldset
+                            input.input#remember_email(type="text" required name="email")
+                            label.label(for="remember_email") E-маіl
+                        //button.btn-primary.btn востановить пароль
+                        a(href="done.html").btn-primary.btn востановить пароль

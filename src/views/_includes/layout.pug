@@ -10,20 +10,21 @@ html(lang=__.lang, class="no-js")
     body.body(class=bodyClass)
         
         .app
-            include blocks/aside
-            .page-content
-                include blocks/header
+            if name === 'auth' || name === 'remember' || name === 'done'
                 block content
-                    
-            
-            if name === 'streams'
-                include blocks/streamsAddPopup
-                include blocks/streamsArchivePopup
-            else if name === 'parking'
-                include blocks/parkingDomainPopup
-                include blocks/addPixelPopup
-            else if name === 'finances'
-                include blocks/financesPopup
+            else  
+                include blocks/aside
+                .page-content
+                    include blocks/header
+                    block content
+                if name === 'streams'
+                    include blocks/streamsAddPopup
+                    include blocks/streamsArchivePopup
+                else if name === 'parking'
+                    include blocks/parkingDomainPopup
+                    include blocks/addPixelPopup
+                else if name === 'finances'
+                    include blocks/financesPopup
 
         block scripts
             include scripts

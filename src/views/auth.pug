@@ -1,0 +1,59 @@
+extends _includes/layout
+
+block config
+    - var pagetitle = 'Авторизация'
+    - var bodyClass = 'auth'
+    - var pageName = 'Авторизация'
+    - var name = 'auth'
+
+block content
+    .auth
+        .auth__content
+            .main__content.auth__content--inner._active
+                ul.list__tabs
+                    li.list__tabs--item
+                        a.list__tabs--link.auth__tab--link(href="" data-href="registration") Регистрация
+                    li.list__tabs--item
+                        a.list__tabs--link.auth__tab--link._active(href="" data-href="auth") Вход
+                .auth__form-wrapper(data-target="registration")
+                    form.form(method="post")
+                        .fieldset
+                            input.input#name(type="text" required name="name")
+                            label.label(for="name") Имя 
+                                span *
+                        .fieldset
+                            input.input#registration_email(type="text" required name="email")
+                            label.label(for="registration_email") E-mail 
+                                span *
+                        .fieldset
+                            input.input#telegram(type="text" required name="telegram")
+                            label.label(for="telegram") Telegram
+                                span *
+                        .fieldset
+                            input.input#phone(type="password" required name="phone")
+                            label.label(for="phone") Номер телефона
+                                span *
+                        .fieldset
+                            input.input#registration_pass(type="password" required name="pass")
+                            label.label(for="registration_pass") Пароль
+                                span *
+                            i.icon-eye.icon.show-pass
+                        .fieldset
+                            input.input#pass_repeat(type="password" required name="pass_repeat")
+                            label.label(for="pass_repeat") Подтвердить пароль 
+                                span *
+                            i.icon-eye.icon.show-pass
+                            p.error-text Не верный пароль
+                        button.btn-primary.btn регистрация
+                .auth__form-wrapper._active(data-target="auth")
+                    form.form(method="post")
+                        .fieldset
+                            input.input#email(type="text" required name="email")
+                            label.label(for="email") E-маіl
+                        .fieldset
+                            input.input#pass(type="password" required name="pass")
+                            label.label(for="pass") Пароль
+                            a.link.forget-pass(href="remember_pass.html") Забыли пароль?
+                        button.btn-primary.btn Войти
+                        
+    
