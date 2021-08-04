@@ -47,9 +47,19 @@ table {
         .icon + .icon {
             margin-top: 1px;
         }
-        ._sorted {
-            color: red;
+        ._down {
+            color: $color-red;
         }
+
+        ._up {
+            color: $color-green;
+        }
+    }
+
+    .action-elem {
+        //display: flex;
+        width: 30px;
+        height: 30px;
     }
 
     .empty-text {

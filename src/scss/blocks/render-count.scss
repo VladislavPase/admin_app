@@ -26,9 +26,13 @@
         text-align: right;
         cursor: pointer;
         color: $color-blue-light;
+        transition: color .2s ease;
 
         &._selected {
-            color: $color-base;
+            font-weight: bold;
+        }
+
+        &:hover {
             font-weight: bold;
         }
     }

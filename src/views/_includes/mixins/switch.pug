@@ -5,5 +5,5 @@ mixin switch()
             span.slider
         p.switch__name=attributes.switch_name
         if attributes.helper
-            .helper
+            .helper(data-text=attributes.helperText)
                 span ?

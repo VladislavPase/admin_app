@@ -6,45 +6,80 @@ require('@fancyapps/fancybox');
     $(document).ready(function () {
 
         $('.filter__header').on('click', function () {
+            $('.filter').removeClass('_opened');
             $(this).toggleClass('_active');
             $(this).parent('.filter').toggleClass('_opened');
         });
 
-        $('.record-count').on('click', function (e) {
-            e.stopPropagation();
-            let windowHeight = $(window).height();
-            let item = $(this).children('.record-count__options');
-            let triangle = item.children('.triangle');
+        let calculateRecordPosition = (e) => {
 
-            let containerHeight = $(this).outerHeight();
-            let containerWidth = $(this).outerWidth();
+            let target = $(e.target);
+
+            let windowHeight = $(window).height();
+            let $this = target.parent('.record-count');
+            let item = $this.children('.record-count__options');
+            let triangle = item.children('.triangle');
+            let itemOffsetTop = $this.offset().top;
+
+            let containerHeight = $this.outerHeight();
+            let containerWidth = $this.outerWidth();
+
 
             let Y = $(item).offset().top;
             let X = $(item).offset().left;
 
-            let itemHeight = item.height() + parseFloat(item.css('padding-top')) + parseFloat(item.css('padding-bottom'));
-            let top = $(this).offset().top + containerHeight + 12 + 'px';
-            let left = X + $(this).offset().left + containerWidth - $(item).outerWidth() + 20;
+            let itemHeight = item.outerHeight();
+            let top = itemOffsetTop + containerHeight + 12 + 'px';
+            let left = X + $this.offset().left + containerWidth - $(item).outerWidth() + 20;
 
-            if (($(this).offset().top + itemHeight + Y) > windowHeight) {
-                top = windowHeight - itemHeight - containerHeight - 50 + 'px';
-                triangle.css({
-                    top: 'auto',
-                    bottom: -10 + 'px',
-                    transform: 'rotate(180deg)'
+            if (!$this.hasClass('_opened')) {
+                if ((itemOffsetTop + itemHeight + Y) > windowHeight) {
+                    top = itemOffsetTop - itemHeight - containerHeight - $(window).scrollTop() + 'px';
+
+                    triangle.css({
+                        top: 'auto',
+                        bottom: -10 + 'px',
+                        transform: 'rotate(180deg)'
+                    });
+                }
+
+                item.css({
+                    top,
+                    left
                 });
+
+                $this.addClass('_opened');
+
+            } else {
+                $this.removeClass('_opened');
             }
+        };
 
-            item.css({
-                top,
-                left
+        $('.record-count__value')
+            .click((e) => calculateRecordPosition(e));
+
+        $('.record-count__options')
+            .mouseleave(function (e) {
+                e.stopPropagation();
+
+                let $this = $(this).parent('.record-count');
+                let item = $(this);
+                let children = $('.record-count__option');
+
+                if ($(e.target).closest($this) && $(e.target).closest(children)) {
+                    item.removeAttr('style');
+                    $this.removeClass('_opened');
+                }
             });
-            $(this).toggleClass('_opened');
-        });
 
-        $('.record-option').on('click', function (e) {
+
+        $('.record-count__option').on('click', function (e) {
             e.stopPropagation();
+            $('.record-count__option').removeClass('_selected');
             $(this).toggleClass('_selected');
+            $('.record-count__options').removeAttr('style');
+            $('.record-count').removeClass('_opened');
+            $('.record-count__value').text($(this).attr('rel'));
         });
 
         $('.header__notifications')
@@ -63,9 +98,14 @@ require('@fancyapps/fancybox');
                 $(this).removeClass('_opened');
             });
 
+
         $('.setting-trigger .statistics__table--settings-link').on('click', function (e) {
             e.preventDefault();
             $(this).parent().toggleClass('_opened');
+        });
+
+        $('.filter').mouseleave(function () {
+            $(this).removeClass('_opened');
         });
 
         let input = $('input.input');
@@ -127,23 +167,6 @@ require('@fancyapps/fancybox');
         filter('.profile__tab--link', '.profile__content--inner');
         filter('.auth__tab--link', '.auth__form-wrapper');
 
-        // $('.forget-pass').on('click', function (e) {
-        //     e.preventDefault();
-        //
-        //     $('.auth__content .main__content').removeClass('_active');
-        //     $('.auth__form-wrapper').addClass('_active');
-        //     $('.auth__content .forget__content').addClass('_active');
-        // });
-        //
-        // $('.forget__content .close-btn').on('click', function (e) {
-        //     e.preventDefault();
-        //
-        //     $('.auth__content .main__content').addClass('_active');
-        //     $('.auth__content .forget__content').addClass('_active');
-        //     $('.auth__form-wrapper').removeClass('_active');
-        //     $('.auth__form-wrapper[data-target="auth"]').addClass('_active');
-        // });
-
         let post_back_input = $('input[name="post_back"]');
         let post_back_text = $('.popup__postback--text');
 
@@ -158,6 +181,13 @@ require('@fancyapps/fancybox');
         $('[data-action="archive"]').on('click', function () {
             $.fancybox.open({
                 src: '#archivePopup',
+                touch: false
+            });
+        });
+
+        $('[data-action="edit"]').on('click', function () {
+            $.fancybox.open({
+                src: '#editStream',
                 touch: false
             });
         });
@@ -182,6 +212,7 @@ require('@fancyapps/fancybox');
 
         $(document).on('click', (e) => handlersFormExist(e, '.filter'));
         $(document).on('click', (e) => handlersFormExist(e, '.settings-item'));
+        $(document).on('click', (e) => handlersFormExist(e, '.record-count'));
 
         $('.show-pass').on('click', function () {
             let input = $(this).parent('.fieldset').find('input');
@@ -195,6 +226,33 @@ require('@fancyapps/fancybox');
             }
         });
 
+        $('.helper')
+            .mouseover(function () {
+                let text = $(this).data('text');
+                let top = $(this).offset().top + 10 + 'px';
+                let left = $(this).offset().left + 10 + 'px';
+
+
+                $(this).append(
+                    `<div class="helper-text">
+                        ${text}
+                    </div>`
+                );
+
+                $('.helper-text').css({
+                    top,
+                    left,
+                });
+            })
+            .mouseout(function () {
+                $('.helper-text').remove();
+            });
+
+        $(window).resize(function () {
+            $('.record-count__options').removeAttr('style');
+            $('.record-count').removeClass('_opened');
+            $('.helper-text').remove();
+        });
     });
 
 })(jquery, window);

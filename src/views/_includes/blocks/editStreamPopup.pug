@@ -1,12 +1,12 @@
 include ../mixins/filter
 include ../mixins/switch
 
-.popup#addStream
+.popup#editStream
     .popup__close.close-btn(data-fancybox-close)
         span
         span
     .popup__inner
-        h2.popup__title Добавление потока
+        h2.popup__title Редактирование потока
         form.form.popup__form.add-popup-form(method="post")
             .fieldset
                 input.input(name="stream_name" type="text" required id="stream_name")
@@ -76,21 +76,18 @@ include ../mixins/switch
                     value="domonetization"
                     switch_name="Домонетизация"
                     helper=true
-                    helperText="Домонетизация - Способ получения дополнительной выгоды из трафика"
                 )
                 +switch(
                     name="popup_window"
                     value="popup_window"
                     switch_name="Поп-ап окно"
                     helper=true
-                    helperText="Pop-up - Окно с рекомендуемым контентом, которое всплывает поверх наполнения сайта"
                 )
                 +switch(
                     name="push_base"
                     value="push_base"
                     switch_name="Сбор пуш базы"
                     helper=true
-                    helperText="Push база - Сбор подписчиков, которые дали согласие на получение push уведомлений (могут появляться на экране любого устройства, где есть область оповещений)."
                 )
             .popup__postback
                 +switch(
@@ -107,7 +104,7 @@ include ../mixins/switch
                     p {subid1}  - параметр, указанный в поле subid1
                     p Пример
                         span http://sdjvjskdv.jsdvnjndsv/sdkv
-                    h2.popup__title._track-title Трекинг
+                    h2.popup__title Трекинг
                     .fieldset
                         input.input(name="subid1" type="text" required)#subid1
                         label.label(for="subid1") subid1
@@ -123,4 +120,6 @@ include ../mixins/switch
                     .fieldset
                         input.input(name="postback_url" type="text" required)#postback_url
                         label.label(for="postback_url") PostBack URL
-            button.btn.btn-primary(type="submit") ДОБАВИТЬ НОВЫЙ пОТОК
+            .buttons-wrapper
+                button.btn.btn-primary(type="submit") Сохранить
+                button.btn.btn-outlined(type="button" data-fancybox-close) Отменить

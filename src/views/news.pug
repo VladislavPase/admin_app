@@ -55,17 +55,17 @@ block content
                         tr
                             th Дата новости
                                 .sort-icons
-                                    i.icon-up-dir.icon
-                                    i.icon-down-dir.icon._sorted
+                                    i.icon-up-dir.icon._up
+                                    i.icon-down-dir.icon._down
                             th Картинка
                             th Заголовок статьи
                                 .sort-icons
                                     i.icon-up-dir.icon
-                                    i.icon-down-dir.icon._sorted
+                                    i.icon-down-dir.icon
                             th Маркер категории
                                 .sort-icons
                                     i.icon-up-dir.icon
-                                    i.icon-down-dir.icon._sorted
+                                    i.icon-down-dir.icon
                             th Язык
                             th 
                     tbody
@@ -84,7 +84,7 @@ block content
                                 td.news__table--lang
                                     img(src="assets/img/ru-flag.svg" alt="RU")
                                 td.news__table--action
-                                    button(value=i).action-elem
+                                    a(value=i href="https://izvestiya24.ru/1451" target="_blank").action-elem
                                         i.icon-eye
             .pagination-wrapper
                 include _includes/blocks/renderCount

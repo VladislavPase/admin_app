@@ -105,6 +105,11 @@ body {
         line-height: 21px;
         margin-bottom: 20px;
     }
+
+    .buttons-wrapper {
+        display: flex;
+        gap: 20px;
+    }
 }
 
 .close-btn {
