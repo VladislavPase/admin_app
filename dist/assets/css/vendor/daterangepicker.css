@@ -448,8 +448,9 @@
     background-color: #1F8EFA;
 }
 
-.daterangepicker td.start-date.active span {
+.daterangepicker td span {
     z-index: 4;
+    pointer-events: none;
 }
 
 .daterangepicker td.start-date.active::before {
@@ -476,11 +477,6 @@
     border: 1px solid #FF9C31;
     z-index: 3;
     background-color: #1F8EFA;
-}
-
-.daterangepicker .drp-calendar.right td.end-date.active span {
-    z-index: 4;
-    pointer-events: none;
 }
 
 .daterangepicker .drp-calendar.right td.end-date.active::before {
