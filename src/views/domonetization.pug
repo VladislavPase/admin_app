@@ -33,7 +33,7 @@ block content
                     +switch(
                         name="back_btn"
                         value="back_btn"
-                        switch_name="Кнопка “Назад”"
+                        switch_name="Кнопка «Назад»"
                     )
                     +switch(
                         name="redirect"
@@ -50,10 +50,12 @@ block content
                 .domonetization__form--bottom
                     button.btn.btn-primary скопировать
             .domonetization__info
-                .domonetization__info--item
+                .domonetization__info--item(data-text="push_base")
                     h4.domonetization__info--title Сбор PUSH-базы
                     p.domonetization__info--text При переходе на витрину, посетитель получает предложение подписаться на push-уведомления от сайта. После согласия юзер попадает в личную подписную базу вебмастера и на ежедневной основе получает уведомления с описанием топовых новостей витрины. Монетизируется после клика по пуш уведомлению. 
-                .domonetization__info--item
+                .domonetization__info--item(data-text="redirect")
                     h4.domonetization__info--title Редирект
                     p.domonetization__info--text Показываем  витрину после успешного заказа на лендинге - При клике на транзитке ленд открывается в отдельном окне, а на месте транзитки открывается новостник Превращаем транзитку в витрину  - После того, как сделан заказ - на ленде открывается новостник
-                        
+                .domonetization__info--item(data-text="back_btn")
+                    h4.domonetization__info--title Кнопка «Назад» 
+                    p.domonetization__info--text Когда пользователь нажимает «Назад» - он попадает на наш сайт с топовыми тизерами, а вы  получаете дополнительный доход, за каждую покупку, совершенную пользователем после клика по рекламным объявлениям. Позволяет увеличить доход вебмастера до 30%

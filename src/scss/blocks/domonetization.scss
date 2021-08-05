@@ -41,6 +41,10 @@
             margin-top: 10px;
         }
 
+        &--item {
+            display: none;
+        }
+
         &--item + &--item {
             margin-top: 30px;
         }

@@ -1,20 +1,33 @@
 .calendar-trigger {
-    padding: 15px 10px;
-    background: $color-white;
-    border: 1px solid $color-gray-dark;
-    cursor: pointer;
-    border-radius: 8px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    margin-right: 7px;
     flex: 0 0 200px;
-    font-size: 14px;
-    line-height: 16px;
-    display: flex;
-    align-items: center;
-    height: auto;
 
-    .icon {
-        margin-right: 7px;
+    input {
+        width: 0;
+        height: 0;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    label {
+        width: 100%;
+        height: 100%;
+        padding: 15px 10px;
+        background: $color-white;
+        border: 1px solid $color-gray-dark;
+        cursor: pointer;
+        border-radius: 8px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    .value {
+        text-transform: capitalize;
     }
 }

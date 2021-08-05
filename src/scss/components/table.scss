@@ -1,4 +1,4 @@
-table {
+table:not(.table-condensed) {
     background: $color-white;
     font-size: 14px;
     line-height: 16px;

@@ -1,9 +1,36 @@
 import jquery from 'jquery';
 export default (window.$ = window.jQuery = jquery);
 require('@fancyapps/fancybox');
+require('./libs/daterangepicker');
+import moment from 'moment';
+import 'moment/locale/ru';
 
 (function ($, window) {
     $(document).ready(function () {
+
+        let start = moment().subtract(29, 'days');
+        let end = moment();
+
+        function cb(start, end) {
+            $('.calendar-trigger .value').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+        }
+
+        $('input[name="date"]').daterangepicker({
+            startDate: start,
+            endDate: end,
+            ranges: {
+                'Сегодня': [moment(), moment()],
+                'Вчера': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Последние 3 дня': [moment().subtract(3, 'days'), moment()],
+                'Последние 7 дней': [moment().subtract(7, 'days'), moment()],
+                'Текущий месяц': [moment().startOf('month'), moment().endOf('month')],
+                'Прошедший месяц': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            }
+        }, cb);
+
+        cb(start, end);
+
+
 
         $('.filter__header').on('click', function () {
             $('.filter').removeClass('_opened');
@@ -167,16 +194,20 @@ require('@fancyapps/fancybox');
         filter('.profile__tab--link', '.profile__content--inner');
         filter('.auth__tab--link', '.auth__form-wrapper');
 
-        let post_back_input = $('input[name="post_back"]');
-        let post_back_text = $('.popup__postback--text');
+        function checkInputs(input, selector_text) {
+            $(input).change(function () {
+                if ($(this).is(':checked')) {
+                    $(selector_text).show();
+                } else {
+                    $(selector_text).hide();
+                }
+            });
+        }
 
-        post_back_input.change(function () {
-            if ($(this).is(':checked')) {
-                post_back_text.show();
-            } else {
-                post_back_text.hide();
-            }
-        });
+        checkInputs('input[name="post_back"]', '.popup__postback--text');
+        checkInputs('input[name="back_btn"]', '.domonetization__info--item[data-text="back_btn"]');
+        checkInputs('input[name="redirect"]', '.domonetization__info--item[data-text="redirect"]');
+        checkInputs('input[name="push_base"]', '.domonetization__info--item[data-text="push_base"]');
 
         $('[data-action="archive"]').on('click', function () {
             $.fancybox.open({
