@@ -1,6 +1,7 @@
 extends _includes/layout
 include _includes/mixins/filter
 include _includes/mixins/input-search
+include _includes/mixins/calendar
 
 block config
     - var pagetitle = 'Новости'
@@ -23,9 +24,7 @@ block content
                         span.search-info__title Вы недавно искали
                         p.search-info__text Новый Мерседес блеснул в Париже
                 .news__form--bottom
-                    .calendar-trigger 
-                        i.icon-calendar-1
-                        span.value 21.05.2019 - 26.05.2019
+                    +calendar()
                     +filter(
                         title="Маркер категории"
                         type="checkbox"
