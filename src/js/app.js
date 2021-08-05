@@ -12,10 +12,12 @@ import 'moment/locale/ru';
         let end = moment();
 
         function cb(start, end) {
-            $('.calendar-trigger .value').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+            $('.calendar-trigger .value').html(start.format('DD.MM.YYYY') + ' - ' + end.format('DD.MM.YYYY'));
         }
 
-        $('input[name="date"]').daterangepicker({
+        let date_input = $('input[name="date"]');
+
+        date_input.daterangepicker({
             startDate: start,
             endDate: end,
             ranges: {
@@ -30,7 +32,9 @@ import 'moment/locale/ru';
 
         cb(start, end);
 
-
+        date_input.on('click', function () {
+            $(this).parents('.calendar-trigger').addClass('_active');
+        });
 
         $('.filter__header').on('click', function () {
             $('.filter').removeClass('_opened');
@@ -235,15 +239,16 @@ import 'moment/locale/ru';
             $('.profile__form .filter__header').parents('.filter').addClass('_selected');
         }
 
-        const handlersFormExist = (e, selector) => {
+        const handlersFormExist = (e, selector, triggerClass) => {
             if (!$(e.target).closest(selector).length ) {
-                $(selector).removeClass('_opened');
+                $(selector).removeClass(triggerClass);
             }
         };
 
-        $(document).on('click', (e) => handlersFormExist(e, '.filter'));
-        $(document).on('click', (e) => handlersFormExist(e, '.settings-item'));
-        $(document).on('click', (e) => handlersFormExist(e, '.record-count'));
+        $(document).on('click', (e) => handlersFormExist(e, '.filter', '_opened'));
+        $(document).on('click', (e) => handlersFormExist(e, '.settings-item', '_opened'));
+        $(document).on('click', (e) => handlersFormExist(e, '.record-count', '_opened'));
+        $(document).on('click', (e) => handlersFormExist(e, '.calendar-trigger', '_active'));
 
         $('.show-pass').on('click', function () {
             let input = $(this).parent('.fieldset').find('input');
