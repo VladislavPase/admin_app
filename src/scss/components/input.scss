@@ -44,10 +44,15 @@ input.input._focus + label.label, input.input._valid + label.label {
 
 input.input._focus + label.label + .icon, input.input._valid + label.label + .icon {
     opacity: 1;
+    color: $color-blue-light;
 }
 
 input.input._focus, input.input._focusout {
     padding: 15px 10px;
+}
+
+input.input._focus {
+    border-color: $color-blue-light;
 }
 
 input.input._focusout + label.label {

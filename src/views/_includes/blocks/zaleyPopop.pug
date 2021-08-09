@@ -1,0 +1,16 @@
+.popup#zaleyPopup
+    .popup__close(data-fancybox-close)
+        span
+        span
+    .popup__inner
+        h2.popup__title Выплата на ZaleyCash
+        form.form.popup__form.finances-form(method="post")
+            .fieldset
+                input.input(name="zaley_sum" type="text" required)#zaley_sum
+                label.label(for="zaley_sum") Сумма выплаты в рублях 
+                    span *
+            .fieldset
+                input.input(name="zaley_email" type="text" required)#zaley_email
+                label.label(for="zaley_email") E-mail 
+                    span *
+            button.btn-primary.btn Заказать выплату

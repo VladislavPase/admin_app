@@ -1,0 +1,43 @@
+.popup#wirePopup
+    .popup__close(data-fancybox-close)
+        span
+        span
+    .popup__inner
+        h2.popup__title Выплата на Wire Transfer
+        form.form.popup__form.finances-form(method="post")
+            .fieldset
+                input.input(name="company_name" type="text" required)#company_name
+                label.label(for="company_name") Название компании-получателя 
+                    span *
+            .fieldset
+                input.input(name="company_url" type="text")#company_url
+                label.label(for="company_url") URL компании-получателя 
+            .fieldset
+                input.input(name="company_address" type="text" required)#company_address
+                label.label(for="company_address") Юридический адрес компании-получателя 
+                    span *
+            .fieldset
+                input.input(name="company_phone" type="text")#company_phone
+                label.label(for="company_phone") Телефон 
+            .fieldset
+                input.input(name="company_email" type="text")#company_email
+                label.label(for="company_email") E-mail 
+            .fieldset
+                input.input(name="company_person" type="text")#company_person
+                label.label(for="company_person") Контактное лицо 
+            .fieldset
+                input.input(name="bank_name" type="text" required)#bank_name
+                label.label(for="bank_name") Название банка 
+                    span *
+            .fieldset
+                input.input(name="bank_address" type="text" required)#bank_address
+                label.label(for="bank_address") Юридический адрес банка 
+                    span *
+            .fieldset
+                input.input(name="account_no" type="text")#account_no
+                label.label(for="account_no") Номер счета (Account No) 
+            .fieldset
+                input.input(name="swift_code" type="text" required)#swift_code
+                label.label(for="swift_code") Swift Code 
+                    span *
+            button.btn-primary.btn Заказать выплату

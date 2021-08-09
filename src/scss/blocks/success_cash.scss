@@ -1,0 +1,45 @@
+.success_cash {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    background-color: $color-green;
+    color: $color-white;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    box-shadow: 0 1px 4px rgba(128, 141, 162, 0.35);
+    border-radius: 36px;
+    width: 235px;
+    opacity: 0;
+    z-index: 99;
+    pointer-events: none;
+    transition: opacity .7s ease;
+
+    &._showed {
+        opacity: 1;
+    }
+
+    .icon {
+        margin-right: 10px;
+        border-radius: 50%;
+        flex: 0 0 18px;
+        height: 18px;
+        background-color: $color-white;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 7px;
+            height: 10px;
+            border: solid $color-green;
+            border-width: 0 2px 2px 0;
+            position: absolute;
+            left: 50%;
+            top: 2px;
+            transform: translateX(-50%) rotate(45deg);
+        }
+    }
+}

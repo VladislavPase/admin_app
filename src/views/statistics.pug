@@ -144,27 +144,18 @@ block content
                                 }
                             ]
                         )
-                        +filter(
-                            title="s_id"
-                            type="radio"
-                            options=[
-                                {
-                                    id: 1,
-                                    option: 's_id_1',
-                                    value: 's_id_1'
-                                },
-                                {
-                                    id: 2,
-                                    option: 's_id_2',
-                                    value: 's_id_2'
-                                },
-                                {
-                                    id: 3,
-                                    option: 's_id_3',
-                                    value: 's_id_3'
-                                }
-                            ]
-                        )
+                        .fieldset
+                            input.input(name="sid_1" type="text")
+                            label.label(for="sid_1") sid_1
+                        .fieldset
+                            input.input(name="sid_2" type="text")
+                            label.label(for="sid_2") sid_2
+                        .fieldset
+                            input.input(name="sid_1" type="text")
+                            label.label(for="sid_3") sid_3
+                        .fieldset
+                            input.input(name="sid_1" type="text")
+                            label.label(for="sid_4") sid_4
                     .statistics__table--actions
                         .statistics__table--buttons
                             button(type="submit").btn.btn-primary ПРИМЕНИТЬ

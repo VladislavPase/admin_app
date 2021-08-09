@@ -1,0 +1,24 @@
+.popup#alfaPopup
+    .popup__close(data-fancybox-close)
+        span
+        span
+    .popup__inner
+        h2.popup__title Выплата на Альфа Банк
+        form.form.popup__form.finances-form(method="post")
+            .fieldset
+                input.input(name="pay_sum" type="text" required)#pay_sum
+                label.label(for="pay_sum") Сумма выплаты в рублях 
+                    span *
+            .fieldset
+                input.input(name="card_num" type="text" required)#card_num
+                label.label(for="card_num") Номер карты 
+                    span *
+            .fieldset
+                input.input(name="person_name" type="text" required)#person_name
+                label.label(for="person_name") Имя 
+                    span *
+            .fieldset
+                input.input(name="person_lastname" type="text" required)#person_lastname
+                label.label(for="person_lastname") Фамилия 
+                    span *
+            button.btn-primary.btn Заказать выплату

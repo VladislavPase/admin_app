@@ -4,9 +4,26 @@
         &--form {
 
         }
+
+        table {
+            th {
+                font-weight: bold;
+                padding: 13px 15px 13px 3px;
+            }
+
+            td {
+                text-align: center;
+                padding: 20px 4px;
+            }
+        }
+
         &--filters, &--buttons {
             display: flex;
             gap: 20px;
+        }
+
+        &--filters {
+            flex-wrap: wrap;
         }
 
         &--actions {

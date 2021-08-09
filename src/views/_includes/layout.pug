@@ -1,5 +1,5 @@
 block config
-
+    
 doctype html
 html(lang=__.lang, class="no-js")
     head
@@ -25,7 +25,18 @@ html(lang=__.lang, class="no-js")
                     include blocks/parkingDomainPopup
                     include blocks/addPixelPopup
                 else if name === 'finances'
-                    include blocks/financesPopup
+                    include blocks/alfbabankPopup
+                    include blocks/payoneerPopup
+                    include blocks/zaleyPopop
+                    include blocks/tinkoffPopup
+                    include blocks/bankPopup
+                    include blocks/webMoneyPopup
+                    include blocks/capitalistDollar
+                    include blocks/capitalistPopup
+                    include blocks/everadPopup
+                    include blocks/wirePopup
+                    include blocks/sberPopup
+                    include blocks/success_cash
 
         block scripts
             include scripts

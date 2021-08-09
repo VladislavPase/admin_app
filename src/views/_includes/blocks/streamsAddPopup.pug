@@ -12,8 +12,9 @@ include ../mixins/switch
                 input.input(name="stream_name" type="text" required id="stream_name")
                 label.label(for="stream_name") Название потока
             .fieldset
-                input.input(name="stream_link" type="text" required id="stream_link")
-                label.label(for="stream_link") Ссылка потока
+                input.input(name="stream_link" type="text" required id="stream_link" value="https://URL.com" disabled)
+                label.label(for="stream_link") Ссылка потока (Генерируется автоматически)
+                .icon.icon-icon-docs(data-action="copy")
             .fieldset
                 +filter(
                     title="Выбор типа страницы"
@@ -104,22 +105,24 @@ include ../mixins/switch
                     p {status} - статус лида (pending, approved, rejected, trash),
                     p {payout} - сумма отчислений вебмастеру,
                     p {currency} - валюта (RUB)
-                    p {subid1}  - параметр, указанный в поле subid1
+                    p {subid1}  - параметр, указанный в поле subid_1
+                    p ...
+                    p {subid4}  - параметр, указанный в поле subid_4
                     p Пример
                         span http://sdjvjskdv.jsdvnjndsv/sdkv
                     h2.popup__title._track-title Трекинг
                     .fieldset
-                        input.input(name="subid1" type="text" required)#subid1
-                        label.label(for="subid1") subid1
+                        input.input(name="subid_1" type="text" required)#subid1
+                        label.label(for="subid1") subid_1
                     .fieldset
-                        input.input(name="subid2" type="text" required)#subid2
-                        label.label(for="subid2") subid2
+                        input.input(name="subid_2" type="text" required)#subid2
+                        label.label(for="subid2") subid_2
                     .fieldset
-                        input.input(name="subid3" type="text" required)#subid3
-                        label.label(for="subid3") subid3
+                        input.input(name="subid_3" type="text" required)#subid3
+                        label.label(for="subid3") subid_3
                     .fieldset
                         input.input(name="subid4" type="text" required)#subid4
-                        label.label(for="subid4") subid4
+                        label.label(for="subid_4") subid_4
                     .fieldset
                         input.input(name="postback_url" type="text" required)#postback_url
                         label.label(for="postback_url") PostBack URL

@@ -166,6 +166,12 @@ import 'moment/locale/ru';
             $(e.target).addClass('_focusout');
         });
 
+        for(let i = 0; i < input.length; i++) {
+            if ($(input[i]).val().length > 0) {
+                $(input[i]).addClass('_focus');
+            }
+        }
+
         $('.faq__item--toggler').on('click', function () {
             $(this).parents('.faq__item').toggleClass('_opened');
             $(this).parents('.faq__item').find('.faq__item--body').slideToggle(400);
@@ -283,6 +289,41 @@ import 'moment/locale/ru';
             .mouseout(function () {
                 $('.helper-text').remove();
             });
+
+        $(document).on('click', '[data-action="copy"]',function () {
+            let value = $(this).parent().find('input').val();
+
+            if (!navigator.clipboard) {
+                return;
+            }
+            navigator.clipboard.writeText(value).then(function() {
+                console.log('Async: Copying to clipboard was successful! ' + value);
+            }, function(err) {
+                console.error('Async: Could not copy text: ', err);
+            });
+        });
+
+        $('input[name="pay_sum"]').keyup(function (e) {
+            let value =  parseFloat($(e.target).val());
+            let convert_input = $(e.target).parents('.popup__form').find('input[name="dollar_convert"]');
+
+            if (!value) {
+                value = 0;
+            }
+
+            convert_input.val('$' + value * 70);
+        });
+
+        $('.finances-form').on('submit', function (e) {
+            e.preventDefault();
+
+            $.fancybox.close();
+            $('.success_cash').addClass('_showed');
+
+            setTimeout(() => {
+                $('.success_cash').removeClass('_showed');
+            }, 3000);
+        });
 
         $(window).resize(function () {
             $('.record-count__options').removeAttr('style');
