@@ -145,8 +145,28 @@ body {
     }
 }
 
+[data-action="copy"] {
+    &.success__copy {
+        color: $color-green !important;
+        border-color: $color-green !important;
+
+        &:hover {
+            color: $color-green !important;
+            border-color: $color-green !important;
+            background-color: transparent !important;
+        }
+    }
+}
 
 
+.success-copy-tooltip {
+    position: fixed;
+    padding: 5px 10px;
+    background-color: #2a2a2a;
+    color: $color-white;
+    font-size: 14px;
+    z-index: 99999999;
+}
 
 
 @import "vendor/jquery.fancybox.css";

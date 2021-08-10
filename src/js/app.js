@@ -290,17 +290,30 @@ import 'moment/locale/ru';
                 $('.helper-text').remove();
             });
 
-        $(document).on('click', '[data-action="copy"]',function () {
-            let value = $(this).parent().find('input').val();
+        $(document).on('click', '[data-action="copy"]',function (e) {
+            let value = $(this).data('value');
 
             if (!navigator.clipboard) {
                 return;
             }
+
             navigator.clipboard.writeText(value).then(function() {
                 console.log('Async: Copying to clipboard was successful! ' + value);
             }, function(err) {
                 console.error('Async: Could not copy text: ', err);
+                return;
             });
+
+            $(this).addClass('success__copy');
+
+            let crd = this.getBoundingClientRect();
+            let x = crd.x;
+            let y = crd.y;
+
+            $('body').append(`<div class="success-copy-tooltip" style="top: ${y + 26}px; left: ${x - 50}px">Скопировано!</div>`);
+            setTimeout(() => {
+                $(document).find('.success-copy-tooltip').remove();
+            }, 2000);
         });
 
         $('input[name="pay_sum"]').keyup(function (e) {

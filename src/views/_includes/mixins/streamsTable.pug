@@ -36,7 +36,7 @@ mixin streamsTable()
                                     i.icon-eye
                                 a.action-elem(data-action="edit")
                                     i.icon-pencil
-                                button.action-elem
+                                button.action-elem(data-action="copy" data-value=("Поток " + i))
                                     i.icon-icon-docs
                                 if attributes.type === "active"
                                     a.action-elem(data-action="archive")

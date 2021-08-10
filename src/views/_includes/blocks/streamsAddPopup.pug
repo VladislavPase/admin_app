@@ -14,7 +14,7 @@ include ../mixins/switch
             .fieldset
                 input.input(name="stream_link" type="text" required id="stream_link" value="https://URL.com" disabled)
                 label.label(for="stream_link") Ссылка потока (Генерируется автоматически)
-                .icon.icon-icon-docs(data-action="copy")
+                .icon.icon-icon-docs(data-action="copy" data-value="https://URL.com")
             .fieldset
                 +filter(
                     title="Выбор типа страницы"

@@ -26,6 +26,10 @@
                 input.input(name="company_person" type="text")#company_person
                 label.label(for="company_person") Контактное лицо 
             .fieldset
+                input.input(name="iban_num" type="text" required)#iban_num
+                label.label(for="iban_num") Счет получателя ( IBAN ) 
+                    span *
+            .fieldset
                 input.input(name="bank_name" type="text" required)#bank_name
                 label.label(for="bank_name") Название банка 
                     span *
