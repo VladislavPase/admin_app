@@ -5,8 +5,23 @@ require('./libs/daterangepicker');
 import moment from 'moment';
 import 'moment/locale/ru';
 
+function numberWithSpaces(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+
 (function ($, window) {
     $(document).ready(function () {
+
+        let info_nums = document.querySelectorAll('.account-info__item--value .value');
+        let header_nums = document.querySelectorAll('.header__account--value .value');
+
+        info_nums.forEach(el => {
+            el.innerText = numberWithSpaces(el.innerText);
+        });
+
+        header_nums.forEach(el => {
+            el.innerText = numberWithSpaces(el.innerText);
+        });
 
         let start = moment().subtract(29, 'days');
         let end = moment();
@@ -49,7 +64,7 @@ import 'moment/locale/ru';
             let windowHeight = $(window).height();
             let $this = target.parent('.record-count');
             let item = $this.children('.record-count__options');
-            let triangle = item.children('.triangle');
+            let triangle = item.children('.triangle-with-shadow');
             let itemOffsetTop = $this.offset().top;
 
             let containerHeight = $this.outerHeight();
@@ -67,9 +82,10 @@ import 'moment/locale/ru';
                 if ((itemOffsetTop + itemHeight + Y) > windowHeight) {
                     top = itemOffsetTop - itemHeight - containerHeight - $(window).scrollTop() + 'px';
 
+
                     triangle.css({
                         top: 'auto',
-                        bottom: -10 + 'px',
+                        bottom: -triangle.outerHeight() + 'px',
                         transform: 'rotate(180deg)'
                     });
                 }

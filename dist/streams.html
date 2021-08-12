@@ -46,21 +46,21 @@
           <ul class="header__account">
             <li class="header__item">
               <p class="header__account--title item-title">ЕРС</p>
-              <p class="header__account--value">300 000 $</p>
+              <p class="header__account--value"> <span class="value">300000</span>$</p>
             </li>
             <li class="header__item">
               <p class="header__account--title item-title">Домонетизировано</p>
-              <p class="header__account--value">300 000 $</p>
+              <p class="header__account--value"><span class="value">300000</span>$</p>
             </li>
             <li class="header__item balance">
               <p class="header__account--title item-title">Баланс</p>
-              <p class="header__account--value">300 000 $</p>
+              <p class="header__account--value"><span class="value">300000</span>$</p>
             </li>
           </ul>
           <div class="header__notifications header__item"><i class="icon-bell-alt icon"></i>
             <div class="new-notifications-indicator"></div>
             <ul class="header__messages">
-              <div class="triangle"></div>
+              <div class="triangle-with-shadow"></div>
               <p class="header__messages--title">Сообщения</p>
                       <li class="header__messages--item">
                         <div class="header__messages--icon">
@@ -93,7 +93,7 @@
           </div>
           <div class="header__profile header__item"><a class="header__profile--link" href="#">Vitaliy Zamedyanskiy<i class="icon-down-dir icon"></i></a>
             <ul class="account__settings">
-              <div class="triangle"></div>
+              <div class="triangle-with-shadow"></div>
               <li class="account__settings--item"><i class="icon-user-icon icon"></i><a class="account__settings--link" href="profile.html">Личные данные</a></li>
               <li class="account__settings--item"><i class="icon-security-icon icon"></i><a class="account__settings--link" href="profile.html">Безопасность</a></li>
               <li class="account__settings--item"><i class="icon-exit-icon icon"></i><a class="account__settings--link" href="auth.html">Выйти из профиля</a></li>
@@ -113,13 +113,12 @@
                     <input name="date" id="date"/>
                     <label for="date"><i class="icon-calendar-1 icon"></i><span class="value">21.05.2019 - 26.05.2019</span></label>
                   </div>
-                  <div class="fieldset input-search">
-                    <div class="icon-search icon"></div>
+                  <div class="fieldset input-search"><i class="icon-search icon"></i>
                     <input class="input" name="streams_active_search" type="text" id="streams_active_search"/>
                     <label class="label" for="streams_active_search">Поиск потока</label>
                   </div>
-                  <div class="search-info"><span class="search-info__title">Вы недавно искали</span>
-                    <p class="search-info__text">Новый Мерседес блеснул в Париже</p>
+                  <div class="search-info">
+                    <p class="search-info__title">Вы недавно искали</p><a class="search-info__text" href="#">Новый Мерседес блеснул в Париже</a>
                   </div><a class="btn btn-primary _js-popup-trigger" href="#addStream" data-fancybox data-options="{&quot;touch&quot; : false}">Добавить поток</a>
                 </form>
                 <div class="streams__table">
@@ -215,7 +214,7 @@
                   <div class="record-count"><span>Отобразить по</span>
                     <div class="record-count__value">10</div>
                     <ul class="record-count__options">
-                      <div class="triangle"></div>
+                      <div class="triangle-with-shadow"></div>
                       <li class="record-count__option" rel="5">5</li>
                       <li class="record-count__option" rel="10">10</li>
                       <li class="record-count__option" rel="25">25</li>
@@ -240,8 +239,7 @@
               </div>
               <div class="streams__content--inner" data-target="archive_streams">
                 <form class="form streams__form" method="post">
-                  <div class="fieldset input-search">
-                    <div class="icon-search icon"></div>
+                  <div class="fieldset input-search"><i class="icon-search icon"></i>
                     <input class="input" name="streams_active_search" type="text" id="streams_active_search"/>
                     <label class="label" for="streams_active_search">Поиск потока</label>
                   </div>
@@ -343,7 +341,7 @@
                   <div class="record-count"><span>Отобразить по</span>
                     <div class="record-count__value">10</div>
                     <ul class="record-count__options">
-                      <div class="triangle"></div>
+                      <div class="triangle-with-shadow"></div>
                       <li class="record-count__option" rel="5">5</li>
                       <li class="record-count__option" rel="10">10</li>
                       <li class="record-count__option" rel="25">25</li>

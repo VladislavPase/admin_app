@@ -15,6 +15,7 @@ table:not(.table-condensed) {
         padding: 13px 20px;
         text-align: start;
         font-weight: bold;
+        cursor: pointer;
     }
     td {
         text-align: start;
@@ -35,6 +36,14 @@ table:not(.table-condensed) {
         }
     }
 
+    tr {
+        cursor: pointer;
+        transition: background-color .3s ease;
+        &:hover {
+            background-color: rgba(66,130,255,.1) !important;
+        }
+    }
+
     .sort-icons {
         display: flex;
         flex-direction: column;
@@ -44,6 +53,7 @@ table:not(.table-condensed) {
         .icon {
             line-height: 5px;
             height: 5px;
+            cursor: pointer;
         }
         .icon + .icon {
             margin-top: 1px;

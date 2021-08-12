@@ -94,6 +94,7 @@
                 text-align: start;
                 width: 200px;
                 z-index: 2;
+                box-shadow: 0 0 4px rgba(128, 141, 162, 0.36);
             }
         }
 
@@ -147,6 +148,20 @@
             p + p {
                 margin-top: 12px;
             }
+        }
+    }
+
+    input + label + .icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-size: 18px;
+        opacity: .5;
+
+        &._showed {
+            color: $color-blue-light;
         }
     }
 }

@@ -4,6 +4,6 @@ mixin infoItem()
         p.account-info__item--value(class=attributes.subclass ? attributes.subclass : '')
             if attributes.icon
                 i(class=attributes.icon)
-            span=attributes.value
+            span(class="value")=attributes.value
             if attributes.type=='cash'
                 span $

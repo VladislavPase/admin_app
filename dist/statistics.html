@@ -46,21 +46,21 @@
           <ul class="header__account">
             <li class="header__item">
               <p class="header__account--title item-title">ЕРС</p>
-              <p class="header__account--value">300 000 $</p>
+              <p class="header__account--value"> <span class="value">300000</span>$</p>
             </li>
             <li class="header__item">
               <p class="header__account--title item-title">Домонетизировано</p>
-              <p class="header__account--value">300 000 $</p>
+              <p class="header__account--value"><span class="value">300000</span>$</p>
             </li>
             <li class="header__item balance">
               <p class="header__account--title item-title">Баланс</p>
-              <p class="header__account--value">300 000 $</p>
+              <p class="header__account--value"><span class="value">300000</span>$</p>
             </li>
           </ul>
           <div class="header__notifications header__item"><i class="icon-bell-alt icon"></i>
             <div class="new-notifications-indicator"></div>
             <ul class="header__messages">
-              <div class="triangle"></div>
+              <div class="triangle-with-shadow"></div>
               <p class="header__messages--title">Сообщения</p>
                       <li class="header__messages--item">
                         <div class="header__messages--icon">
@@ -93,7 +93,7 @@
           </div>
           <div class="header__profile header__item"><a class="header__profile--link" href="#">Vitaliy Zamedyanskiy<i class="icon-down-dir icon"></i></a>
             <ul class="account__settings">
-              <div class="triangle"></div>
+              <div class="triangle-with-shadow"></div>
               <li class="account__settings--item"><i class="icon-user-icon icon"></i><a class="account__settings--link" href="profile.html">Личные данные</a></li>
               <li class="account__settings--item"><i class="icon-security-icon icon"></i><a class="account__settings--link" href="profile.html">Безопасность</a></li>
               <li class="account__settings--item"><i class="icon-exit-icon icon"></i><a class="account__settings--link" href="auth.html">Выйти из профиля</a></li>
@@ -106,22 +106,22 @@
               <div class="account-info large">
                 <div class="account-info__item">
                   <p class="account-info__item--title item-title">Доступно</p>
-                  <p class="account-info__item--value green-text"><span>1000</span><span>$</span>
+                  <p class="account-info__item--value green-text"><span class="value">1000</span><span>$</span>
                   </p>
                 </div>
                 <div class="account-info__item">
                   <p class="account-info__item--title item-title">В ожидании</p>
-                  <p class="account-info__item--value"><span>0</span><span>$</span>
+                  <p class="account-info__item--value"><span class="value">0</span><span>$</span>
                   </p>
                 </div>
                 <div class="account-info__item">
                   <p class="account-info__item--title item-title">Всего</p>
-                  <p class="account-info__item--value green-text"><span>1000</span><span>$</span>
+                  <p class="account-info__item--value green-text"><span class="value">1000</span><span>$</span>
                   </p>
                 </div>
                 <div class="account-info__item">
                   <p class="account-info__item--title item-title">Выплачено</p>
-                  <p class="account-info__item--value"><span>0</span><span>$</span>
+                  <p class="account-info__item--value"><span class="value">0</span><span>$</span>
                   </p>
                 </div>
               </div>
@@ -261,78 +261,80 @@
                         <div class="icon-calendar icon"></div><span>Настроить поля в таблице</span>
                         <div class="icon-down-dir"></div></a>
                       <div class="table-settings">
-                        <div class="triangle"></div>
-                        <div class="table-settings__item">
-                          <input type="checkbox" name="table_settings" id="date" value="date"/>
-                          <label for="date">Дата
-                            <div class="check"><i class="icon-ok icon"></i></div>
-                          </label>
-                        </div>
-                        <div class="table-settings__item">
-                          <input type="checkbox" name="table_settings" id="redirect" value="redirect"/>
-                          <label for="redirect">Переходы
-                            <div class="check"><i class="icon-ok icon"></i></div>
-                          </label>
-                        </div>
-                        <div class="table-settings__item">
-                          <input type="checkbox" name="table_settings" id="uniques" value="uniques"/>
-                          <label for="uniques">Уники
-                            <div class="check"><i class="icon-ok icon"></i></div>
-                          </label>
-                        </div>
-                        <div class="table-settings__item">
-                          <input type="checkbox" name="table_settings" id="shows" value="shows"/>
-                          <label for="shows">Показы
-                            <div class="check"><i class="icon-ok icon"></i></div>
-                          </label>
-                        </div>
-                        <div class="table-settings__item">
-                          <input type="checkbox" name="table_settings" id="clicks" value="clicks"/>
-                          <label for="clicks">Клики
-                            <div class="check"><i class="icon-ok icon"></i></div>
-                          </label>
-                        </div>
-                        <div class="table-settings__item">
-                          <input type="checkbox" name="table_settings" id="ctr" value="ctr"/>
-                          <label for="ctr">CTR
-                            <div class="check"><i class="icon-ok icon"></i></div>
-                          </label>
-                        </div>
-                        <div class="table-settings__item">
-                          <input type="checkbox" name="table_settings" id="leads" value="leads"/>
-                          <label for="leads">Лиды
-                            <div class="check"><i class="icon-ok icon"></i></div>
-                          </label>
-                        </div>
-                        <div class="table-settings__item">
-                          <input type="checkbox" name="table_settings" id="cr" value="cr"/>
-                          <label for="cr">CR
-                            <div class="check"><i class="icon-ok icon"></i></div>
-                          </label>
-                        </div>
-                        <div class="table-settings__item">
-                          <input type="checkbox" name="table_settings" id="approval" value="approval"/>
-                          <label for="approval">Аппрув
-                            <div class="check"><i class="icon-ok icon"></i></div>
-                          </label>
-                        </div>
-                        <div class="table-settings__item">
-                          <input type="checkbox" name="table_settings" id="income" value="income"/>
-                          <label for="income">Доход
-                            <div class="check"><i class="icon-ok icon"></i></div>
-                          </label>
-                        </div>
-                        <div class="table-settings__item">
-                          <input type="checkbox" name="table_settings" id="domonetization" value="domonetization"/>
-                          <label for="domonetization">Домонетизировано
-                            <div class="check"><i class="icon-ok icon"></i></div>
-                          </label>
-                        </div>
-                        <div class="table-settings__item">
-                          <input type="checkbox" name="table_settings" id="waiting" value="waiting"/>
-                          <label for="waiting">В ожидании
-                            <div class="check"><i class="icon-ok icon"></i></div>
-                          </label>
+                        <div class="triangle-with-shadow"></div>
+                        <div class="settings-wrapper">
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="table_date" value="table_date"/>
+                            <label for="table_date">Дата
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="redirect" value="redirect"/>
+                            <label for="redirect">Переходы
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="uniques" value="uniques"/>
+                            <label for="uniques">Уники
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="shows" value="shows"/>
+                            <label for="shows">Показы
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="clicks" value="clicks"/>
+                            <label for="clicks">Клики
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="ctr" value="ctr"/>
+                            <label for="ctr">CTR
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="leads" value="leads"/>
+                            <label for="leads">Лиды
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="cr" value="cr"/>
+                            <label for="cr">CR
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="approval" value="approval"/>
+                            <label for="approval">Аппрув
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="income" value="income"/>
+                            <label for="income">Доход
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="domonetization" value="domonetization"/>
+                            <label for="domonetization">Домонетизировано
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="waiting" value="waiting"/>
+                            <label for="waiting">В ожидании
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -468,7 +470,7 @@
               <div class="record-count"><span>Отобразить по</span>
                 <div class="record-count__value">10</div>
                 <ul class="record-count__options">
-                  <div class="triangle"></div>
+                  <div class="triangle-with-shadow"></div>
                   <li class="record-count__option" rel="5">5</li>
                   <li class="record-count__option" rel="10">10</li>
                   <li class="record-count__option" rel="25">25</li>

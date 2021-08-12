@@ -344,6 +344,7 @@
 
 .daterangepicker .ranges li.active {
     color: #1F8EFA;
+    font-weight: bold;
 }
 
 .daterangepicker .ranges li.active:before {
@@ -443,7 +444,7 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 1px solid #FF9C31;
+    border: 3px solid #FF9C31;
     z-index: 3;
     background-color: #1F8EFA;
 }
@@ -466,7 +467,8 @@
     z-index: 1;
 }
 
-.daterangepicker .drp-calendar.right td.end-date.active::after {
+.daterangepicker .drp-calendar.right td.end-date.active::after,
+.daterangepicker .drp-calendar.left td.end-date.active::after {
     content: '';
     position: absolute;
     left: 0;
@@ -474,12 +476,13 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 1px solid #FF9C31;
+    border: 3px solid #FF9C31;
     z-index: 3;
     background-color: #1F8EFA;
 }
 
-.daterangepicker .drp-calendar.right td.end-date.active::before {
+.daterangepicker .drp-calendar.right td.end-date.active::before,
+.daterangepicker .drp-calendar.left td.end-date.active::before{
     content: '';
     position: absolute;
     left: 0;
@@ -490,6 +493,10 @@
     border-top-right-radius: 17px;
     background-color: #ebf4f8;
     z-index: 1;
+}
+
+.daterangepicker td.active span {
+    color: #fff !important;
 }
 
 .weekend[data-title="r0c6"],

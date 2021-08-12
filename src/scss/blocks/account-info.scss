@@ -12,9 +12,17 @@
         display: flex;
     }
 
-    &.chart, &.account-info__news {
+    &.chart {
         flex: 1 1 30%;
         padding: 20px;
+    }
+
+    &.account-info__news {
+        flex: 1 1 30%;
+
+        .account-info__item--title {
+            padding: 0 20px;
+        }
     }
 
     &__wrapper {
@@ -32,7 +40,7 @@
         }
 
         &--title {
-            font-width: 500;
+            font-weight: 500;
         }
 
         &--value {

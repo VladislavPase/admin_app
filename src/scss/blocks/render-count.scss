@@ -4,6 +4,12 @@
     font-size: 14px;
     line-height: 16px;
 
+    .triangle-with-shadow {
+        left: auto;
+        right: 8px;
+        transform: none;
+    }
+
     &__value {
         font-weight: bold;
         margin-left: 15px;

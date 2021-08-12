@@ -29,9 +29,11 @@
         }
     }
     &__table, .pixels__table {
-        th, td {
-            text-align: start;
-            padding: 12px 20px;
+        table {
+            th, td {
+                text-align: start;
+                padding: 20px;
+            }
         }
         &--domain {
             width: 230px;

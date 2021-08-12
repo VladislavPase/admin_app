@@ -120,17 +120,3 @@ textarea.textarea {
         }
     }
 }
-
-.fieldset .icon {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    font-size: 18px;
-    opacity: .5;
-
-    &._showed {
-        color: $color-blue-light;
-    }
-}

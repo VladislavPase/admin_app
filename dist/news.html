@@ -46,21 +46,21 @@
           <ul class="header__account">
             <li class="header__item">
               <p class="header__account--title item-title">ЕРС</p>
-              <p class="header__account--value">300 000 $</p>
+              <p class="header__account--value"> <span class="value">300000</span>$</p>
             </li>
             <li class="header__item">
               <p class="header__account--title item-title">Домонетизировано</p>
-              <p class="header__account--value">300 000 $</p>
+              <p class="header__account--value"><span class="value">300000</span>$</p>
             </li>
             <li class="header__item balance">
               <p class="header__account--title item-title">Баланс</p>
-              <p class="header__account--value">300 000 $</p>
+              <p class="header__account--value"><span class="value">300000</span>$</p>
             </li>
           </ul>
           <div class="header__notifications header__item"><i class="icon-bell-alt icon"></i>
             <div class="new-notifications-indicator"></div>
             <ul class="header__messages">
-              <div class="triangle"></div>
+              <div class="triangle-with-shadow"></div>
               <p class="header__messages--title">Сообщения</p>
                       <li class="header__messages--item">
                         <div class="header__messages--icon">
@@ -93,7 +93,7 @@
           </div>
           <div class="header__profile header__item"><a class="header__profile--link" href="#">Vitaliy Zamedyanskiy<i class="icon-down-dir icon"></i></a>
             <ul class="account__settings">
-              <div class="triangle"></div>
+              <div class="triangle-with-shadow"></div>
               <li class="account__settings--item"><i class="icon-user-icon icon"></i><a class="account__settings--link" href="profile.html">Личные данные</a></li>
               <li class="account__settings--item"><i class="icon-security-icon icon"></i><a class="account__settings--link" href="profile.html">Безопасность</a></li>
               <li class="account__settings--item"><i class="icon-exit-icon icon"></i><a class="account__settings--link" href="auth.html">Выйти из профиля</a></li>
@@ -104,13 +104,12 @@
           <div class="content__inner">
             <form class="news__form">
               <div class="news__form--top">
-                <div class="fieldset input-search">
-                  <div class="icon-search icon"></div>
+                <div class="fieldset input-search"><i class="icon-search icon"></i>
                   <input class="input" name="news_search" type="text" id="news_search"/>
                   <label class="label" for="news_search">Введите фрагмент заголовка новости</label>
                 </div>
-                <div class="search-info"><span class="search-info__title">Вы недавно искали</span>
-                  <p class="search-info__text">Новый Мерседес блеснул в Париже</p>
+                <div class="search-info">
+                  <p class="search-info__title">Вы недавно искали</p><a class="search-info__text" href="#">Новый Мерседес блеснул в Париже</a>
                 </div>
               </div>
               <div class="news__form--bottom">
@@ -244,7 +243,7 @@
               <div class="record-count"><span>Отобразить по</span>
                 <div class="record-count__value">10</div>
                 <ul class="record-count__options">
-                  <div class="triangle"></div>
+                  <div class="triangle-with-shadow"></div>
                   <li class="record-count__option" rel="5">5</li>
                   <li class="record-count__option" rel="10">10</li>
                   <li class="record-count__option" rel="25">25</li>

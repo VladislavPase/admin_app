@@ -32,9 +32,15 @@
             justify-content: space-between;
             align-items: center;
         }
+
         &--settings {
             display: flex;
             align-items: center;
+            .triangle-with-shadow {
+                left: auto;
+                transform: none;
+                right: 10%;
+            }
             &-link {
                 display: flex;
                 align-items: center;
@@ -73,24 +79,28 @@
         box-shadow: 0 1px 13px rgba(128, 141, 162, 0.36);
         border-radius: 6px;
         background: $color-white;
-        padding: 20px;
+        padding: 20px 0;
         z-index: 5;
         width: 215px;
         height: 225px;
-        overflow-y: auto;
         display: none;
 
-        &::-webkit-scrollbar {
-            width: 5px;
-        }
+        .settings-wrapper {
+            padding: 0 15px;
+            overflow-y: auto;
+            height: 100%;
+            &::-webkit-scrollbar {
+                width: 5px;
+            }
 
-        &::-webkit-scrollbar-track {
-            background: #f4f4f4;
-        }
+            &::-webkit-scrollbar-track {
+                background: #f4f4f4;
+            }
 
-        &::-webkit-scrollbar-thumb {
-            background: $color-gray-dark;
-            border-radius: 12px;
+            &::-webkit-scrollbar-thumb {
+                background: $color-gray-dark;
+                border-radius: 12px;
+            }
         }
 
         input {

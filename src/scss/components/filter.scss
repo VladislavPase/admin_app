@@ -35,12 +35,12 @@
         left: -1px;
         width: calc(100% + 2px);
         background: $color-white;
-        z-index: 2;
         //padding: 0 10px;
         display: none;
         border: 1px solid $color-gray-dark;
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
+        z-index: 5;
     }
 
     &._opened {
