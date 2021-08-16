@@ -41,8 +41,8 @@
       </aside>
       <div class="page-content">
         <header class="header">
-          <div class="header__route"> <i class="icon icon-statistics-icon"></i>Статистика
-          </div>
+          <div class="burger"><span></span><span></span></div>
+          <div class="header__route"> <i class="icon icon-statistics-icon"></i><span class="route__name">Статистика</span></div>
           <ul class="header__account">
             <li class="header__item">
               <p class="header__account--title item-title">ЕРС</p>
@@ -343,132 +343,134 @@
                   </div>
                 </div>
               </form>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Дата
-                      <div class="sort-icons"><i class="icon-up-dir icon _up"></i><i class="icon-down-dir icon _down"></i></div>
-                    </th>
-                    <th>Переходы
-                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
-                    </th>
-                    <th>Уники
-                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
-                    </th>
-                    <th>Показы
-                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
-                    </th>
-                    <th>Клики
-                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
-                    </th>
-                    <th>CTR, %
-                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
-                    </th>
-                    <th>EPC
-                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
-                    </th>
-                    <th>Лиды
-                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
-                    </th>
-                    <th>CR, %
-                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
-                    </th>
-                    <th>% Аппрува
-                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
-                    </th>
-                    <th>Доход
-                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
-                    </th>
-                    <th>Домонетизизация
-                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
-                    </th>
-                    <th>В ожидании
-                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>12.02.2021</td>
-                    <td>10</td>
-                    <td>10к</td>
-                    <td>100к</td>
-                    <td>250</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>100</td>
-                    <td>20</td>
-                    <td>25</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                  </tr>
-                  <tr>
-                    <td>12.02.2021</td>
-                    <td>10</td>
-                    <td>10к</td>
-                    <td>100к</td>
-                    <td>250</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>100</td>
-                    <td>20</td>
-                    <td>25</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                  </tr>
-                  <tr>
-                    <td>12.02.2021</td>
-                    <td>10</td>
-                    <td>10к</td>
-                    <td>100к</td>
-                    <td>250</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>100</td>
-                    <td>20</td>
-                    <td>25</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                  </tr>
-                  <tr>
-                    <td>12.02.2021</td>
-                    <td>10</td>
-                    <td>10к</td>
-                    <td>100к</td>
-                    <td>250</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>100</td>
-                    <td>20</td>
-                    <td>25</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                  </tr>
-                  <tr>
-                    <td>12.02.2021</td>
-                    <td>10</td>
-                    <td>10к</td>
-                    <td>100к</td>
-                    <td>250</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>100</td>
-                    <td>20</td>
-                    <td>25</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Дата
+                        <div class="sort-icons"><i class="icon-up-dir icon _up"></i><i class="icon-down-dir icon _down"></i></div>
+                      </th>
+                      <th>Переходы
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                      <th>Уники
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                      <th>Показы
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                      <th>Клики
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                      <th>CTR, %
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                      <th>EPC
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                      <th>Лиды
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                      <th>CR, %
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                      <th>% Аппрува
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                      <th>Доход
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                      <th>Домонетизизация
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                      <th>В ожидании
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>12.02.2021</td>
+                      <td>10</td>
+                      <td>10к</td>
+                      <td>100к</td>
+                      <td>250</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>100</td>
+                      <td>20</td>
+                      <td>25</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>12.02.2021</td>
+                      <td>10</td>
+                      <td>10к</td>
+                      <td>100к</td>
+                      <td>250</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>100</td>
+                      <td>20</td>
+                      <td>25</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>12.02.2021</td>
+                      <td>10</td>
+                      <td>10к</td>
+                      <td>100к</td>
+                      <td>250</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>100</td>
+                      <td>20</td>
+                      <td>25</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>12.02.2021</td>
+                      <td>10</td>
+                      <td>10к</td>
+                      <td>100к</td>
+                      <td>250</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>100</td>
+                      <td>20</td>
+                      <td>25</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>12.02.2021</td>
+                      <td>10</td>
+                      <td>10к</td>
+                      <td>100к</td>
+                      <td>250</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>100</td>
+                      <td>20</td>
+                      <td>25</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div class="pagination-wrapper">
               <div class="record-count"><span>Отобразить по</span>
-                <div class="record-count__value">10</div>
+                <div class="record-count__value"> <span class="value">10</span><i class="icon-down-dir icon"></i></div>
                 <ul class="record-count__options">
                   <div class="triangle-with-shadow"></div>
                   <li class="record-count__option" rel="5">5</li>

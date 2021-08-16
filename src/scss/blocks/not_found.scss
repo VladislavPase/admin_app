@@ -39,3 +39,27 @@
         }
     }
 }
+
+@media screen and (max-width: 767px) {
+    .error {
+        h1 {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        .error__code {
+            font-size: 100px;
+            line-height: 70px;
+            height: 70px;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        p {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+    }
+}

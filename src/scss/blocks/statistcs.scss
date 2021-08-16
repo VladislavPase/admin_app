@@ -1,11 +1,9 @@
 .statistics {
     &__table {
         margin-top: 30px;
-        &--form {
-
-        }
 
         table {
+            width: 980px;
             th {
                 font-weight: bold;
                 padding: 13px 15px 13px 3px;
@@ -29,6 +27,7 @@
         &--actions {
             margin-top: 20px;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
         }
@@ -36,6 +35,7 @@
         &--settings {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             .triangle-with-shadow {
                 left: auto;
                 transform: none;
@@ -148,6 +148,45 @@
             border-color: transparent;
             .icon {
                 opacity: 1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .statistics {
+        .table {
+            overflow-x: auto;
+            width: 500px;
+        }
+
+        table {
+            width: 980px;
+        }
+
+        .settings-item {
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .statistics {
+        .table {
+            overflow-x: auto;
+            width: 300px;
+        }
+
+        &__table {
+            &--settings {
+                margin-top: 20px;
+                align-items: flex-start;
+            }
+
+            .settings-item + .settings-item {
+                margin-left: 0;
+                margin-top: 15px;
             }
         }
     }

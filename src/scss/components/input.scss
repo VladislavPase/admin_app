@@ -120,3 +120,33 @@ textarea.textarea {
         }
     }
 }
+
+@media screen and (max-width: 1200px) {
+    input.input {
+        font-size: 12px;
+        line-height: 14px;
+        padding: 10px 10px 10px 0;
+    }
+
+    label.label {
+        font-size: 12px;
+        line-height: 14px;
+        top: 9px;
+    }
+
+    input.input._focus, input.input._focusout {
+        padding: 10px;
+    }
+
+    .input-search {
+        .icon {
+            font-size: 13px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    input.input._focus + label.label, input.input._valid + label.label {
+        font-size: 8px;
+    }
+}

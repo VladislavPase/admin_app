@@ -1,6 +1,5 @@
 .auth {
     flex: 1;
-    //height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,6 +29,17 @@
 
         input#pass {
             padding: 15px 135px 15px 10px;
+        }
+
+        .icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            &._showed {
+                color: $color-blue-light;
+            }
         }
     }
 
@@ -66,6 +76,25 @@
             img {
                 margin: 0 auto;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    .auth {
+        &__form-wrapper {
+            .forget-pass {
+                font-size: 12px;
+                line-height: 14px;
+            }
+
+            input#pass {
+                padding: 10px 115px 10px 10px;
+            }
+        }
+
+        &__content {
+            width: 300px;
         }
     }
 }

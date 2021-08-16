@@ -3,6 +3,7 @@
         &--top, &--bottom {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         &--bottom {
@@ -84,6 +85,37 @@
             button {
                 width: 30px;
                 height: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .news {
+        &__table {
+            overflow-x: auto;
+            width: 500px;
+
+            table {
+                width: 980px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .news {
+        &__table {
+            overflow-x: auto;
+            width: 300px;
+        }
+
+        &__form {
+            &--bottom {
+                > * {
+                    margin-left: 0;
+                    margin-top: 15px;
+                }
             }
         }
     }

@@ -1,9 +1,12 @@
 include ../mixins/header-message
 
 header.header
+    .burger
+        span
+        span
     .header__route 
         i.icon(class=headerIcon)
-        =pageName
+        span.route__name=pageName
     ul.header__account
         li.header__item
             p.header__account--title.item-title ЕРС

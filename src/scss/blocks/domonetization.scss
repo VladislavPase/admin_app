@@ -50,3 +50,13 @@
         }
     }
 }
+
+@media screen and (max-width: 767px) {
+    .domonetization {
+        &__form {
+            &--top {
+                flex-wrap: wrap;
+            }
+        }
+    }
+}

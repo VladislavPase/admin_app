@@ -2,6 +2,7 @@
     &__top {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
 
         .support-text {
             font-size: 14px;
@@ -42,8 +43,11 @@
                 box-shadow: 0 0 4px rgba(128, 141, 162, 0.5);
             }
 
-            img {
+            img, picture {
                 max-width: 100%;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
             }
         }
     }
@@ -60,6 +64,46 @@
             td {
                 padding: 20px;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .finances {
+        &__top {
+            .support-text {
+                font-size: 12px;
+                line-height: 14px;
+                flex: 1;
+                padding-left: 0;
+                margin-top: 20px;
+            }
+        }
+
+        &__systems {
+            &--item {
+                flex: 0 0 30%;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .finances {
+        &__systems {
+            &--item {
+                flex: 0 1 45%;
+            }
+        }
+
+        &__table {
+            width: 300px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 980px;
         }
     }
 }

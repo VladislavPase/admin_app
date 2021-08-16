@@ -15,6 +15,14 @@
         margin-left: 15px;
         cursor: pointer;
         color: $color-blue-light;
+
+        i.icon {
+            pointer-events: none;
+        }
+
+        .value {
+            pointer-events: none;
+        }
     }
 
     &__options {
@@ -51,5 +59,12 @@
         .record-count__options {
             display: block;
         }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .record-count {
+        font-size: 12px;
+        line-height: 14px;
     }
 }

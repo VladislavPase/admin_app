@@ -46,3 +46,13 @@
         width: 100%;
     }
 }
+
+@media screen and (max-width: 992px) {
+    .profile {
+        &__form {
+            .filter {
+                height: 36px;
+            }
+        }
+    }
+}

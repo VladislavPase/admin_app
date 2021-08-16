@@ -2,9 +2,9 @@
     font-size: 14px;
     line-height: 16px;
     color: $color-blue-light;
-    transition: color .2s ease;
+    transition: opacity .2s ease;
 
     &:hover {
-        color: $color-base
+        opacity: .7;
     }
 }

@@ -27,3 +27,24 @@
         border-left: 1px solid rgba(138,167,224, .2);
     }
 }
+
+@media screen and (max-width: 1200px){
+    .pagination {
+        &__item {
+            width: 30px;
+
+            a {
+                padding: 8px 0;
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    .pagination {
+        flex: 0 1 auto;
+        margin-top: 15px;
+    }
+}

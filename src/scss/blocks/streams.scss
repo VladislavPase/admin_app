@@ -63,3 +63,41 @@
         }
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .streams {
+        &__table {
+            overflow-x: auto;
+            width: 500px;
+
+            table {
+                width: 980px;
+            }
+        }
+
+        &__form {
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .streams {
+        &__table {
+            overflow-x: auto;
+            width: 300px;
+        }
+
+        &__form {
+            .input-search {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+        }
+    }
+}

@@ -35,3 +35,17 @@
         color: $color-blue-light;
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .calendar-trigger label {
+        font-size: 12px;
+        line-height: 14px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .calendar-trigger {
+        flex: 0 0 100%;
+    }
+}

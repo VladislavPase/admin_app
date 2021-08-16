@@ -179,6 +179,13 @@ body {
     box-shadow: -1px -1px 10px -2px rgba(0,0,0,0.5);
 }
 
+@media screen and (max-width: 1200px) {
+    .item-title {
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+
 
 @import "vendor/jquery.fancybox.css";
 @import "vendor/daterangepicker.css";

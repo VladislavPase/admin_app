@@ -76,7 +76,7 @@ function numberWithSpaces(x) {
 
             let itemHeight = item.outerHeight();
             let top = itemOffsetTop + containerHeight + 12 + 'px';
-            let left = X + $this.offset().left + containerWidth - $(item).outerWidth() + 20;
+            let left = X + $this.offset().left + containerWidth - $(item).outerWidth();
 
             if (!$this.hasClass('_opened')) {
                 if ((itemOffsetTop + itemHeight + Y) > windowHeight) {
@@ -126,7 +126,7 @@ function numberWithSpaces(x) {
             $(this).toggleClass('_selected');
             $('.record-count__options').removeAttr('style');
             $('.record-count').removeClass('_opened');
-            $('.record-count__value').text($(this).attr('rel'));
+            $('.record-count__value .value').text($(this).attr('rel'));
         });
 
         $('.header__notifications')
@@ -358,6 +358,11 @@ function numberWithSpaces(x) {
             $('.record-count__options').removeAttr('style');
             $('.record-count').removeClass('_opened');
             $('.helper-text').remove();
+        });
+
+        $('.burger').on('click', function () {
+           $('.sidebar').toggleClass('_active');
+           $(this).toggleClass('_active');
         });
     });
 

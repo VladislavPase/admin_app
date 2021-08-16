@@ -56,3 +56,21 @@
         }
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .faq {
+        &__item {
+            &--header {
+                padding: 10px;
+                font-size: 12px;
+                line-height: 14px;
+            }
+
+            &--body {
+                padding: 10px;
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+    }
+}

@@ -165,3 +165,22 @@
         }
     }
 }
+
+@media screen and (max-width: 767px) {
+    .popup {
+        padding: 30px;
+        width: 300px;
+
+        &__form {
+            width: 100%;
+
+            .switch-item {
+                flex: 0 0 100%;
+            }
+
+            .label[for="stream__link"] {
+
+            }
+        }
+    }
+}
