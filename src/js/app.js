@@ -42,7 +42,7 @@ function numberWithSpaces(x) {
                 'Последние 7 дней': [moment().subtract(7, 'days'), moment()],
                 'Текущий месяц': [moment().startOf('month'), moment().endOf('month')],
                 'Прошедший месяц': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-            }
+            },
         }, cb);
 
         cb(start, end);
@@ -255,6 +255,7 @@ function numberWithSpaces(x) {
 
             header_select.text(selected_text);
             $(this).parents('.filter').addClass('_selected');
+            $(this).parents('.filter._opened').removeClass('_opened');
         });
 
         if ($('.profile__form .filter__header').text()) {
@@ -330,6 +331,17 @@ function numberWithSpaces(x) {
             setTimeout(() => {
                 $(document).find('.success-copy-tooltip').remove();
             }, 2000);
+        });
+
+        $(document).on('click' ,function () {
+            let datepicker = document.querySelector('.daterangepicker');
+            let html = document.querySelector('html');
+
+            if (datepicker.style.display === 'block') {
+                html.style.overflow = 'hidden';
+            } else {
+                html.style.overflow = '';
+            }
         });
 
         $('input[name="pay_sum"]').keyup(function (e) {

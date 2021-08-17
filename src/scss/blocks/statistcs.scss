@@ -2,6 +2,10 @@
     &__table {
         margin-top: 30px;
 
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
         table {
             width: 980px;
             th {
@@ -155,15 +159,6 @@
 
 @media screen and (max-width: 1200px) {
     .statistics {
-        .table {
-            overflow-x: auto;
-            width: 500px;
-        }
-
-        table {
-            width: 980px;
-        }
-
         .settings-item {
             font-size: 14px;
             line-height: 19px;
@@ -173,15 +168,20 @@
 
 @media screen and (max-width: 767px) {
     .statistics {
-        .table {
-            overflow-x: auto;
-            width: 300px;
-        }
 
         &__table {
             &--settings {
                 margin-top: 20px;
+                flex-direction: column;
                 align-items: flex-start;
+            }
+
+            .table-settings {
+                left: 0;
+            }
+
+            .settings-item {
+                padding: 0;
             }
 
             .settings-item + .settings-item {

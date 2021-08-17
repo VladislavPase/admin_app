@@ -190,10 +190,19 @@
 
         &.account-info__news {
             flex: 0 0 100%;
+        }
+    }
+}
 
-            .news__item--title {
-                width: 280px;
-            }
+@media screen and (max-width: 360px) {
+    .account-info {
+        &.large {
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        &__item {
+            flex: 0 0 100%;
         }
     }
 }

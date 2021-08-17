@@ -7,6 +7,6 @@ mixin filter()
         .filter__body
             - let arr = attributes.options
             each item in arr
-                .filter__item
+                .filter__item(class=item.disabled ? 'js-disabled' : '')
                     input(type=attributes.type name="stream" value=item.value id=item.value checked=item.checked)
                     label(for=item.value)=item.option

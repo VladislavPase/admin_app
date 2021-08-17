@@ -1094,7 +1094,7 @@
                     this.container.css({
                         top: containerTop,
                         left: containerLeft,
-                        right: 'auto'
+                        right: 'auto',
                     });
                 }
             } else {
@@ -1106,9 +1106,16 @@
                         right: 0
                     });
                 } else {
+                    let height;
+                    if ($(window).width() < 767) {
+                        height = $(window).height() / 2
+                    } else {
+                        height = 'auto'
+                    }
                     this.container.css({
                         top: containerTop,
                         left: containerLeft,
+                        height,
                         right: 'auto'
                     });
                 }

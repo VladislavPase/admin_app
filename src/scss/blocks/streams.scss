@@ -31,8 +31,6 @@
 
     &__table {
 
-        overflow-x: auto;
-
         &--date {
             width: 135px;
         }
@@ -66,15 +64,6 @@
 
 @media screen and (max-width: 1200px) {
     .streams {
-        &__table {
-            overflow-x: auto;
-            width: 500px;
-
-            table {
-                width: 980px;
-            }
-        }
-
         &__form {
             flex-wrap: wrap;
         }
@@ -88,15 +77,25 @@
 
 @media screen and (max-width: 767px) {
     .streams {
-        &__table {
-            overflow-x: auto;
-            width: 300px;
-        }
-
         &__form {
             .input-search {
                 margin-left: 0;
+                flex: 1 1 auto;
+            }
+        }
+
+        .btn {
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .streams {
+        &__form {
+            .input-search {
                 margin-top: 15px;
+                flex: 0 0 100%;
             }
         }
     }

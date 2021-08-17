@@ -15,6 +15,15 @@
         &:not(:first-child) {
             border-top: 1px solid rgba(101,125,149,.15);
         }
+        &.js-disabled {
+            pointer-events: none;
+            cursor: not-allowed;
+            background-color: rgba(0,0,0,.05);
+
+            label {
+                pointer-events: none !important;
+            }
+        }
     }
     &__header {
         overflow: hidden;
@@ -98,11 +107,13 @@
 
         &__header {
             padding: 10px 25px 10px 0;
+            font-size: 12px;
+            line-height: 14px;
         }
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 576px) {
     .filter {
         flex: 0 0 100%;
     }

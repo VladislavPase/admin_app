@@ -65,20 +65,11 @@
 
             &--info  {
                 padding-right: 0;
+                flex: 0 0 100%;
             }
 
             .btn {
                 margin-top: 20px;
-            }
-        }
-
-        &__table,
-        .pixels__table {
-            width: 300px;
-            overflow-x: auto;
-
-            table {
-                width: 980px;
             }
         }
     }

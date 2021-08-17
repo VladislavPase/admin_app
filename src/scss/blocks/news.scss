@@ -90,28 +90,32 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 767px) {
     .news {
-        &__table {
-            overflow-x: auto;
-            width: 500px;
+        &__form {
+            &--bottom {
+                > * {
+                    margin-left: 10px;
+                }
 
-            table {
-                width: 980px;
+                .btn.btn-primary {
+                    flex: 1;
+                }
+
+                .btn + .btn {
+                    margin-left: 10px;
+                }
             }
         }
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 576px) {
     .news {
-        &__table {
-            overflow-x: auto;
-            width: 300px;
-        }
-
         &__form {
             &--bottom {
+                margin-top: 15px;
+
                 > * {
                     margin-left: 0;
                     margin-top: 15px;

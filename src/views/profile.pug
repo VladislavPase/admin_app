@@ -38,19 +38,29 @@ block content
                                 span *
                         .fieldset
                             +filter(
-                                title="Доллары США"
+                                title="RUB"
                                 type="radio"
                                 options=[
                                     {
+                                        id: 123,
                                         option: 'Доллары США',
                                         value: 'dollars',
-                                        checked: true
+                                        disabled: true,
+                                        checked: false
                                     },
                                     {
                                         id: 12312,
                                         option: 'UAH',
+                                        disabled: true,
                                         value: 'uah',
                                         checked: false
+                                    },
+                                    {
+                                        id: 12314,
+                                        option: 'RUB',
+                                        disabled: false,
+                                        value: 'rub',
+                                        checked: true
                                     }
                                 ]
                             )
