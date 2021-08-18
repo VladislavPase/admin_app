@@ -58,15 +58,30 @@ mixin table()
             - for (let i = 0; i < 5; i++)
                 tr
                     td 12.02.2021
-                    td 10
-                    td 10к
-                    td 100к
-                    td 250
-                    td 0
-                    td 0
-                    td 100
-                    td 20
-                    td 25
-                    td 0
-                    td 0
-                    td 0
+                    td.redirect-value 10
+                    td.unique-value 10к
+                    td.shows-value 100к
+                    td.clicks-value 250
+                    td.ctr-value 0
+                    td.epc-value 0
+                    td.leads-value 100
+                    td.cr-value 20
+                    td.aproove-value 25
+                    td.income-value 0
+                    td.domo-value 0
+                    td.waiting-value 0
+        tfoot
+            tr
+                td Всего
+                td.redirect-total 10
+                td.unique-total 10к
+                td.shows-total 100к
+                td.clicks-total 250
+                td.ctr-total 0
+                td.epc-total 0
+                td.leads-total 100
+                td.cr-total 20
+                td.aproove-total 25
+                td.income-total 0
+                td.domo-total 0
+                td.waiting-total 0

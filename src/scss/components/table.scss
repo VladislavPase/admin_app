@@ -44,6 +44,10 @@ table:not(.table-condensed) {
         }
     }
 
+    tfoot tr {
+        font-weight: bold;
+    }
+
     .sort-icons {
         display: flex;
         flex-direction: column;
