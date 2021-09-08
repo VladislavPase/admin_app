@@ -117,24 +117,31 @@
                   <input name="date" id="date"/>
                   <label for="date"><i class="icon-calendar-1 icon"></i><span class="value">21.05.2019 - 26.05.2019</span></label>
                 </div>
-                <div class="filter">
+                <div class="filter" data-type="Маркер категории">
                   <div class="filter__header">
                     <div class="filter__item">
                       <p class="filter__header--title">Маркер категории</p>
                     </div><i class="icon-down-dir icon"></i>
                   </div>
-                  <div class="filter__body">
-                    <div class="filter__item">
-                      <input type="checkbox" name="stream" value="category_1" id="category_1"/>
-                      <label for="category_1">Маркер категории1</label>
+                  <div class="filter__body dropdown-body">
+                    <div class="triangle-with-shadow"></div>
+                    <div class="dropdown-wrapper">
+                      <label class="filter__item dropdown-item">Маркер категории1
+                        <input type="checkbox" value="category_1"/>
+                        <div class="check"><i class="icon-ok icon"></i></div>
+                      </label>
+                      <label class="filter__item dropdown-item">Маркер категории2
+                        <input type="checkbox" value="category_2"/>
+                        <div class="check"><i class="icon-ok icon"></i></div>
+                      </label>
+                      <label class="filter__item dropdown-item">Маркер категории3
+                        <input type="checkbox" value="category_3"/>
+                        <div class="check"><i class="icon-ok icon"></i></div>
+                      </label>
                     </div>
-                    <div class="filter__item">
-                      <input type="checkbox" name="stream" value="category_2" id="category_2"/>
-                      <label for="category_2">Маркер категории2</label>
-                    </div>
-                    <div class="filter__item">
-                      <input type="checkbox" name="stream" value="category_3" id="category_3"/>
-                      <label for="category_3">Маркер категории3</label>
+                    <div class="dropdown-actions">
+                      <button class="dropdown-accept" type="button"><span class="icon-accept icon"><span></span><span></span></span>Выбрать</button>
+                      <button class="dropdown-cancel" type="button"> <span class="icon-cancel icon"><span></span><span></span></span>Отменить</button>
                     </div>
                   </div>
                 </div>

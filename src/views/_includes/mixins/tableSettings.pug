@@ -1,6 +1,6 @@
-mixin tableSetting()
-    .table-settings__item
+mixin dropdownItem()
+    label.table-settings__item.dropdown-item=attributes.title
         input(type="checkbox" name="table_settings" id=attributes.id value=attributes.value)
-        label(for=attributes.id)=attributes.title
-            .check
-                i.icon-ok.icon
+        .check
+            i.icon-ok.icon
+            

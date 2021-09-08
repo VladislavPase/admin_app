@@ -151,9 +151,67 @@ function numberWithSpaces(x) {
             $(this).parent().toggleClass('_opened');
         });
 
-        $('.filter').mouseleave(function () {
-            $(this).removeClass('_opened');
+        let dropDownButtonAccept = [...document.querySelectorAll('button.dropdown-accept')];
+        let dropDownButtonCancel = [...document.querySelectorAll('button.dropdown-cancel')];
+        let filterHeaderTitle = document.querySelectorAll('.filter__header--title');
+
+        if (filterHeaderTitle) {
+            filterHeaderTitle.forEach(title => {
+                title.style.width = title.clientWidth + 'px';
+                console.log(title.clientWidth)
+            });
+        }
+
+        if (dropDownButtonAccept) {
+            dropDownButtonAccept.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    let inputs = $(this).parents('.dropdown-body').find('input');
+                    let checked_inputs = [];
+
+                    inputs.each(function () {
+                        if ($(this).is(':checked')) {
+                            checked_inputs.push($(this).attr('value'));
+                        }
+                    });
+
+                    let title = $(this).parents('.filter').find('.filter__header--title');
+                    title.addClass('js-selected');
+                    title.text(checked_inputs.join(', '));
+                });
+            });
+        }
+
+        if (dropDownButtonCancel) {
+            dropDownButtonCancel.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    let inputs = $(this).parents('.dropdown-body').find('input');
+                    let filterName = $(this).parents('.filter').data('type');
+
+                    inputs.each(function () {
+                        if ($(this).is(':checked')) {
+                            inputs.prop('checked', false);
+                        }
+                    });
+
+                    let title = $(this).parents('.filter').find('.filter__header--title');
+                    title.removeClass('js-selected');
+                    title.text(filterName);
+                });
+            });
+        }
+
+        $('.form__filter--body .filter__item').on('click', function () {
+            let selected_text = $(this).text();
+            let header_select = $(this).parents('.filter._opened').find('.filter__header--title');
+
+            header_select.text(selected_text);
+            $(this).parents('.filter').addClass('_selected');
+            $(this).parents('.filter._opened').removeClass('_opened');
         });
+
+        // $('.filter').mouseleave(function () {
+        //     $(this).removeClass('_opened');
+        // });
 
         let input = $('input.input');
 

@@ -3,7 +3,7 @@
     padding: 0 10px;
     background: $color-white;
     border: 1px solid $color-gray-dark;
-    flex: 1 0 auto;
+    flex: 1 0 135px;
     cursor: pointer;
     * {
         user-select: none;
@@ -24,12 +24,30 @@
                 pointer-events: none !important;
             }
         }
+
+        &.not-data {
+            font-size: 14px;
+            line-height: 16px;
+            opacity: 0.4;
+            font-style: italic;
+            pointer-events: none;
+        }
     }
     &__header {
         overflow: hidden;
         padding: 15px 25px 15px 0;
         cursor: pointer;
-        width: 100%;
+
+        &--title {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+
+            &.js-selected {
+                margin: 0;
+            }
+        }
+
         .icon {
             position: absolute;
             right: -2px;
@@ -38,26 +56,55 @@
         }
     }
     &__body {
-        position: absolute;
-        top: 100%;
-        left: -1px;
-        width: calc(100% + 2px);
-        background: $color-white;
-        //padding: 0 10px;
-        display: none;
-        border: 1px solid $color-gray-dark;
-        border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px;
-        z-index: 5;
+
     }
 
     &._opened {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
+        border-color: $color-blue-light;
         .filter__body {
             display: block;
         }
     }
+
+    &._opened + .label, &._selected + .label {
+        top: -8px;
+        left: 10px;
+        opacity: 1;
+        font-size: 12px;
+        line-height: 14px;
+        color: $color-blue-light;
+    }
+
+    &._selected + .label {
+        color: $color-base;
+    }
+}
+
+.form__filter--body {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: -1px;
+    width: calc(100% + 2px);
+    background: $color-white;
+    display: none;
+    box-shadow: 0 1px 13px rgba(128, 141, 162, 0.358);
+    border-radius: 8px;
+    z-index: 5;
+    overflow: hidden;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f4f4f4;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $color-gray-dark;
+        border-radius: 12px;
+    }
+
     input {
         position: absolute;
         width: 0;
@@ -74,27 +121,17 @@
         cursor: pointer;
         z-index: 2;
         transition: background-color .2s ease;
+
         &:hover {
-            background-color: rgba(101,125,149,.15);
+            background-color: $color-blue-light;
+            color: $color-white;
         }
     }
 
     input:checked + label {
-        color: $color-yellow;
+        color: $color-white;
         font-weight: bold;
-    }
-
-    &._opened + .label, &._selected + .label {
-        top: -8px;
-        left: 10px;
-        opacity: 1;
-        font-size: 12px;
-        line-height: 14px;
-        color: $color-blue-light;
-    }
-
-    &._selected + .label {
-        color: $color-base;
+        background-color: $color-blue-light;
     }
 }
 

@@ -45,6 +45,7 @@ block content
                     .statistics__table--filters
                         +calendar()
                         +filter(
+                            name="stream"
                             title="Поток"
                             type="checkbox"
                             options=[
@@ -62,10 +63,21 @@ block content
                                     id: 123125,
                                     option: 'Поток3',
                                     value: 'stream_3'
+                                },
+                                {
+                                    id: 1231252,
+                                    option: 'Поток4',
+                                    value: 'stream_4'
+                                },
+                                {
+                                    id: 12312532,
+                                    option: 'Поток5',
+                                    value: 'stream_5'
                                 }
                             ]
                         )
                         +filter(
+                            name="article"
                             title="Статья"
                             type="checkbox"
                             options=[
@@ -87,6 +99,7 @@ block content
                             ]
                         )
                         +filter(
+                            name="design"
                             title="Дизайн"
                             type="checkbox"
                             options=[
@@ -103,6 +116,7 @@ block content
                             ]
                         )
                         +filter(
+                            name="type"
                             title="Тип страницы"
                             type="checkbox"
                             options=[
@@ -124,6 +138,7 @@ block content
                             ]
                         )
                         +filter(
+                            name="device"
                             title="Устройство"
                             type="checkbox"
                             options=[
@@ -160,71 +175,71 @@ block content
                         .statistics__table--buttons
                             button(type="submit").btn.btn-primary ПРИМЕНИТЬ
                             button(type="button").btn.btn-outlined ОЧИСТИТЬ
-                        .statistics__table--settings 
+                        .statistics__table--settings
                             .settings-item.setting-trigger
                                 a(href="#").statistics__table--settings-link
                                     .icon-calendar.icon
                                     span Настроить поля в таблице
                                     .icon-down-dir
-                                .table-settings
+                                .table-settings.dropdown-body
                                     .triangle-with-shadow
-                                    .settings-wrapper
-                                        +tableSetting(
+                                    .settings-wrapper.dropdown-wrapper
+                                        +dropdownItem(
                                             title="Дата"
                                             id="table_date"
                                             value="table_date"
                                         )
-                                        +tableSetting(
+                                        +dropdownItem(
                                             title="Переходы"
                                             id="redirect"
                                             value="redirect"
                                         )
-                                        +tableSetting(
+                                        +dropdownItem(
                                             title="Уники"
                                             id="uniques"
                                             value="uniques"
                                         )
-                                        +tableSetting(
+                                        +dropdownItem(
                                             title="Показы"
                                             id="shows"
                                             value="shows"
                                         )
-                                        +tableSetting(
+                                        +dropdownItem(
                                             title="Клики"
                                             id="clicks"
                                             value="clicks"
                                         )
-                                        +tableSetting(
+                                        +dropdownItem(
                                             title="CTR"
                                             id="ctr"
                                             value="ctr"
                                         )
-                                        +tableSetting(
+                                        +dropdownItem(
                                             title="Лиды"
                                             id="leads"
                                             value="leads"
                                         )
-                                        +tableSetting(
+                                        +dropdownItem(
                                             title="CR"
                                             id="cr"
                                             value="cr"
                                         )
-                                        +tableSetting(
+                                        +dropdownItem(
                                             title="Аппрув"
                                             id="approval"
                                             value="approval"
                                         )
-                                        +tableSetting(
+                                        +dropdownItem(
                                             title="Доход"
                                             id="income"
                                             value="income"
                                         )
-                                        +tableSetting(
+                                        +dropdownItem(
                                             title="Домонетизировано"
                                             id="domonetization"
                                             value="domonetization"
                                         )
-                                        +tableSetting(
+                                        +dropdownItem(
                                             title="В ожидании"
                                             id="waiting"
                                             value="waiting"
@@ -233,8 +248,12 @@ block content
                                 a(href="#").statistics__table--settings-link
                                     .icon-export.icon
                                     span Экспорт CSV
-                .table-wrapper
-                    +table()
-            .pagination-wrapper
-                include _includes/blocks/renderCount
-                include _includes/blocks/pagination
+                .statistics__data
+                    //.table-wrapper
+                    //    +table()
+                    //.pagination-wrapper
+                    //    include _includes/blocks/renderCount
+                    //    include _includes/blocks/pagination
+                    .pure-content-message
+                        img(src="assets/img/pure__data.svg" alt="")
+                        p Здесь будет отображаться ваша статистика

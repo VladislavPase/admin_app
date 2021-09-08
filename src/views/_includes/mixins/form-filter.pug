@@ -1,0 +1,15 @@
+mixin form-filter()
+    .filter
+        .filter__header
+            .filter__item
+                p.filter__header--title=attributes.title
+            i.icon-down-dir.icon
+        .filter__body.form__filter--body
+            - let arr = attributes.options
+            if arr.length === 0
+                .filter__item.not-data
+                    label Нет данных
+            else
+                each item in arr
+                    label.filter__item.dropdown-item(class=item.disabled ? 'js-disabled' : '')=item.option
+                        input(type="checkbox" name=attributes.name value=item.value)

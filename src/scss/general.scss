@@ -181,6 +181,23 @@ body {
     overflow-x: auto;
 }
 
+.pure-content-message {
+    text-align: center;
+    margin-top: 150px;
+
+    img {
+        margin: 0 auto 25px;
+    }
+
+    p {
+        font-size: 22px;
+        line-height: 26px;
+        color: #B1BDD6;
+        max-width: 330px;
+        margin: 0 auto;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .item-title {
         font-size: 12px;

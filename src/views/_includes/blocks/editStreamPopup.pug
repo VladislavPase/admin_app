@@ -1,4 +1,4 @@
-include ../mixins/filter
+include ../mixins/form-filter
 include ../mixins/switch
 
 .popup#editStream
@@ -16,7 +16,7 @@ include ../mixins/switch
                 label.label(for="stream_link") Ссылка потока (Генерируется автоматически)
                 .icon.icon-icon-docs(data-action="copy")
             .fieldset
-                +filter(
+                +form-filter(
                     title="Выбор типа страницы"
                     type="radio"
                     options=[
@@ -38,7 +38,7 @@ include ../mixins/switch
                     ]
                 )
             .fieldset
-                +filter(
+                +form-filter(
                     title="Дизайн"
                     type="radio"
                     options=[
@@ -55,7 +55,7 @@ include ../mixins/switch
                     ]
                 )
             .fieldset
-                +filter(
+                +form-filter(
                     title="Домен"
                     type="radio"
                     options=[
