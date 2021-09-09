@@ -55,14 +55,20 @@
             transform: translateY(-50%);
         }
     }
-    &__body {
-
-    }
 
     &._opened {
         border-color: $color-blue-light;
+
+        .filter__header {
+            .icon {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+
         .filter__body {
-            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
     }
 

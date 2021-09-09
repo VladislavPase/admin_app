@@ -1,11 +1,12 @@
 mixin filter()
-    .filter(data-type=attributes.title)
+    .filter.js-control-filter(data-type=attributes.title)
         .filter__header
             .filter__item
                 p.filter__header--title=attributes.title
             i.icon-down-dir.icon
         .filter__body.dropdown-body
             .triangle-with-shadow
+            input.dropdown-search(type="text" placeholder="Поиск...")
             .dropdown-wrapper
                 - let arr = attributes.options
                 if arr.length === 0
@@ -18,6 +19,7 @@ mixin filter()
                             .check
                                 i.icon-ok.icon
             .dropdown-actions
+                button.dropdown-select_all.btn-primary(type="button") Выбрать все
                 button.dropdown-accept(type="button")
                     span.icon-accept.icon
                         span

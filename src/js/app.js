@@ -153,12 +153,11 @@ function numberWithSpaces(x) {
 
         let dropDownButtonAccept = [...document.querySelectorAll('button.dropdown-accept')];
         let dropDownButtonCancel = [...document.querySelectorAll('button.dropdown-cancel')];
-        let filterHeaderTitle = document.querySelectorAll('.filter__header--title');
+        let filterHeaderTitle = document.querySelectorAll('.js-control-filter .filter__header--title');
 
         if (filterHeaderTitle) {
             filterHeaderTitle.forEach(title => {
                 title.style.width = title.clientWidth + 'px';
-                console.log(title.clientWidth)
             });
         }
 
@@ -176,7 +175,9 @@ function numberWithSpaces(x) {
 
                     let title = $(this).parents('.filter').find('.filter__header--title');
                     title.addClass('js-selected');
-                    title.text(checked_inputs.join(', '));
+                    title.text(checked_inputs.length === 0 ? this.dataset.type : checked_inputs.join(', '));
+
+                    $(this).parents('.filter').removeClass('_opened');
                 });
             });
         }
