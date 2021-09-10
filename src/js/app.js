@@ -153,6 +153,7 @@ function numberWithSpaces(x) {
 
         let dropDownButtonAccept = [...document.querySelectorAll('button.dropdown-accept')];
         let dropDownButtonCancel = [...document.querySelectorAll('button.dropdown-cancel')];
+        let dropDownButtonSelectAll = [...document.querySelectorAll('button.dropdown-select_all')];
         let filterHeaderTitle = document.querySelectorAll('.js-control-filter .filter__header--title');
 
         if (filterHeaderTitle) {
@@ -191,6 +192,25 @@ function numberWithSpaces(x) {
                     inputs.each(function () {
                         if ($(this).is(':checked')) {
                             inputs.prop('checked', false);
+                        }
+                    });
+
+                    let title = $(this).parents('.filter').find('.filter__header--title');
+                    title.removeClass('js-selected');
+                    title.text(filterName);
+                });
+            });
+        }
+
+        if (dropDownButtonSelectAll) {
+            dropDownButtonSelectAll.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    let inputs = $(this).parents('.dropdown-body').find('input');
+                    let filterName = $(this).parents('.filter').data('type');
+
+                    inputs.each(function () {
+                        if (!$(this).is(':checked')) {
+                            inputs.prop('checked', true);
                         }
                     });
 
