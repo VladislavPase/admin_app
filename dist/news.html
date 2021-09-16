@@ -183,7 +183,9 @@
                       <div class="category-mark">ШОУ-БИЗНЕС</div>
                     </td>
                     <td class="news__table--lang"><img src="assets/img/ru-flag.svg" alt="RU"></td>
-                    <td class="news__table--action"><a class="action-elem" value="0" href="https://izvestiya24.ru/1451" target="_blank"><i class="icon-eye"></i></a></td>
+                    <td class="news__table--action">
+                      <div class="news__table--action-inner"><a class="action-elem" value="0" href="https://izvestiya24.ru/1451" target="_blank"><i class="icon-eye"></i></a><a class="action-elem _js-popup-trigger" value="0" href="#addStream" target="_blank" data-fancybox data-options="{&quot;touch&quot; : false}" data-item-type="long_news" data-item-title="ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.">+</a></div>
+                    </td>
                   </tr>
                   <tr>
                     <td>12.02.2021</td>
@@ -198,7 +200,9 @@
                       <div class="category-mark">ШОУ-БИЗНЕС</div>
                     </td>
                     <td class="news__table--lang"><img src="assets/img/ru-flag.svg" alt="RU"></td>
-                    <td class="news__table--action"><a class="action-elem" value="1" href="https://izvestiya24.ru/1451" target="_blank"><i class="icon-eye"></i></a></td>
+                    <td class="news__table--action">
+                      <div class="news__table--action-inner"><a class="action-elem" value="1" href="https://izvestiya24.ru/1451" target="_blank"><i class="icon-eye"></i></a><a class="action-elem _js-popup-trigger" value="1" href="#addStream" target="_blank" data-fancybox data-options="{&quot;touch&quot; : false}" data-item-type="long_news" data-item-title="ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.">+</a></div>
+                    </td>
                   </tr>
                   <tr>
                     <td>12.02.2021</td>
@@ -213,7 +217,9 @@
                       <div class="category-mark">ШОУ-БИЗНЕС</div>
                     </td>
                     <td class="news__table--lang"><img src="assets/img/ru-flag.svg" alt="RU"></td>
-                    <td class="news__table--action"><a class="action-elem" value="2" href="https://izvestiya24.ru/1451" target="_blank"><i class="icon-eye"></i></a></td>
+                    <td class="news__table--action">
+                      <div class="news__table--action-inner"><a class="action-elem" value="2" href="https://izvestiya24.ru/1451" target="_blank"><i class="icon-eye"></i></a><a class="action-elem _js-popup-trigger" value="2" href="#addStream" target="_blank" data-fancybox data-options="{&quot;touch&quot; : false}" data-item-type="long_news" data-item-title="ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.">+</a></div>
+                    </td>
                   </tr>
                   <tr>
                     <td>12.02.2021</td>
@@ -228,7 +234,9 @@
                       <div class="category-mark">ШОУ-БИЗНЕС</div>
                     </td>
                     <td class="news__table--lang"><img src="assets/img/ru-flag.svg" alt="RU"></td>
-                    <td class="news__table--action"><a class="action-elem" value="3" href="https://izvestiya24.ru/1451" target="_blank"><i class="icon-eye"></i></a></td>
+                    <td class="news__table--action">
+                      <div class="news__table--action-inner"><a class="action-elem" value="3" href="https://izvestiya24.ru/1451" target="_blank"><i class="icon-eye"></i></a><a class="action-elem _js-popup-trigger" value="3" href="#addStream" target="_blank" data-fancybox data-options="{&quot;touch&quot; : false}" data-item-type="long_news" data-item-title="ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.">+</a></div>
+                    </td>
                   </tr>
                   <tr>
                     <td>12.02.2021</td>
@@ -243,7 +251,9 @@
                       <div class="category-mark">ШОУ-БИЗНЕС</div>
                     </td>
                     <td class="news__table--lang"><img src="assets/img/ru-flag.svg" alt="RU"></td>
-                    <td class="news__table--action"><a class="action-elem" value="4" href="https://izvestiya24.ru/1451" target="_blank"><i class="icon-eye"></i></a></td>
+                    <td class="news__table--action">
+                      <div class="news__table--action-inner"><a class="action-elem" value="4" href="https://izvestiya24.ru/1451" target="_blank"><i class="icon-eye"></i></a><a class="action-elem _js-popup-trigger" value="4" href="#addStream" target="_blank" data-fancybox data-options="{&quot;touch&quot; : false}" data-item-type="long_news" data-item-title="ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.">+</a></div>
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -275,6 +285,168 @@
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="popup" id="addStream">
+        <div class="popup__close close-btn" data-fancybox-close><span></span><span></span></div>
+        <div class="popup__inner">
+          <h2 class="popup__title">Добавление потока</h2>
+          <form class="form popup__form add-popup-form" method="post">
+            <div class="fieldset">
+              <input class="input" name="stream_name" type="text" required id="stream_name">
+              <label class="label" for="stream_name">Название потока</label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="stream_link" type="text" required id="stream_link" value="https://URL.com" disabled>
+              <label class="label" for="stream_link">Ссылка потока (Генерируется автоматически)</label>
+              <div class="icon icon-icon-docs" data-action="copy" data-value="https://URL.com"></div>
+            </div>
+            <div class="fieldset">
+                    <div class="filter">
+                      <div class="filter__header">
+                        <div class="filter__item">
+                          <p class="filter__header--title">Выбор типа страницы</p>
+                        </div><i class="icon-down-dir icon"></i>
+                      </div>
+                      <div class="filter__body form__filter--body">
+                        <label class="filter__item dropdown-item">Короткая новость
+                          <input type="checkbox" name="page_type" value="short_news">
+                        </label>
+                        <label class="filter__item dropdown-item">Длинная новость
+                          <input type="checkbox" name="page_type" value="long_news">
+                        </label>
+                        <label class="filter__item dropdown-item">Домонетизация
+                          <input type="checkbox" name="page_type" value="domonetization">
+                        </label>
+                      </div>
+                    </div>
+            </div>
+            <div class="fieldset js-hidden available-news">
+                    <div class="filter">
+                      <div class="filter__header">
+                        <input class="filter__item" type="text" placeholder="Доступные новости"><i class="icon-down-dir icon"></i>
+                      </div>
+                      <div class="filter__body form__filter--body">
+                        <label class="filter__item dropdown-item">Очень длинное названиееееееееееееееееееееееееееееееееееееее
+                          <input type="checkbox" value="news_1">
+                        </label>
+                        <label class="filter__item dropdown-item">news 2
+                          <input type="checkbox" value="news_2">
+                        </label>
+                        <label class="filter__item dropdown-item">news 2
+                          <input type="checkbox" value="news_2">
+                        </label>
+                        <label class="filter__item dropdown-item">news 2
+                          <input type="checkbox" value="news_2">
+                        </label>
+                        <label class="filter__item dropdown-item">news 2
+                          <input type="checkbox" value="news_2">
+                        </label>
+                        <label class="filter__item dropdown-item">news 2
+                          <input type="checkbox" value="news_2">
+                        </label>
+                      </div>
+                    </div>
+            </div>
+            <div class="fieldset">
+                    <div class="filter">
+                      <div class="filter__header">
+                        <div class="filter__item">
+                          <p class="filter__header--title">Дизайн</p>
+                        </div><i class="icon-down-dir icon"></i>
+                      </div>
+                      <div class="filter__body form__filter--body">
+                        <label class="filter__item dropdown-item">Дизайн 1
+                          <input type="checkbox" value="design_1">
+                        </label>
+                        <label class="filter__item dropdown-item">Дизайн 2
+                          <input type="checkbox" value="design_2">
+                        </label>
+                      </div>
+                    </div>
+            </div>
+            <div class="fieldset">
+                    <div class="filter">
+                      <div class="filter__header">
+                        <div class="filter__item">
+                          <p class="filter__header--title">Домен</p>
+                        </div><i class="icon-down-dir icon"></i>
+                      </div>
+                      <div class="filter__body form__filter--body">
+                        <label class="filter__item dropdown-item">Домен 1
+                          <input type="checkbox" value="domain_1">
+                        </label>
+                        <label class="filter__item dropdown-item">Домен 2
+                          <input type="checkbox" value="domain_2">
+                        </label>
+                      </div>
+                    </div>
+            </div>
+            <div class="switch-wrapper">
+                    <div class="switch-item">
+                      <label class="switch">
+                        <input type="checkbox" name="domonetization" value="domonetization"><span class="slider"></span>
+                      </label>
+                      <p class="switch__name">Домонетизация</p>
+                      <div class="helper" data-text="Домонетизация - Способ получения дополнительной выгоды из трафика"><span>?</span></div>
+                    </div>
+                    <div class="switch-item">
+                      <label class="switch">
+                        <input type="checkbox" name="popup_window" value="popup_window"><span class="slider"></span>
+                      </label>
+                      <p class="switch__name">Поп-ап окно</p>
+                      <div class="helper" data-text="Pop-up - Окно с рекомендуемым контентом, которое всплывает поверх наполнения сайта"><span>?</span></div>
+                    </div>
+                    <div class="switch-item">
+                      <label class="switch">
+                        <input type="checkbox" name="push_base" value="push_base"><span class="slider"></span>
+                      </label>
+                      <p class="switch__name">Сбор пуш базы</p>
+                      <div class="helper" data-text="Push база - Сбор подписчиков, которые дали согласие на получение push уведомлений (могут появляться на экране любого устройства, где есть область оповещений)."><span>?</span></div>
+                    </div>
+            </div>
+            <div class="popup__postback">
+                    <div class="switch-item">
+                      <label class="switch">
+                        <input type="checkbox" name="post_back" value="post_back"><span class="slider"></span>
+                      </label>
+                      <p class="switch__name">Отправлять PostBack</p>
+                    </div>
+              <div class="popup__postback--text">
+                <p>PostBack запрос будет отправлен на указанный адрес методом GET. Для передачи параметров в запрос Вы можете использовать макросы, указанные ниже:</p>
+                <p>{click_id} - номер лида в системе,</p>
+                <p>{status} - статус лида (pending, approved, rejected, trash),</p>
+                <p>{payout} - сумма отчислений вебмастеру,</p>
+                <p>{currency} - валюта (RUB)</p>
+                <p>{subid1}  - параметр, указанный в поле subid_1</p>
+                <p>...</p>
+                <p>{subid4}  - параметр, указанный в поле subid_4</p>
+                <p>Пример<span>http://sdjvjskdv.jsdvnjndsv/sdkv</span></p>
+                <h2 class="popup__title _track-title">Трекинг</h2>
+                <div class="fieldset">
+                  <input class="input" name="subid_1" type="text" required id="subid1">
+                  <label class="label" for="subid1">subid_1</label>
+                </div>
+                <div class="fieldset">
+                  <input class="input" name="subid_2" type="text" required id="subid2">
+                  <label class="label" for="subid2">subid_2</label>
+                </div>
+                <div class="fieldset">
+                  <input class="input" name="subid_3" type="text" required id="subid3">
+                  <label class="label" for="subid3">subid_3</label>
+                </div>
+                <div class="fieldset">
+                  <input class="input" name="subid4" type="text" required id="subid4">
+                  <label class="label" for="subid_4">subid_4</label>
+                </div>
+                <div class="fieldset">
+                  <input class="input" name="postback_url" type="text" required id="postback_url">
+                  <label class="label" for="postback_url">PostBack URL</label>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit">ДОБАВИТЬ НОВЫЙ пОТОК</button>
+          </form>
         </div>
       </div>
     </div>

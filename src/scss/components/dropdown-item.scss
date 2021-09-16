@@ -48,16 +48,22 @@
     }
 }
 
+
 .dropdown-item {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-weight: bold;
     color: $color-base;
     padding: 10px 0;
     border-bottom: 1px solid #EBEEF3;
     cursor: pointer;
+
+    &._checked {
+        font-weight: bold;
+        color: #FF9C31;
+    }
+
     .check {
         border: 1px solid $color-gray-dark;
         box-sizing: border-box;
@@ -84,6 +90,10 @@
         position: absolute;
         top: 0;
         left: 0;
+    }
+
+    & + input:checked {
+        font-weight: bold;
     }
 
     input:checked + .check  {

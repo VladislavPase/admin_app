@@ -82,9 +82,17 @@
         &--action {
             width: 115px;
             padding: 0 20px;
+
             button {
                 width: 30px;
                 height: 30px;
+            }
+
+            &-inner {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                gap: 10px;
             }
         }
     }

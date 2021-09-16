@@ -21,6 +21,8 @@ html(lang=__.lang, class="no-js")
                     include blocks/streamsAddPopup
                     include blocks/streamsArchivePopup
                     include blocks/editStreamPopup
+                else if name === 'news'
+                    include blocks/streamsAddPopup
                 else if name === 'parking'
                     include blocks/parkingDomainPopup
                     include blocks/addPixelPopup

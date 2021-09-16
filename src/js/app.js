@@ -4,6 +4,8 @@ require('@fancyapps/fancybox');
 require('./libs/daterangepicker');
 import moment from 'moment';
 import 'moment/locale/ru';
+import './streamPopupFilters';
+import './popupFromNews';
 
 function numberWithSpaces(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
@@ -221,14 +223,7 @@ function numberWithSpaces(x) {
             });
         }
 
-        $('.form__filter--body .filter__item').on('click', function () {
-            let selected_text = $(this).text();
-            let header_select = $(this).parents('.filter._opened').find('.filter__header--title');
 
-            header_select.text(selected_text);
-            $(this).parents('.filter').addClass('_selected');
-            $(this).parents('.filter._opened').removeClass('_opened');
-        });
 
         // $('.filter').mouseleave(function () {
         //     $(this).removeClass('_opened');

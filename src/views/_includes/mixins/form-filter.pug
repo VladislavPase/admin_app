@@ -1,9 +1,14 @@
 mixin form-filter()
     .filter
-        .filter__header
-            .filter__item
-                p.filter__header--title=attributes.title
-            i.icon-down-dir.icon
+        if attributes.headerType==="input"
+            .filter__header
+                input.filter__item(type="text" placeholder=attributes.title)
+                i.icon-down-dir.icon
+        else
+            .filter__header
+                .filter__item
+                    p.filter__header--title=attributes.title
+                i.icon-down-dir.icon
         .filter__body.form__filter--body
             - let arr = attributes.options
             if arr.length === 0

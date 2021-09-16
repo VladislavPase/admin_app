@@ -19,21 +19,60 @@ include ../mixins/switch
                 +form-filter(
                     title="Выбор типа страницы"
                     type="radio"
+                    name="page_type"
                     options=[
                         {
                             id: 123123123,
-                            option: 'Тип страницы 1',
-                            value: 'page_type_1'
+                            option: 'Короткая новость',
+                            value: 'short_news'
                         },
                         {
                             id: 12312,
-                            option: 'Тип страницы 2',
-                            value: 'page_type_2'
+                            option: 'Длинная новость',
+                            value: 'long_news'
                         },
                         {
                             id: 123125,
-                            option: 'Тип страницы 3',
-                            value: 'page_type_3'
+                            option: 'Домонетизация',
+                            value: 'domonetization'
+                        }
+                    ]
+                )
+            .fieldset.js-hidden.available-news
+                +form-filter(
+                    headerType="input"
+                    title="Доступные новости"
+                    type="radio"
+                    options=[
+                        {
+                            id: 123123123,
+                            option: 'Очень длинное названиееееееееееееееееееееееееееееееееееееее',
+                            value: 'news_1',
+                        },
+                        {
+                            id: 12312,
+                            option: 'news 2',
+                            value: 'news_2',
+                        },
+                        {
+                            id: 123122,
+                            option: 'news 2',
+                            value: 'news_2',
+                        },
+                        {
+                            id: 1231223,
+                            option: 'news 2',
+                            value: 'news_2',
+                        },
+                        {
+                            id: 1231223,
+                            option: 'news 2',
+                            value: 'news_2',
+                        },
+                        {
+                            id: 1231221,
+                            option: 'news 2',
+                            value: 'news_2',
                         }
                     ]
                 )

@@ -192,6 +192,44 @@ body {
   margin: 0 auto;
 }
 
+.icon-info {
+  width: 17px;
+  height: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #8AA7E0;
+  color: #FFFFFF;
+  border-radius: 50%;
+  font-size: 12px !important;
+}
+
+.message-info {
+  padding: 8px;
+  background: #8AA7E0;
+  box-shadow: 0 11px 26px rgba(128, 141, 162, 0.35);
+  border-radius: 4px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease-in;
+  color: #FFFFFF;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 16px;
+  z-index: 2;
+}
+
+.message-info._showed {
+  opacity: 1;
+}
+
+.available-news.js-hidden {
+  display: none;
+}
+
 @media screen and (max-width: 1200px) {
   .item-title {
     font-size: 12px;
