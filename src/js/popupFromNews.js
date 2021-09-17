@@ -10,11 +10,11 @@ require('@fancyapps/fancybox');
             let input = [...$('input[name="page_type"]')];
             input.forEach(el => {
                 if (el.value === type) {
-                    let text = $(el).parent().text()
+                    let text = $(el).parent().text();
                     $(el).prop('checked', true);
                     $(el).parent().addClass('_checked');
                     $(el).parents('.filter').find('.filter__header--title').text(text);
-                    $(el).parents('.filter').addClass('_selected js-disabled');
+                    $(el).parents('.filter').addClass('_selected');
                     $('.available-news').removeClass('js-hidden');
                     $('.available-news').find('.filter__item').val(title);
                     $('.available-news').find('.filter').addClass('_selected js-disabled');

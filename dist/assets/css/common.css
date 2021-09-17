@@ -2442,7 +2442,7 @@ table:not(.table-condensed) .empty-text {
 }
 
 .streams__form .input-search {
-  flex: 1 1 265px;
+  flex: 0 0 265px;
 }
 
 .streams__table--date {
