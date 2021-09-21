@@ -20,6 +20,30 @@
             p {
                 line-height: 25px;
             }
+
+            ol {
+                list-style: decimal;
+            }
+
+            ul {
+                list-style: inherit;
+            }
+
+            ol, ul {
+                padding-left: 20px;
+
+                li {
+                    line-height: 25px;
+                }
+
+                li + li, p {
+                    margin-top: 10px;
+                }
+            }
+
+            p + ol, p + ul, ul + p, ol + p {
+                margin-top: 15px;
+            }
         }
 
         &--toggler {

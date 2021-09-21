@@ -108,11 +108,6 @@ abbr {
   text-decoration: none;
 }
 
-b,
-strong {
-  font-weight: inherit;
-}
-
 i,
 em {
   font-style: inherit;
@@ -2384,6 +2379,38 @@ table:not(.table-condensed) .empty-text {
 
 .faq__item--body p {
   line-height: 25px;
+}
+
+.faq__item--body ol {
+  list-style: decimal;
+}
+
+.faq__item--body ul {
+  list-style: inherit;
+}
+
+.faq__item--body ol,
+.faq__item--body ul {
+  padding-left: 20px;
+}
+
+.faq__item--body ol li,
+.faq__item--body ul li {
+  line-height: 25px;
+}
+
+.faq__item--body ol li + li,
+.faq__item--body ol p,
+.faq__item--body ul li + li,
+.faq__item--body ul p {
+  margin-top: 10px;
+}
+
+.faq__item--body p + ol,
+.faq__item--body p + ul,
+.faq__item--body ul + p,
+.faq__item--body ol + p {
+  margin-top: 15px;
 }
 
 .faq__item--toggler {
