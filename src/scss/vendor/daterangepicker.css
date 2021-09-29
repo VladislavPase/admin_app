@@ -187,7 +187,7 @@
 }
 
 .daterangepicker td.off, .daterangepicker td.off.in-range, .daterangepicker td.off.start-date, .daterangepicker td.off.end-date {
-    background-color: #fff;
+    /* background-color: #fff; */
     border-color: transparent;
     color: #999;
 }
