@@ -2,9 +2,10 @@ const config = require('./config.json');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const webpackConfig = {
-    entry: [
-        './src/js/app.js',
-    ],
+    entry: {
+        main: ['./src/js/app.js'],
+        select: ['./src/js/selectTags.js'],
+    },
 
     output: {
         path: __dirname,

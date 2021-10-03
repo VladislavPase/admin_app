@@ -16,6 +16,10 @@
         &:active, &:hover {
             background: $color-button-primary-active;
         }
+
+        &:focus {
+            background: #FF5C00;
+        }
     }
 
     &-outlined {

@@ -32,15 +32,15 @@ mixin streamsTable()
                             | ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.
                         td.streams__table--action
                             .actions
-                                button.action-elem
+                                button.action-elem(data-action-name="Посмотреть поток")
                                     i.icon-eye
-                                a.action-elem(data-action="edit")
+                                a.action-elem(data-action="edit" data-action-name="Редактировать поток")
                                     i.icon-pencil
-                                button.action-elem(data-action="copy" data-value=("Поток " + i))
+                                button.action-elem(data-action="copy" data-value=("Поток " + i) data-action-name="Скопировать поток")
                                     i.icon-icon-docs
                                 if attributes.type === "active"
-                                    a.action-elem(data-action="archive")
+                                    a.action-elem(data-action="archive" data-action-name="Архивировать поток")
                                         i.icon-icon-archive
                                 else
-                                    a.action-elem(data-action="active")
+                                    a.action-elem(data-action="active" data-action-name="Активировать поток")
                                         i.icon-icon-docs2

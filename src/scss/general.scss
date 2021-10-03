@@ -11,12 +11,20 @@ body {
     min-width: 100%;
     padding-left: 240px;
     min-height: 100%;
+
+    body.auth &, body.remember & {
+        padding: 0;
+    }
 }
 
 .page-content {
     flex: 1;
     display: flex;
     flex-direction: column;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .green-text {
@@ -179,6 +187,20 @@ body {
 
 .table-wrapper {
     overflow-x: auto;
+    margin-bottom: 20px;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+    }
 }
 
 .pure-content-message {

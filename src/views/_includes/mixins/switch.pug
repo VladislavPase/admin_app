@@ -1,7 +1,7 @@
 mixin switch()
-    .switch-item
+    .switch-item(class=attributes.class)
         label.switch
-            input(type="checkbox" name=attributes.name value=attributes.value)
+            input(type="checkbox" name=attributes.name value=attributes.value checked=attributes.checked)
             span.slider
         p.switch__name=attributes.switch_name
         if attributes.helper

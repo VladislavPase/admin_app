@@ -82,6 +82,8 @@
     &__profile {
         padding: 15px 0 15px 20px;
         cursor: pointer;
+        border-left: none;
+
         &--link {
             font-size: 14px;
             line-height: 16px;
@@ -107,6 +109,8 @@
 
     &__notifications {
         cursor: pointer;
+        border-right: 1px solid #ECEEF1;
+
         .icon {
             font-size: 22px;
             pointer-events: none;
@@ -214,7 +218,7 @@
 
     .account__settings {
         position: absolute;
-        right: 0;
+        right: -10px;
         width: 225px;
         top: calc(100% - 15px);
         border-radius: 6px;
@@ -315,6 +319,10 @@
     .header {
         .burger {
             display: flex;
+        }
+
+        &__profile {
+            margin-left: auto;
         }
     }
 }

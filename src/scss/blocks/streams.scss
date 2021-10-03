@@ -15,10 +15,9 @@
     &__form {
         display: flex;
         align-items: center;
+        gap: 20px;
 
         > * {
-            margin-left: 20px;
-
             &:first-child {
                 margin-left: 0;
             }
@@ -26,6 +25,10 @@
 
         .input-search {
             flex: 0 0 265px;
+        }
+
+        .search-info {
+            margin: 0;
         }
     }
 
@@ -67,11 +70,6 @@
         &__form {
             flex-wrap: wrap;
         }
-
-        .btn {
-            margin-left: 0;
-            margin-top: 20px;
-        }
     }
 }
 
@@ -79,13 +77,8 @@
     .streams {
         &__form {
             .input-search {
-                margin-left: 0;
                 flex: 1 1 auto;
             }
-        }
-
-        .btn {
-            margin-left: 0;
         }
     }
 }
@@ -94,7 +87,6 @@
     .streams {
         &__form {
             .input-search {
-                margin-top: 15px;
                 flex: 0 0 100%;
             }
         }

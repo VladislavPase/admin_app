@@ -42,7 +42,7 @@ input.input._focus + label.label, input.input._valid + label.label {
     color: $color-blue-light;
 }
 
-input.input._focus + label.label + .icon, input.input._valid + label.label + .icon {
+input.input._focus + label.label + .icon:not(.show-pass), input.input._valid + label.label + .icon:not(.show-pass) {
     opacity: 1;
     color: $color-blue-light;
 }

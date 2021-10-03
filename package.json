@@ -39,6 +39,7 @@
         "lazysizes": "5.x",
         "mobiscroll": "^3.0.0-beta6",
         "moment": "^2.29.1",
+        "select-pure": "^2.1.1-alpha.1",
         "svg4everybody": "2.x",
         "swiper": "^6.0.2"
     },

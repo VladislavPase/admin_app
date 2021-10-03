@@ -117,6 +117,7 @@ include ../mixins/switch
                     switch_name="Домонетизация"
                     helper=true
                     helperText="Домонетизация - Способ получения дополнительной выгоды из трафика"
+                    checked=true
                 )
                 +switch(
                     name="popup_window"
@@ -124,6 +125,7 @@ include ../mixins/switch
                     switch_name="Поп-ап окно"
                     helper=true
                     helperText="Pop-up - Окно с рекомендуемым контентом, которое всплывает поверх наполнения сайта"
+                    checked=true
                 )
                 +switch(
                     name="push_base"
@@ -131,12 +133,14 @@ include ../mixins/switch
                     switch_name="Сбор пуш базы"
                     helper=true
                     helperText="Push база - Сбор подписчиков, которые дали согласие на получение push уведомлений (могут появляться на экране любого устройства, где есть область оповещений)."
+                    checked=true
                 )
             .popup__postback
                 +switch(
                     name="post_back"
                     value="post_back"
                     switch_name="Отправлять PostBack"
+                    checked=false
                 )
                 .popup__postback--text
                     p PostBack запрос будет отправлен на указанный адрес методом GET. Для передачи параметров в запрос Вы можете использовать макросы, указанные ниже:

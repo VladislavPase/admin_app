@@ -1,9 +1,10 @@
-.auth {
+.auth, .remember {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     background: url('../img/auth_bg.png') no-repeat center/cover;
+    height: 100%;
 
     &__form-wrapper {
         display: none;
@@ -22,13 +23,13 @@
 
         .forget-pass {
             position: absolute;
-            right: 15px;
+            right: 10px;
             top: 50%;
             transform: translateY(-50%);
         }
 
         input#pass {
-            padding: 15px 135px 15px 10px;
+            padding: 15px 150px 15px 10px;
         }
 
         .icon {
@@ -47,14 +48,14 @@
         background: $color-white;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
         border-radius: 20px;
-        width: 360px;
+        width: 430px;
         padding: 40px;
     }
 
     .list__tabs{
         margin-bottom: 20px;
         &--item {
-            flex: 0 0 50%;
+            flex: 1 0 50%;
         }
         &--link {
             text-align: center;
@@ -89,12 +90,13 @@
             }
 
             input#pass {
-                padding: 10px 115px 10px 10px;
+                padding: 10px 130px 10px 10px;
             }
         }
 
         &__content {
-            width: 300px;
+            width: 100%;
+            padding: 40px 20px;
         }
     }
 }

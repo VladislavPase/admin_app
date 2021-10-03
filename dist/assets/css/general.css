@@ -12,10 +12,19 @@ body {
   min-height: 100%;
 }
 
+body.auth .app,
+body.remember .app {
+  padding: 0;
+}
+
 .page-content {
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .green-text {
@@ -173,6 +182,20 @@ body {
 
 .table-wrapper {
   overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.table-wrapper::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
 }
 
 .pure-content-message {

@@ -6,6 +6,8 @@ import moment from 'moment';
 import 'moment/locale/ru';
 import './streamPopupFilters';
 import './popupFromNews';
+import './tooltips';
+import './forgetPass';
 
 function numberWithSpaces(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
@@ -34,18 +36,20 @@ function numberWithSpaces(x) {
 
         let date_input = $('input[name="date"]');
 
-        date_input.daterangepicker({
-            startDate: start,
-            endDate: end,
-            ranges: {
-                'Сегодня': [moment(), moment()],
-                'Вчера': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                'Последние 3 дня': [moment().subtract(3, 'days'), moment()],
-                'Последние 7 дней': [moment().subtract(7, 'days'), moment()],
-                'Текущий месяц': [moment().startOf('month'), moment().endOf('month')],
-                'Прошедший месяц': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-            },
-        }, cb);
+        if (date_input) {
+            date_input.daterangepicker({
+                startDate: start,
+                endDate: end,
+                ranges: {
+                    'Сегодня': [moment(), moment()],
+                    'Вчера': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Последние 3 дня': [moment().subtract(3, 'days'), moment()],
+                    'Последние 7 дней': [moment().subtract(7, 'days'), moment()],
+                    'Текущий месяц': [moment().startOf('month'), moment().endOf('month')],
+                    'Прошедший месяц': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                },
+            }, cb);
+        }
 
         cb(start, end);
 
@@ -309,9 +313,46 @@ function numberWithSpaces(x) {
         checkInputs('input[name="redirect"]', '.domonetization__info--item[data-text="redirect"]');
         checkInputs('input[name="push_base"]', '.domonetization__info--item[data-text="push_base"]');
 
+        let addInstance = null;
+        let flag = true;
+
+        $('.add-stream-btn').on('click', function (e) {
+            e.preventDefault();
+            addInstance = $.fancybox.open({
+                src: '#addStream',
+                touch: false,
+                beforeClose: function () {
+                    if (flag) {
+                        $.fancybox.open({
+                            src: '#closeMessagePopup',
+                            touch: false,
+                            autoFocus: false
+                        });
+
+                        return false;
+                    }
+                }
+            });
+        });
+
+        $('#closeMessagePopup form').on('submit', function (e) {
+            e.preventDefault();
+            flag = false;
+            $.fancybox.close();
+            addInstance.close();
+            flag = true;
+        });
+
         $('[data-action="archive"]').on('click', function () {
             $.fancybox.open({
                 src: '#archivePopup',
+                touch: false
+            });
+        });
+
+        $('[data-action="active"]').on('click', function () {
+            $.fancybox.open({
+                src: '#activatePopup',
                 touch: false
             });
         });
@@ -411,10 +452,12 @@ function numberWithSpaces(x) {
             let datepicker = document.querySelector('.daterangepicker');
             let html = document.querySelector('html');
 
-            if (datepicker.style.display === 'block') {
-                html.style.overflow = 'hidden';
-            } else {
-                html.style.overflow = '';
+            if (datepicker) {
+                if (datepicker.style.display === 'block') {
+                    html.style.overflow = 'hidden';
+                } else {
+                    html.style.overflow = '';
+                }
             }
         });
 
@@ -453,3 +496,4 @@ function numberWithSpaces(x) {
     });
 
 })(jquery, window);
+

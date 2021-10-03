@@ -28,10 +28,12 @@ $('.form__filter--body .filter__item').on('click', function () {
 
         availableNewsFilter.removeClass('js-hidden');
         toggle.removeAttr('disabled');
+        $(this).parents('.popup__form').find('.switch-item').removeClass('disabled');
 
     }else if ($(this).find(pageTypeInputs).val() === 'domonetization') {
         availableNewsFilter.addClass('js-hidden');
         toggle.prop('checked', false);
         toggle.attr('disabled', 'true');
+        $(this).parents('.popup__form').find('.switch-item').removeClass('disabled');
     }
 });

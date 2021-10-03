@@ -164,6 +164,21 @@
             color: $color-blue-light;
         }
     }
+
+    &.archive-popup,
+    &.activate-popup {
+        width: 430px;
+    }
+
+    .actions {
+        margin-top: 30px;
+        display: flex;
+        gap: 15px;
+
+        > * {
+            flex: 0 1 50%;
+        }
+    }
 }
 
 @media screen and (max-width: 767px) {
