@@ -58,7 +58,7 @@ function numberWithSpaces(x) {
         });
 
         $('.filter__header').on('click', function () {
-            $('.filter').removeClass('_opened');
+            $('.filter').not($(this).parent('.filter')).removeClass('_opened');
             $(this).toggleClass('_active');
             $(this).parent('.filter').toggleClass('_opened');
         });
@@ -226,12 +226,6 @@ function numberWithSpaces(x) {
                 });
             });
         }
-
-
-
-        // $('.filter').mouseleave(function () {
-        //     $(this).removeClass('_opened');
-        // });
 
         let input = $('input.input');
 

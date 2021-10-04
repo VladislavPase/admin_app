@@ -414,31 +414,20 @@
                     </div>
             </div>
             <div class="fieldset js-hidden available-news">
-                    <div class="filter">
-                      <div class="filter__header">
-                        <input class="filter__item" type="text" placeholder="Доступные новости"><i class="icon-down-dir icon"></i>
-                      </div>
-                      <div class="filter__body form__filter--body">
-                        <label class="filter__item dropdown-item">Очень длинное названиееееееееееееееееееееееееееееееееееееее
-                          <input type="checkbox" value="news_1">
-                        </label>
-                        <label class="filter__item dropdown-item">news 2
-                          <input type="checkbox" value="news_2">
-                        </label>
-                        <label class="filter__item dropdown-item">news 2
-                          <input type="checkbox" value="news_2">
-                        </label>
-                        <label class="filter__item dropdown-item">news 2
-                          <input type="checkbox" value="news_2">
-                        </label>
-                        <label class="filter__item dropdown-item">news 2
-                          <input type="checkbox" value="news_2">
-                        </label>
-                        <label class="filter__item dropdown-item">news 2
-                          <input type="checkbox" value="news_2">
-                        </label>
-                      </div>
-                    </div>
+              <div class="filter">
+                <div class="filter__header"> 
+                  <div class="filter__header--inner">Доступные новости</div><i class="icon-down-dir icon"></i>
+                </div>
+                <div class="form__filter--body">
+                  <input class="news-filter" type="text" placeholder="Поиск новости">
+                  <div class="filter__item dropdown-item js-news-option" data-value="news_1">Новость 1</div>
+                  <div class="filter__item dropdown-item js-news-option" data-value="news_2">Новость 2</div>
+                  <div class="filter__item dropdown-item js-news-option" data-value="news_3">Новость 3</div>
+                  <div class="filter__item dropdown-item js-news-option" data-value="news_4">Новость 4</div>
+                  <div class="filter__item dropdown-item js-news-option" data-value="news_5">Новость 5</div>
+                  <div class="filter__item dropdown-item js-news-option" data-value="news_6">Новость 6</div>
+                </div>
+              </div>
             </div>
             <div class="fieldset">
                     <div class="filter">
@@ -704,7 +693,6 @@
     </div>
     <script src="assets/js/main.bundle.js?v=1.2.3"></script>
     <script src="assets/js/vendors~main.bundle.js"></script>
-    <!--script(src='assets/js/select.bundle.js?v=' + PACKAGE.version)-->
-    <!--script(src='assets/js/vendors~select.bundle.js')-->
+    <script src="assets/js/select.bundle.js?v=1.2.3"></script>
   </body>
 </html>

@@ -1,0 +1,52 @@
+extends _includes/layout
+include _includes/mixins/accountInfoItem
+include _includes/mixins/financesTable
+
+block config
+    - var pagetitle = 'Loader'
+    - var bodyClass = 'loader'
+    - var pageName = 'Loader'
+    - var name = 'finances'
+    - var headerIcon = 'icon-wallet-icon'
+
+block content
+    .content
+        .content__inner
+            //.loader__wrapper
+            //    .loader__logo
+            //        include _includes/loader-logo
+            .loader__wrapper
+                .loader-icon
+                    svg.circular-loader(viewbox='25 25 50 50')
+                        circle.loader-path(
+                            cx='50' cy='50' r='20' fill='none' stroke-dashoffset="-50" stroke-dasharray="65 200"
+                            )
+                            animateTransform(attributeName="transform"
+                                attributeType="XML"
+                                type="rotate"
+                                from="0 25 25"
+                                to="360 25 25"
+                                dur="2s"
+                                repeatCount="indefinite"
+                                )
+                        circle.loader-path(cx='50' cy='50' r='14' fill='none' stroke-dashoffset="-35" stroke-dasharray="45 200")
+                            animateTransform(attributeName="transform"
+                                attributeType="XML"
+                                type="rotate"
+                                from="0 25 25"
+                                to="-360 25 25"
+                                dur="2s"
+                                repeatCount="indefinite"
+                                )
+                        circle.loader-path(cx='50' cy='50' r='8' fill='none' stroke-dashoffset="-21" stroke-dasharray="24 200")
+                            animateTransform(attributeName="transform"
+                                attributeType="XML"
+                                type="rotate"
+                                from="0 25 25"
+                                to="360 25 25"
+                                dur="2s"
+                                repeatCount="indefinite"
+                                )
+                        circle.loader-center(cx='50' cy='50' r='3')
+                
+

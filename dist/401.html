@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <title>Вспомнить пароль</title>
+    <title>Error: 401 Unauthorized</title>
     <meta name="description" content="Description">
     <meta property="og:url" content="https://">
     <meta property="og:type" content="website">
@@ -18,27 +18,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/common.css?v=1.2.3">
   </head>
-  <body class="body remember">
-    <div class="app">
-      <div class="auth">
-        <div class="auth__content">
-          <div class="forget__content auth__content--inner">
-            <div class="auth__form-wrapper _active">
-              <div class="close-btn"><span></span><span></span></div>
-              <form class="form" method="post">
-                <h3 class="form__title">Забыли пароль?</h3>
-                <p class="form__text">Не волнуйтесь! Мы вышлем вам на почту инструкцию по восстановлению пароля.</p>
-                <div class="fieldset">
-                  <input class="input" id="remember_email" type="text" required name="email">
-                  <label class="label" for="remember_email">E-маіl</label>
-                </div>
-                <!--button.btn-primary.btn востановить пароль--><a class="btn-primary btn" href="done.html">востановить пароль</a>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <body class="body error error_401">
+    <h1>Error: 401 Unauthorized</h1>
+    <div class="error__code"><span>4</span><img src="assets/img/robot.svg" alt=""><span>1</span></div>
+    <p>Возникла ошибка, ваш запрос не может будет закончен.</p>
+    <p>Проверьте URL, или вернитесь <a class="link" href="./">На главную, </a>или обратите в <a class="link" href="mailto:">Службу поддержки.</a></p>
+    <div class="illustration"><img src="assets/img/illustration.svg" alt=""></div>
     <script src="assets/js/main.bundle.js?v=1.2.3"></script>
     <script src="assets/js/vendors~main.bundle.js"></script>
     <script src="assets/js/select.bundle.js?v=1.2.3"></script>

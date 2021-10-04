@@ -1,0 +1,27 @@
+block config
+    - var pagetitle = 'Error: 401 Unauthorized'
+    - var bodyClass = 'error error_401'
+    - var pageName = '401'
+    - var name = 'error'
+doctype html
+html(lang=__.lang, class="no-js")
+    head
+        block head
+            include _includes/head
+            block styles
+                link(rel='stylesheet', href='assets/css/common.css?v=' + PACKAGE.version)
+    body.body(class=bodyClass)
+        h1 Error: 401 Unauthorized
+        .error__code
+            span 4
+            img(src="assets/img/robot.svg" alt="")
+            span 1
+        p Возникла ошибка, ваш запрос не может будет закончен.
+        p Проверьте URL, или вернитесь 
+            a(href="./").link На главную, 
+            | или обратите в 
+            a(href="mailto:").link Службу поддержки.
+        .illustration
+            img(src="assets/img/illustration.svg" alt="")
+        block scripts
+            include _includes/scripts

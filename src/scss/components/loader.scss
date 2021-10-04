@@ -1,0 +1,27 @@
+.loader__wrapper {
+    padding-top: 10vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .loader-icon {
+        width: 100px;
+        height: 100px;
+
+        .circular-loader {
+            transform: rotate(-90deg);
+        }
+
+        .loader-path {
+            stroke-linecap: round;
+            stroke: #6ABFA1;
+            stroke-width: 3px;
+            transform-origin: 50% 50%;
+        }
+
+        .loader-center {
+            fill: #6ABFA1;
+        }
+    }
+}

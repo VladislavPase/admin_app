@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <title>Финансы</title>
+    <title>Loader</title>
     <meta name="description" content="Description">
     <meta property="og:url" content="https://">
     <meta property="og:type" content="website">
@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/common.css?v=1.2.3">
   </head>
-  <body class="body finances">
+  <body class="body loader">
     <div class="app">
       <aside class="sidebar">
         <nav class="sidebar__navigation"><a class="sidebar__link" href="./"><i class="icon-dashboard-icon icon"></i>Dashboard</a>
@@ -53,7 +53,7 @@
       <div class="page-content">
         <header class="header">
           <div class="burger"><span></span><span></span></div>
-          <div class="header__route"> <i class="icon icon-wallet-icon"></i><span class="route__name">Финансы</span></div>
+          <div class="header__route"> <i class="icon icon-wallet-icon"></i><span class="route__name">Loader</span></div>
           <ul class="header__account">
             <li class="header__item">
               <p class="header__account--title item-title">ЕРС</p>
@@ -113,152 +113,24 @@
         </header>
         <div class="content">
           <div class="content__inner">
-            <div class="finances__top">
-              <div class="account-info large">
-                <div class="account-info__item">
-                  <p class="account-info__item--title item-title">Доступно</p>
-                  <p class="account-info__item--value green-text"><span class="value">1000</span><span>$</span>
-                  </p>
-                </div>
-                <div class="account-info__item">
-                  <p class="account-info__item--title item-title">В ожидании</p>
-                  <p class="account-info__item--value"><span class="value">0</span><span>$</span>
-                  </p>
-                </div>
-                <div class="account-info__item">
-                  <p class="account-info__item--title item-title">Всего</p>
-                  <p class="account-info__item--value green-text"><span class="value">1000</span><span>$</span>
-                  </p>
-                </div>
-                <div class="account-info__item">
-                  <p class="account-info__item--title item-title">Выплачено</p>
-                  <p class="account-info__item--value"><span class="value">0</span><span>$</span>
-                  </p>
-                </div>
+            <!--.loader__wrapper-->
+            <!--    .loader__logo-->
+            <!--        include _includes/loader-logo-->
+            <div class="loader__wrapper">
+              <div class="loader-icon">
+                <svg class="circular-loader" viewbox="25 25 50 50">
+                  <circle class="loader-path" cx="50" cy="50" r="20" fill="none" stroke-dashoffset="-50" stroke-dasharray="65 200">
+                    <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 25 25" to="360 25 25" dur="2s" repeatCount="indefinite"></animateTransform>
+                  </circle>
+                  <circle class="loader-path" cx="50" cy="50" r="14" fill="none" stroke-dashoffset="-35" stroke-dasharray="45 200">
+                    <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 25 25" to="-360 25 25" dur="2s" repeatCount="indefinite"></animateTransform>
+                  </circle>
+                  <circle class="loader-path" cx="50" cy="50" r="8" fill="none" stroke-dashoffset="-21" stroke-dasharray="24 200">
+                    <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 25 25" to="360 25 25" dur="2s" repeatCount="indefinite"></animateTransform>
+                  </circle>
+                  <circle class="loader-center" cx="50" cy="50" r="3"></circle>
+                </svg>
               </div>
-              <div class="support-text">При наличии вопросов Вы всегда можете к нам обращаться по электронному адресу <a class="link" href="">supportnew@yaya.com. </a>Всегда рады оказать информационную поддержку.</div>
-            </div>
-            <div class="finances__systems">
-              <div class="finances__systems--header">
-                <h3 class="finances__systems--title">Выбор платежной системы на вывод средств</h3>
-              </div>
-              <div class="finances__systems--body"><a class="finances__systems--item" href="#payoneer" data-fancybox data-options="{&quot;touch&quot; : false}"> 
-                  <picture>
-                    <source srcset="assets/img/finances/payoneer.webp" type="image/webp">
-                    <source srcset="assets/img/finances/payoneer.png" type="image/png"><img src="assets/img/finances/payoneer.png" alt="payoneer">
-                  </picture></a><a class="finances__systems--item" href="#alfaPopup" data-fancybox data-options="{&quot;touch&quot; : false}">
-                  <picture>
-                    <source srcset="assets/img/finances/alfabank.webp" type="image/webp">
-                    <source srcset="assets/img/finances/alfabank.png" type="image/png"><img src="assets/img/finances/alfabank.png" alt="alfabank">
-                  </picture></a><a class="finances__systems--item" href="#zaleyPopup" data-fancybox data-options="{&quot;touch&quot; : false}">
-                  <picture>
-                    <source srcset="assets/img/finances/zeley-cash.webp" type="image/webp">
-                    <source srcset="assets/img/finances/zeley-cash.png" type="image/png"><img src="assets/img/finances/zeley-cash.png" alt="zaley">
-                  </picture></a><a class="finances__systems--item" href="#tinkoffPopup" data-fancybox data-options="{&quot;touch&quot; : false}">
-                  <picture>
-                    <source srcset="assets/img/finances/tinkoff.webp" type="image/webp">
-                    <source srcset="assets/img/finances/tinkoff.png" type="image/png"><img src="assets/img/finances/tinkoff.png" alt="tinkoff">
-                  </picture></a><a class="finances__systems--item" href="#bankPopup" data-fancybox data-options="{&quot;touch&quot; : false}">
-                  <picture>
-                    <source srcset="assets/img/master_card.webp" type="image/webp">
-                    <source srcset="assets/img/master_card.png" type="image/png"><img src="assets/img/master_card.png" alt="master_card">
-                  </picture></a><a class="finances__systems--item" href="#webmoneyPopup" data-fancybox data-options="{&quot;touch&quot; : false}">
-                  <picture>
-                    <source srcset="assets/img/finances/webmoney.webp" type="image/webp">
-                    <source srcset="assets/img/finances/webmoney.png" type="image/png"><img src="assets/img/finances/webmoney.png" alt="webmoney">
-                  </picture></a><a class="finances__systems--item" href="#capitalistDollar" data-fancybox data-options="{&quot;touch&quot; : false}">
-                  <picture>
-                    <source srcset="assets/img/finances/capitalist_dollar.webp" type="image/webp">
-                    <source srcset="assets/img/finances/capitalist_dollar.png" type="image/png"><img src="assets/img/finances/capitalist_dollar.png" alt="capitalist $">
-                  </picture></a><a class="finances__systems--item" href="#capitalistPopup" data-fancybox data-options="{&quot;touch&quot; : false}">
-                  <picture>
-                    <source srcset="assets/img/finances/capitalist.webp" type="image/webp">
-                    <source srcset="assets/img/finances/capitalist.png" type="image/png"><img src="assets/img/finances/capitalist.png" alt="capitalist">
-                  </picture></a><a class="finances__systems--item" href="#everadPopup" data-fancybox data-options="{&quot;touch&quot; : false}">
-                  <picture>
-                    <source srcset="assets/img/finances/everad.webp" type="image/webp">
-                    <source srcset="assets/img/finances/everad.png" type="image/png"><img src="assets/img/finances/everad.png" alt="everad">
-                  </picture></a><a class="finances__systems--item" href="#wirePopup" data-fancybox data-options="{&quot;touch&quot; : false}">
-                  <picture>
-                    <source srcset="assets/img/finances/wire.webp" type="image/webp">
-                    <source srcset="assets/img/finances/wire.png" type="image/png"><img src="assets/img/finances/wire.png" alt="wire">
-                  </picture></a><a class="finances__systems--item" href="#sberPopup" data-fancybox data-options="{&quot;touch&quot; : false}">
-                  <picture>
-                    <source srcset="assets/img/finances/sber.webp" type="image/webp">
-                    <source srcset="assets/img/finances/sber.png" type="image/png"><img src="assets/img/finances/sber.png" alt="Сбербанк">
-                  </picture></a></div>
-            </div>
-            <div class="finances__table table-wrapper">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Дата
-                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon _sorted"></i></div>
-                    </th>
-                    <th>Номер транзакции
-                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon _sorted"></i></div>
-                    </th>
-                    <th>Сумма
-                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon _sorted"></i></div>
-                    </th>
-                    <th>Статус
-                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon _sorted"></i></div>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="finances__table--id">12.07.2021</td>
-                    <td class="finances__table--num">123123123123123123123123123</td>
-                    <td class="finances__table--sum green-text">1 259 $</td>
-                    <td class="finances__table--status">Проведена</td>
-                  </tr>
-                  <tr>
-                    <td class="finances__table--id">12.07.2021</td>
-                    <td class="finances__table--num">12312312</td>
-                    <td class="finances__table--sum green-text">1 123 $</td>
-                    <td class="finances__table--status">Проведена</td>
-                  </tr>
-                  <tr>
-                    <td class="finances__table--id">12.07.2021</td>
-                    <td class="finances__table--num">12312312312312</td>
-                    <td class="finances__table--sum green-text">999 $</td>
-                    <td class="finances__table--status">Проведена</td>
-                  </tr>
-                  <tr>
-                    <td class="finances__table--id">12.07.2021</td>
-                    <td class="finances__table--num">1231231231231231231231</td>
-                    <td class="finances__table--sum green-text">1 245 $</td>
-                    <td class="finances__table--status">Проведена</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="pagination-wrapper">
-              <div class="record-count"><span>Отобразить по</span>
-                <div class="record-count__value"> <span class="value">10</span><i class="icon-down-dir icon"></i></div>
-                <ul class="record-count__options">
-                  <div class="triangle-with-shadow"></div>
-                  <li class="record-count__option" rel="5">5</li>
-                  <li class="record-count__option" rel="10">10</li>
-                  <li class="record-count__option" rel="25">25</li>
-                  <li class="record-count__option" rel="50">50</li>
-                  <li class="record-count__option" rel="100">100</li>
-                </ul>
-              </div>
-              <ul class="pagination">
-                <li class="pagination__item"><a href=""> <i class="icon-to-start"></i></a></li>
-                <li class="pagination__item"><a href=""><i class="icon-left-open"></i></a></li>
-                <li class="pagination__item"><a class="_active" href="">1</a></li>
-                <li class="pagination__item"><a href="">2</a></li>
-                <li class="pagination__item"><a href="">3</a></li>
-                <li class="pagination__item"><a href="">4</a></li>
-                <li class="pagination__item"><a href="">5</a></li>
-                <li class="pagination__item"><a href="">...</a></li>
-                <li class="pagination__item"><a href="">10</a></li>
-                <li class="pagination__item"><a href=""><i class="icon-right-open"></i></a></li>
-                <li class="pagination__item"><a href=""><i class="icon-to-end"></i></a></li>
-              </ul>
             </div>
           </div>
         </div>
